@@ -1,0 +1,119 @@
+*{margin:0;}
+html{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+body{
+    background-color: rgb(113, 173, 252);
+}
+#box {
+    overflow-y: auto;
+    overflow-x: hidden;
+    white-space: nowrap;
+    vertical-align: text-top;
+    margin: 0;
+    padding: 0;
+    clear: both;
+    border-spacing: 5px;
+}
+.scene{
+    display: inline-block;
+    margin:0;
+}
+.scene1 {
+
+    min-width: 540px;
+    width: 4046px;
+    font-size: 140px;
+ 
+
+background-color: rgb(113, 173, 252);
+    height:1000px;
+    white-space: normal;
+    line-height: 1.6;
+    /* vertical-align: top; */
+    text-align: center;
+}
+.scene2 {
+    /* display: table-cell; */
+    min-width: 540px;
+    width: 1440px;
+    font-size: 140px;
+    background-color: rgb(71, 54, 148);
+    margin-left: -4px;
+    color:aliceblue;
+    height:5000px;
+   
+    line-height: 1.6;
+    min-height:720px;
+    vertical-align: top;
+    text-align: center;
+}
+.scene3 {
+    /* display: table-cell; */
+    min-width: 540px;
+    width: 540px;
+    font-size: 140px;
+
+   
+    padding: 5px;
+
+    white-space: normal;
+    line-height: 1.6;
+    vertical-align: top;
+    text-align: center;
+}
+.scene4 {
+    /* display: table-cell; */
+    min-width: 540px;
+    width: 540px;
+    font-size: 140px;
+
+    padding: 5px;
+ 
+    white-space: normal;
+    line-height: 1.6;
+    vertical-align: top;
+    text-align: center;
+}
+.scene5 {
+    /* display: table-cell; */
+    min-width: 540px;
+    width: 540px;
+    font-size: 140px;
+ 
+    padding: 5px;
+
+    white-space: normal;
+    line-height: 1.6;
+    /* vertical-align: top; */
+    text-align: center;
+}
+.scene6 {
+    /* display: table-cell; */
+    min-width: 540px;
+    width: 540px;
+    font-size: 140px;
+
+   
+    padding: 5px;
+
+    white-space: normal;
+    line-height: 1.6;
+    /* vertical-align: top; */
+    text-align: center;
+}
+.scene7 {
+    /* display: table-cell; */
+    min-width: 540px;
+    width: 540px;
+    font-size: 140px;
+    border: 2px solid #d1d1d1;
+    border-radius: 5px;
+    padding: 5px;
+
+    white-space: normal;
+  
+    vertical-align: top;
+    text-align: center;
+}

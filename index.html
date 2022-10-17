@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/bg.css">
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="crossorigin="anonymous"></script>
+    <script src="js/js.js"></script>
+   
+    <title>Interactive Resume</title>
+</head>
+<body >
+    <div id="loading" style="position:absolute;top:0px;left:0px;margin:0 auto;min-height:700px;width:100%;border: 1px solid red;z-index:100;">
+    
+            <img src="images/loading.png" alt="" srcset="" style="margin:0px  600px;width:300px;padding-top:200px;">
+    </div>
+    <div id="box">
+        <div id="me" style="border:px solid red;max-width:100%;height:1000px;padding:5px;position:fixed;top:305px;z-index: 99;left:500px;">
+        <img src="images/me.png" id ="me2d" alt="" srcset="" style="width:94px;height:auto;position: fixed;top:305px;">
+        </div>
+        <div class="scene1 scene" style="color:white;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><span style="position: relative;left:-1400px;">scene 1</span>
+            <h1 style="color:white;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;border:2px solid white;background-color:red;font-size: 28px;width:400px;margin:0 400px;">Welcome to My world!</h1>
+                <div class="house" style="border:px solid red;min-width:800px;position:relative;top:-115px;left:700px;width:600px">
+                        <img src="images/house.png" alt="" srcset=""style="">
+                   
+                    </div>
+                  
+                    
+            <div class="ground" style="position:relative;bottom:165px;background-image:url('images/ground.png');width:99%;height:100px;  background-repeat: repeat-x;"></div>
+                 <div class="grass" style="position:relative;bottom:282px;background-image:url('images/green.png');width:99%;height:100px;    background-repeat: repeat-x;"></div>
+                
+                 <div style="position:relative;top:-910px;left:1900px;z-index:1;border:2px solid white;width:400px;padding:12px;background-color:dodgerblue;" >
+                    <h1 style="color:white;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 28px;">About Me</h1>
+                
+                </div>
+                <div style="position:relative;top:-915px;left:1900px;z-index:1;border:2px solid white;width:400px;background-color:#f43269;padding:12px;" >
+                    <h1 style="color:white;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 22px;">Hi! I'm Alj</h1>
+                    <h1 style="color:white;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 22px;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1>
+                </div>
+        </div>
+       <div class="scene2 scene">scence 2</div>
+       <div class="scene3 scene">3</div>
+       <div class="scene4 scene">4</div>
+       <div class="scene5  scene">5</div>
+       <div class="scene6 scene">6</div>
+     
+     </div>
+    
+</body>
+<script>
+  
+$(window).on("load",function(){
+	 $("#loading").fadeOut(3000);
+
+})
+</script>
+
+   
+</html>
