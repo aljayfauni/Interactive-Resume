@@ -8,7 +8,7 @@ body{
 }
 #box {
     overflow-y: auto;
-    overflow-x: hidden;
+    overflow-x: auto;
     white-space: nowrap;
     vertical-align: text-top;
     margin: 0;
@@ -19,6 +19,9 @@ body{
 .scene{
     display: inline-block;
     margin:0;
+}
+.me{
+    height: auto;
 }
 .scene1 {
 
@@ -37,7 +40,7 @@ background-color: rgb(113, 173, 252);
 .scene2 {
     /* display: table-cell; */
     min-width: 540px;
-    width: 1440px;
+    width: 1840px;
     font-size: 140px;
     background-color: rgb(71, 54, 148);
     margin-left: -4px;
@@ -52,12 +55,14 @@ background-color: rgb(113, 173, 252);
 .scene3 {
     /* display: table-cell; */
     min-width: 540px;
-    width: 540px;
+    width: 2540px;
     font-size: 140px;
+    height:2000px;
 
-   
+   background-color: blueviolet;
     padding: 5px;
-
+    background-size: cover;
+    margin-left: -4px;
     white-space: normal;
     line-height: 1.6;
     vertical-align: top;
