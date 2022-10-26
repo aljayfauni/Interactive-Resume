@@ -5,11 +5,52 @@ jQuery(function ($) {
             var oEvent = event.originalEvent, 
                 direction = oEvent.detail ? oEvent.detail * -amount : oEvent.wheelDelta, 
                 position = $(this).scrollLeft();
-                positionX =  $(this).scrollLeft(position);
+                positionX =  $(this).scrollLeft();
            
-               // console.log(position);
+                console.log(position);
             ;
+            const container = document.querySelector('#box')
                var me_ofset =  document.getElementById('box');
+               x = container.scrollLeft = '0' ;
+               console.log(x);
+               if(position <= x ){
+                $("#me2d").attr("src","images/go_left1.png");
+            
+                if(position >x ){
+                    $("#me2d").attr("src","images/me_walk2.png");
+                }
+               }
+               if(position >x ){
+                $("#me2d").attr("src","images/me_walk.png");
+            
+               }
+
+               var _scrollTimeout = null;
+               clearTimeout(_scrollTimeout);
+               _scrollTimeout = setTimeout(function() {
+                   console.log("Haven't scrolled in 1s");
+                   $("#me2d").attr("src","images/me_walk2.png");
+
+               }, 200);
+          
+        
+               var _scrollTimeout = null;
+               clearTimeout(_scrollTimeout);
+               _scrollTimeout = setTimeout(function() {
+                   console.log("Haven't scrolled in 1s");
+                   $("#me2d").attr("src","images/me_walk3.png");
+
+               }, 250);
+           
+          
+               var _scrollTimeout = null;
+               clearTimeout(_scrollTimeout);
+               _scrollTimeout = setTimeout(function() {
+                   console.log("Haven't scrolled in 1s");
+                   $("#me2d").attr("src","images/me.png");
+
+               }, 350);
+           
 
                if(position >3499){
                 window.scrollTo( 0,1000);        
@@ -65,7 +106,7 @@ jQuery(function ($) {
 
             if (position < 3499){
                 
-                $('#me').css({top: '305px', position:'fixed'})
+                $('#me').css({top: '330px', position:'fixed'})
                 //    $('html,body').animate({
                 //     scrollTop: $("#me").offset().top},
                 //     'slow');
@@ -102,7 +143,21 @@ jQuery(function ($) {
                  } else {
                       $('.greet').slideUp(300);
                  }
+                 if (position > 2200) {
+                    $('.educ').slideDown(500);
+                  // alert('hello');
+                } else {
+                     $('.educ').slideUp(500);
+                }
 
+                if (position > 2200) {
+                    $('#cloud1').css({position:'absolute'});
+                  // alert('hello');
+                } 
+                if (position > 2200) {
+                    $('#cloud2').css({position:'absolute'});
+                  // alert('hello');
+                } 
 
                  if (position >3490) {
                     $('.submarine').fadeIn(200);
@@ -127,7 +182,7 @@ jQuery(function ($) {
 });
 
 $(document).ready(function() {
-    $('#box').hScroll(30); // You can pass (optionally) scrolling amount
+    $('#box').hScroll(75); // You can pass (optionally) scrolling amount
 });
 
 
@@ -143,4 +198,17 @@ $(document).scroll(function () {
     }
 
 });
+
+$(document).ready(function() {
+    $(window).on("scroll", function() {
+      console.log($(this).scrollLeft())
+      if($(this).scrollLeft() >100){
+        // set to new image
+        $(".brand-logo img").attr("src","http://placekitten.com/300/300");
+      } else {
+        //back to default
+        $(".brand-logo img").attr("src","http://placekitten.com/200/200");
+      }
+    })
+  })
      
