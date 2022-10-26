@@ -195,7 +195,8 @@ $(window).on('scroll', hScroll(75));
     jQuery(function ($) {
         $.fn.hScroll = function (amount) {
             amount = amount || 120;
-            $(this).bind("touchmove", function (event) {
+         //   $(this).bind("DOMMouseScroll mousewheel", function (event) {
+            jQuery("body").on("touchmove", function(event) {
                 var oEvent = event.originalEvent, 
                     direction = oEvent.detail ? oEvent.detail * -amount : oEvent.wheelDelta, 
                     position = $(this).scrollLeft();
