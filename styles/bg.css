@@ -2,6 +2,7 @@
 html{
     overflow-y: hidden;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 body{
     background-color: rgb(113, 173, 252);
@@ -42,7 +43,7 @@ background-color: rgb(113, 173, 252);
     min-width: 540px;
     width: 1840px;
     font-size: 140px;
-    background-color: rgb(71, 54, 148);
+    background-color: rgb(113, 173, 252);
     margin-left: -4px;
     color:aliceblue;
     height:5000px;
@@ -121,4 +122,10 @@ background-color: rgb(113, 173, 252);
   
     vertical-align: top;
     text-align: center;
+}
+@media only screen and (max-width: 600px)  {
+    #me{
+        position: fixed;
+
+    }
 }

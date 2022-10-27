@@ -17,7 +17,7 @@ jQuery(function ($) {
                 $("#me2d").attr("src","images/go_left1.png");
             
                 if(position >x ){
-                    $("#me2d").attr("src","images/me_walk2.png");
+                    $("#me2d").attr("src","images/me_wal2.png");
                 }
                }
                if(position >x ){
@@ -51,16 +51,19 @@ jQuery(function ($) {
 
                }, 350);
            
-
+           
+        
+               
                if(position >3499){
                 window.scrollTo( 0,1000);        
                     //  $('html,body').animate({
                     //         scrollTop: $("#me").offset().top},
                     //         'slow');
-
+                    
+                  
                }
               if(position<3499 && position <=0){
-
+                
                 $('html,body').animate({
           scrollTop: 0},
           'slow');
@@ -167,7 +170,7 @@ jQuery(function ($) {
 });
 
 $(document).ready(function() {
-    $('#box').hScroll(75); // You can pass (optionally) scrolling amount
+    $('#box').hScroll(60); // You can pass (optionally) scrolling amount
 });
 
 
