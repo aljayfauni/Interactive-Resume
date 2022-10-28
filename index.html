@@ -3,25 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- <meta name="viewport" content="width=device-width,height=device-height, initial-scale=0.5"> -->
+ 
     <link rel="stylesheet" href="styles/bg.css">
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
     <script
     src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="crossorigin="anonymous"></script>
     <script src="js/js.js"></script>
    
     <title>Interactive Resume</title>
+    <style>
+        body h1,h2,h3{
+    font-family: 'Lobster';font-weight: 100;
+    -webkit-overflow-scrolling: touch;
+}
+    </style>
 </head>
 <body >
     <div id="loading" style="position:absolute;top:0px;left:0px;margin:0 auto;min-height:3000px;background:blueviolet;width:100%;border: px solid red;z-index:999;">
-    
-            <img src="images/loading.png" alt="" srcset="" style="margin:0px  500px;width:300px;padding-top:200px;">
-    </div>
+            <div id="loading_img">
+            <img src="images/loading.png" alt="" srcset="" style="width:300px;">
+            </div>
+        </div>
     <div id="box">
-        <div id="me" style="border:px solid red;max-width:100%;padding:5px;position:fixed;top:330px;z-index: 99;left:500px;">
+        <div id="me" style="border:px solid red;max-width:100%;padding:5px;position:fixed;top:340px;z-index: 99;left:500px;">
         <img src="images/me.png" id ="me2d" alt="" srcset="" style="width:94px;height:auto;position:relative; z-index: 99;">
         </div>
-        <div class="scene1 scene" style="color:white;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><span style="position: relative;left:-1400px;z-index: 1;color:rgb(243, 240, 240);">START</span>
-            <h1 class='scroll'style="color:white;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;border:3px solid white;background-color:red;font-size: 28px;width:400px;margin:0 400px;">Scroll down To Interact</h1>
+        <div class="scene1 scene" style="color:white;"><span style="position: relative;left:-1400px;z-index: 1;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color:rgb(243, 240, 240);">START</span>
+            <h1 class='scroll'style="color:white;border:3px solid white;background-color:red;font-size: 28px;width:400px;margin:0 400px;">Scroll down To Interact</h1>
                 <div class="house" style="border:px solid red;max-width:800px;position:relative;top:-115px;left:850px;width:600px">
                         <img src="images/house1.png" alt="" srcset=""style="width:650px;">  
                     </div>
@@ -33,43 +41,65 @@
                  <div class="grass" style="position:relative;bottom:282px;background-image:url('images/green.png');width:100%;height:100px;    background-repeat: repeat-x;"></div>
                 
                  <div style="position:relative;top:-910px;left:1700px;z-index:1;border:2px solid white;width:400px;padding:12px;background-color:dodgerblue;" >
-                    <h1 style="color:white;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 28px;">About Me</h1>
+                    <h1 style="color:white;font-size: 28px;">About Me</h1>
                 
                 </div>
                 <div class ='greet'style="position:relative;top:-915px;left:1700px;z-index:1;border:2px solid white;width:400px;background-color:#f43269;padding:12px;display:none;" >
-                    <h1 style="color:white;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 28px;">Hi! I'm Alj</h1>
-                    <h1 style="color:white;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 24px;">"Web Designer / Developer.</h1>
+                    <h1 style="color:white;font-size: 28px;">Hi! I'm Alj</h1>
+                    <h1 style="color:white;font-size: 24px;">"Web Designer / Developer.</h1>
                 </div>
                 <div class="school" style="border:px solid rgb(60, 42, 176);width:800px;position:relative;top:-1060px;left:2400px;z-index: auto;">
                     <img src="images/school.png" alt="" srcset=""style="width:500px;">
                 </div>
                 <div style="position:relative;top:-1550px;left:3200px;z-index:1;border:2px solid white;width:500px;padding:12px;background-color:#ff1e6c;" >
-                    <h1 style="color:white;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 28px;">EDUCATION</h1>
+                    <h1 style="color:white;font-size: 28px;">EDUCATION</h1>
 
                 </div>
                 <div class ='educ'style="position:relative;top:-1555px;left:3200px;z-index:1;border:2px solid white;width:500px;background-color:#5b65dc;padding:12px;display:none;" >
-                    <h3 style="color:white;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 20px;">> Imus Institute of Science and Technology<br>Bachelor Of Science In Computer Science (Laderized)</h3>
+                    <h3 style="color:white;font-size: 20px;">> Imus Institute of Science and Technology<br>Bachelor Of Science In Computer Science (Laderized)</h3>
                     
-                    <h3 style="color:white;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 20px;">> Associate Degree 2years course Scholarship<br>Datacom Institute of Computer Technology<br>Multimedia and Information Technology</h3>
+                    <h3 style="color:white;font-size: 20px;">> Associate Degree 2years course Scholarship<br>Datacom Institute of Computer Technology<br>Multimedia and Information Technology</h3>
                 </div>
                
         </div>
-       <div class="scene2 scene" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Technologies
-        <div class="sea-deep" style="position:relative;top:410px;background-color: rgb(67, 105, 230);width:100%;margin-left:-3px;height:3000px; z-index:1;  "></div>
-        <div class="submarine" style="display:none;border:px solid rgb(60, 42, 176);width:800px;position:relative;top:-2000px;left:450px;z-index: auto;">
+       <div class="scene2 scene">&nbsp;&nbsp;
+        <div class="sea-deep" style="position:relative;top:410px;background-color: rgb(67, 105, 230);width:100%;margin-left:-3px;height:3000px; z-index:3;  "></div>
+        <div class="skills" style="display:block;position:relative;top:-2200px;left:200px;z-index: 4;width:390px;height:170px;padding:5px;border:5px solid white;border-radius:20px;">
+            <h1 style="text-shadow: -15px 5px 5px rgb(75 80 229);font-size:86px;font-weight: 300;">{ SKILLS }</h1>
+        </div>
+        <div class="skill_html" style="display:block;position:relative;top:-2300px;left:690px;z-index: 4;width:150px;height:auto;padding:5px;border:3px solid white;">
+            <h1 style="font-size:24px;font-weight: 300;background-color: #e90a58;">HTML/HTML5</h1>
+        </div>
+        <div class="skill_html" style="display:block;position:relative;top:-2295px;left:770px;z-index: 4;width:150px;height:auto;padding:5px;border:3px solid white;">
+            <h1 style="font-size:24px;font-weight: 300;background-color: #1b1269;">CSS/CSS3</h1>
+        </div>
+        <div class="skill_html" style="display:block;position:relative;top:-2290px;left:810px;z-index: 4;width:150px;height:auto;padding:5px;border:3px solid white;">
+            <h1 style="font-size:24px;font-weight: 300;background-color: #1dcebf;">Javascript</h1>
+        </div>
+        <div class="skill_html" style="display:block;position:relative;top:-2465px;left:890px;z-index: 4;width:150px;height:auto;padding:5px;border:3px solid white;">
+            <h1 style="font-size:24px;font-weight: 300;background-color: #f7aa53;">PHP</h1>
+        </div>
+        <div class="skill_html" style="display:block;position:relative;top:-2465px;left:950px;z-index: 4;width:150px;height:auto;padding:5px;border:3px solid white;">
+            <h1 style="font-size:24px;font-weight: 300;background-color: #b553f7;">MYSQL</h1>
+        </div>
+        <div class="skill_html" style="display:block;position:relative;top:-2465px;left:1000px;z-index: 4;width:150px;height:auto;padding:5px;border:3px solid white;">
+            <h1 style="font-size:24px;font-weight: 300;background-color: #611579;">MSSQL</h1>
+        </div>
+        <div class="submarine" style="display:none;border:px solid rgb(60, 42, 176);width:800px;position:relative;top:-2300px;left:400px;z-index: auto;">
             <img src="images/submarine.png" alt="" srcset=""style="width:600px;">
        
         </div>
+
        </div>
-       <div class="scene3 scene" style="color:white;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><span style="position: relative;">Experience
+       <div class="scene3 scene" style="color:white;"><span style="position: relative;">Experience
         
-        <div class="cty" style="position:relative;bottom:870px;left:-0px;width:100%;margin-left:-3px;height:auto;    background-repeat: no-repeat;background-size:100%;">
+        <div class="cty" style="position:relative;bottom:720px;left:-0px;width:100%;margin-left:-3px;height:auto;    background-repeat: no-repeat;background-size:100%;">
             <img src="images/city.png" alt="" srcset=""style="width:100%;">
         </div>
         <div class="ground-deep" style="position:relative;bottom:880px;background-color: rgb(131, 93, 66);width:100%;margin-left:-3px;height:3000px;   "></div>
        
         <div style="position:relative;top:-910px;left:1900px;z-index:1;border:2px solid white;width:400px;padding:12px;background-color:dodgerblue;" >
-           <h1 style="color:white;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 28px;">About Me</h1>
+           <h1 style="color:white;font-size: 28px;">About Me</h1>
        
        </div>
        </div>

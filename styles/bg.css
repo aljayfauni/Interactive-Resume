@@ -7,6 +7,11 @@ html{
 body{
     background-color: rgb(113, 173, 252);
 }
+#loading_img{
+    margin: 250px auto;
+    width:300px;
+    height: auto;
+}
 #box {
     overflow-y: auto;
     overflow-x: auto;
@@ -123,9 +128,23 @@ background-color: rgb(113, 173, 252);
     vertical-align: top;
     text-align: center;
 }
-@media only screen and (max-width: 600px)  {
-    #me{
-        position: fixed;
-
+@media screen and (max-width: 768px){
+    ::-webkit-scrollbar {
+        --webkit-appearance: none;
+        scroll-behavior: smooth;
+    }
+    html{
+    
+            --webkit-appearance: none;
+        scroll-behavior: smooth;
+    }
+    #box{
+        overflow-y: hidden;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+    body{
+        --webkit-appearance: none;
+        scroll-behavior: smooth;
     }
 }
