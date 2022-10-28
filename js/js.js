@@ -13,6 +13,10 @@ jQuery(function ($) {
                var me_ofset =  document.getElementById('box');
                x = container.scrollLeft = '0' ;
                console.log(x);
+               position += direction > 0 ? -amount : amount;
+               $(this).scrollLeft(position);
+               event.preventDefault();
+            
                if(position <= x ){
                 $("#me2d").attr("src","images/go_left1.png");
             
@@ -41,8 +45,7 @@ jQuery(function ($) {
                    $("#me2d").attr("src","images/me_walk3.png");
 
                }, 250);
-           
-          
+ 
                var _scrollTimeout = null;
                clearTimeout(_scrollTimeout);
                _scrollTimeout = setTimeout(function() {
@@ -50,16 +53,15 @@ jQuery(function ($) {
                    $("#me2d").attr("src","images/me.png");
 
                }, 350);
-           
-           
-        
-               
-               if(position >3499){
+
+               if(position >3475){
                 window.scrollTo( 0,1000);        
                     //  $('html,body').animate({
                     //         scrollTop: $("#me").offset().top},
                     //         'slow');
+
                     
+                    $('#me').css({border:'3px solid #eee',borderRadius:'300px',padding:'20px',backgroundColor: 'rgba(90,42,205,0.5)'});
                   
                }
               if(position<3499 && position <=0){
@@ -72,10 +74,7 @@ jQuery(function ($) {
         //         scrollTop: $("#me").offset().top},
         //         'slow');
          
-            position += direction > 0 ? -amount : amount;
-            $(this).scrollLeft(position);
-            event.preventDefault();
-         
+          
             if (position > 3499) {
                 $('#me').addClass('me');
                 $('#me').slideDown(1000);
@@ -88,30 +87,36 @@ jQuery(function ($) {
                 //$('#me2d').slideUp(300);
                 $('#me').removeClass('me');
                 $('#me2d').css({top: '0px', position:'relative'});
+                $('#me').css({border:'0px solid white',borderRadius:'300px',padding:'0px',backgroundColor: 'rgba(0,0,0,0)'});
               
             }
 
-
             if (position < 3499){
                 
-                $('#me').css({top: '330px', position:'fixed'})
+                $('#me').css({top: '340px', position:'fixed'})
                 //    $('html,body').animate({
                 //     scrollTop: $("#me").offset().top},
                 //     'slow');
+                $('.submarine').css({top: '-3350px', position:'relative'});
+                $('#me').css({border:'0px solid white',borderRadius:'300px',padding:'0px',backgroundColor: 'rgba(0,0,0,0)'});
                 window.scrollTo( 0,0);   
+
             }
           
 
             if (position > 5200){
 
                 $('#me2d').css({top: '0px', position:'relative'});
-                
+                $('.submarine').css({top: '-3350px', position:'relative'});
+              //  $('#me').css({border:'0px solid white',borderRadius:'300px',padding:'0px',backgroundColor: 'rgba(0,0,0,0)'});
                 window.scrollTo( 0,0);   
                 $('#me').removeClass('me');
-
+            }
+            if (position > 5280){
+                $('#me').css({border:'0px solid white',borderRadius:'300px',padding:'0px',backgroundColor: 'rgba(0,0,0,0)'});   
             }
         else if(position <= 5200 && position>=3499){
-        
+            $('.submarine').css({top: '-2300px', position:'relative'});
             //$('#me2d').slideUp(300);
             $('#me2d').css({top: '0px', position:'relative'});
             $('#me').addClass('me');
@@ -150,18 +155,16 @@ jQuery(function ($) {
                  if (position >3490) {
                     $('.submarine').fadeIn(200);
                     $('.submarine').css({zIndex:'99'});
-                  $('.submarine').animate({left:'120px'},950);
+                  $('.submarine').animate({left:'20px'},960);
                   // alert('hello');
 
                 } 
            if(position >= 3600) {
               
-                $('.submarine').animate({left:'950px'},950);
-                $('.submarine').fadeOut(300);
+                $('.submarine').animate({left:'1120px'},960);
+                // $('.submarine').fadeOut(300);
                  }
 
-       
-          
         
         })
        
@@ -173,9 +176,6 @@ $(document).ready(function() {
     $('#box').hScroll(60); // You can pass (optionally) scrolling amount
 });
 
-
-
-   
 
 // $(document).scroll(function () {
 //     var y = $(this).scrollLeft();
