@@ -60,9 +60,9 @@ jQuery(function ($) {
                     //         scrollTop: $("#me").offset().top},
                     //         'slow');
 
-                    
                     $('#me').css({border:'3px solid #eee',borderRadius:'300px',padding:'20px',backgroundColor: 'rgba(90,42,205,0.5)'});
-                  
+                    $('.submarine').css({top: '-2500px', position:'relative'});
+                    $('#bubbles').css({display:'block'});
                }
               if(position<3499 && position <=0){
                 
@@ -88,7 +88,7 @@ jQuery(function ($) {
                 $('#me').removeClass('me');
                 $('#me2d').css({top: '0px', position:'relative'});
                 $('#me').css({border:'0px solid white',borderRadius:'300px',padding:'0px',backgroundColor: 'rgba(0,0,0,0)'});
-              
+                $('#bubbles').css({display:'none'});
             }
 
             if (position < 3499){
@@ -111,15 +111,17 @@ jQuery(function ($) {
               //  $('#me').css({border:'0px solid white',borderRadius:'300px',padding:'0px',backgroundColor: 'rgba(0,0,0,0)'});
                 window.scrollTo( 0,0);   
                 $('#me').removeClass('me');
+                $('#bubbles').css({display:'none'});
             }
             if (position > 5280){
                 $('#me').css({border:'0px solid white',borderRadius:'300px',padding:'0px',backgroundColor: 'rgba(0,0,0,0)'});   
             }
         else if(position <= 5200 && position>=3499){
-            $('.submarine').css({top: '-2300px', position:'relative'});
+            $('.submarine').css({top: '-2500px', position:'relative'});
             //$('#me2d').slideUp(300);
             $('#me2d').css({top: '0px', position:'relative'});
             $('#me').addClass('me');
+            $('#bubbles').css({display:'block'});
         }
              
             // if (position >=0 && position < 3799){
