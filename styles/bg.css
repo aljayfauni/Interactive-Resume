@@ -2,7 +2,7 @@
 html{
     overflow-y: hidden;
     overflow-x: hidden;
-    scroll-behavior: smooth;
+     scroll-behavior: smooth; 
 }
 body{
     background-color: rgb(113, 173, 252);
@@ -141,21 +141,22 @@ background-color: rgb(113, 173, 252);
 @media screen and (max-width: 768px){
     ::-webkit-scrollbar {
         --webkit-appearance: none;
-        scroll-behavior: smooth;
+        /* scroll-behavior: smooth; */
     }
+    
     html{
     
             --webkit-appearance: none;
-        scroll-behavior: smooth;
+        /* scroll-behavior: smooth; */
     }
     #box{
         overflow-y: hidden;
         overflow-x: hidden;
-        scroll-behavior: smooth;
+     
     }
     body{
         --webkit-appearance: none;
-        scroll-behavior: smooth;
+       
     }
 }
 #bubbles{
