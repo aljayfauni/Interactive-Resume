@@ -21,7 +21,7 @@ body{
     padding: 0;
     clear: both;
     border-spacing: 5px;
-    border:1px solid red;
+    border:0px solid red;
     height:3000px;
 }
 .scene{
