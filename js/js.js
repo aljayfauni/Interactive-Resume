@@ -1,3 +1,4 @@
+
 jQuery(function ($) {
     $.fn.hScroll = function (amount) {
         amount = amount || 120;
@@ -61,8 +62,14 @@ jQuery(function ($) {
                     //         'slow');
 
                     $('#me').css({border:'3px solid #eee',borderRadius:'300px',padding:'20px',backgroundColor: 'rgba(90,42,205,0.5)'});
-                    $('.submarine').css({top: '-2500px', position:'relative'});
+                    $('.submarine').css({top: '-2250px', position:'relative'});
                     $('#bubbles').css({display:'block'});
+                  
+                    $('html_level').css({display: 'flex'});
+                    $('.html_level').animate({left:'470px'},2800);
+                    $('.css_level').animate({left:'475px'},3500);
+                    $('.js_level').animate({left:'450px'},4200);
+                    $('.php_level').animate({left:'450px'},4900);
                }
               if(position<3499 && position <=0){
                 
@@ -104,7 +111,7 @@ jQuery(function ($) {
             }
           
 
-            if (position > 5200){
+            if (position > 8690){
 
                 $('#me2d').css({top: '0px', position:'relative'});
                 $('.submarine').css({top: '-3350px', position:'relative'});
@@ -112,12 +119,13 @@ jQuery(function ($) {
                 window.scrollTo( 0,0);   
                 $('#me').removeClass('me');
                 $('#bubbles').css({display:'none'});
+                
             }
-            if (position > 5280){
-                $('#me').css({border:'0px solid white',borderRadius:'300px',padding:'0px',backgroundColor: 'rgba(0,0,0,0)'});   
+            if (position > 8710){
+                $('#me').css({border:'0px solid white',borderRadius:'300px',padding:'20px',backgroundColor: 'rgba(0,0,0,0)'});   
             }
-        else if(position <= 5200 && position>=3499){
-            $('.submarine').css({top: '-2500px', position:'relative'});
+        else if(position <= 8690 && position>=3499){
+            $('.submarine').css({top: '-2250px', position:'relative'});
             //$('#me2d').slideUp(300);
             $('#me2d').css({top: '0px', position:'relative'});
             $('#me').addClass('me');
@@ -133,10 +141,10 @@ jQuery(function ($) {
             //     }
                 //$('#me').css({top: '305px', position:'fixed'});
                 if (position > 900) {
-                     $('.greet').slideDown(300);
+                     $('.greet').fadeIn(300);
                    // alert('hello');
                  } else {
-                      $('.greet').slideUp(300);
+                      $('.greet').fadeOut(300);
                  }
                  if (position > 2200) {
                     $('.educ').slideDown(500);
@@ -157,13 +165,13 @@ jQuery(function ($) {
                  if (position >3490) {
                     $('.submarine').fadeIn(200);
                     $('.submarine').css({zIndex:'99'});
-                  $('.submarine').animate({left:'20px'},960);
+                  $('.submarine').animate({left:'20px'},2800);
                   // alert('hello');
 
                 } 
            if(position >= 3600) {
               
-                $('.submarine').animate({left:'1120px'},960);
+                $('.submarine').animate({left:'4500px'},2800);
                 // $('.submarine').fadeOut(300);
                  }
 
