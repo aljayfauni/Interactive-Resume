@@ -1,7 +1,7 @@
 
 jQuery(function ($) {
     $.fn.hScroll = function (amount) {
-        amount = amount || 120;
+        amount = amount || 60;
      
      
        $('#box').bind("DOMMouseScroll mousewheel", function (event) {
@@ -57,7 +57,7 @@ jQuery(function ($) {
 
                }, 350);
 
-               if(position >3475){
+               if(position >3475 && position< 8690){
                 window.scrollTo( 0,1000);        
                     //  $('html,body').animate({
                     //         scrollTop: $("#me").offset().top},
@@ -75,9 +75,9 @@ jQuery(function ($) {
                }
               if(position<3499 && position <=0){
                 
-                $('html,body').animate({
-          scrollTop: 0},
-          'slow');
+        //         $('html,body').animate({
+        //   scrollTop: 0},
+        //   'slow');
          }
          //     $('html,body').animate({
         //         scrollTop: $("#me").offset().top},
