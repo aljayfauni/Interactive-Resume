@@ -2,7 +2,7 @@
 html{
     overflow-y: hidden;
     overflow-x: hidden;
-    scroll-behavior: smooth;
+     scroll-behavior: smooth; 
 }
 body{
     background-color: rgb(113, 173, 252);
@@ -46,7 +46,7 @@ background-color: rgb(113, 173, 252);
 .scene2 {
     /* display: table-cell; */
     min-width: 540px;
-    width: 1840px;
+    width: 5290px;
     font-size: 140px;
     background-color: rgb(113, 173, 252);
     margin-left: -4px;
@@ -58,14 +58,24 @@ background-color: rgb(113, 173, 252);
     vertical-align: top;
     text-align: center;
 }
+.programming-skill{
+    
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        align-content: stretch;
+    
+}
 .scene3 {
     /* display: table-cell; */
-    min-width: 540px;
-    width: 2540px;
+
+    width: 4092px;
     font-size: 140px;
     height:2000px;
 
-   background-color: blueviolet;
+    /* background-color: blueviolet;  */
     padding: 5px;
     background-size: cover;
     margin-left: -4px;
@@ -131,21 +141,22 @@ background-color: rgb(113, 173, 252);
 @media screen and (max-width: 768px){
     ::-webkit-scrollbar {
         --webkit-appearance: none;
-        scroll-behavior: smooth;
+        /* scroll-behavior: smooth; */
     }
+    
     html{
     
             --webkit-appearance: none;
-        scroll-behavior: smooth;
+        /* scroll-behavior: smooth; */
     }
     #box{
         overflow-y: hidden;
         overflow-x: hidden;
-        scroll-behavior: smooth;
+     
     }
     body{
         --webkit-appearance: none;
-        scroll-behavior: smooth;
+       
     }
 }
 #bubbles{
