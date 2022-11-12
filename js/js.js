@@ -4,7 +4,7 @@ jQuery(function ($) {
         amount = amount || 120;
      
      
-       $('#box').bind("DOMMouseScroll mousewheel ", function (event) {
+       $('#box').bind("DOMMouseScroll mousewheel touchmove", function (event) {
             var oEvent = event.originalEvent, 
                 direction = oEvent.detail ? oEvent.detail * -amount : oEvent.wheelDelta, 
                 position = $(this).scrollLeft();
