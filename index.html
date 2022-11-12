@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.4">
     <link rel="icon" type="image/x-icon" href="images/favicon.JPG">
     <link rel="stylesheet" href="styles/bg.css">
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
@@ -210,7 +211,7 @@ function handleGesture() {
      //   amount = amount || 120;
      
      
-       $('#box').bind("DOMMouseScroll  touchmove", function (event) {
+       $('#box').bind(" touchmove", function (event) {
             var oEvent = event.originalEvent, 
                // direction = oEvent.detail ? oEvent.detail * - : oEvent.wheelDelta, 
                 position = $(this).scrollLeft();
@@ -281,9 +282,9 @@ function handleGesture() {
                }
               if(position<3499 && position <=0){
                 
-                $('html,body').animate({
-          scrollTop: 0},
-          'slow');
+        //         $('html,body').animate({
+        //   scrollTop: 0},
+        //   'slow');
          }
          //     $('html,body').animate({
         //         scrollTop: $("#me").offset().top},
