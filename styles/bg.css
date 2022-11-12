@@ -21,6 +21,8 @@ body{
     padding: 0;
     clear: both;
     border-spacing: 5px;
+    border:0px solid red;
+    height:3000px;
 }
 .scene{
     display: inline-block;
@@ -147,7 +149,7 @@ background-color: rgb(113, 173, 252);
     html{
     
             --webkit-appearance: none;
-        /* scroll-behavior: smooth; */
+         scroll-behavior: smooth; 
     }
     #box{
         overflow-y: hidden;

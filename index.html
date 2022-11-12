@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.4">
     <link rel="icon" type="image/x-icon" href="images/favicon.JPG">
     <link rel="stylesheet" href="styles/bg.css">
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
@@ -178,6 +179,239 @@
 $(window).on("load",function(){
 	 $("#loading").slideToggle(3000);
 })
+
+
+
+
+let touchstartX = 0;
+let touchstartY = 0;
+let touchendX = 0;
+let touchendY = 0;
+
+const gestureZone = document.getElementById('box');
+
+gestureZone.addEventListener('touchstart', function(event) {
+    touchstartX = event.changedTouches[0].screenX;
+    touchstartY = event.changedTouches[0].screenY;
+    //$('#box').hscroll(60); // You can pass (optionally) scrolling amount
+}, false);
+
+gestureZone.addEventListener('touchend', function(event) {
+    touchendX = event.changedTouches[0].screenX;
+    touchendY = event.changedTouches[0].screenY;
+    handleGesture();
+}, false); 
+
+function handleGesture() {
+    if (touchendX < touchstartX) {
+        console.log('Swiped left');
+
+       // jQuery(function ($) {
+   // $.fn.hscroll = function (amount) {
+     //   amount = amount || 120;
+     
+     
+       $('#box').bind(" touchmove", function (event) {
+            var oEvent = event.originalEvent, 
+               // direction = oEvent.detail ? oEvent.detail * - : oEvent.wheelDelta, 
+                position = $(this).scrollLeft();
+                positionX =  $(this).scrollLeft();
+           
+                console.log(position);
+            ;
+            const container = document.querySelector('#box')
+               var me_ofset =  document.getElementById('box');
+               x = container.scrollLeft = '0' ;
+               console.log(x);
+              // position += direction > 0 ? -amount : amount;
+               $(this).scrollLeft(position);
+               //event.preventDefault();
+            
+               if(position <= x ){
+                $("#me2d").attr("src","images/go_left1.png");
+            
+                if(position >x ){
+                    $("#me2d").attr("src","images/me_wal2.png");
+                }
+               }
+               if(position >x ){
+                $("#me2d").attr("src","images/me_walk.png");
+            
+               }
+
+               var _scrollTimeout = null;
+               clearTimeout(_scrollTimeout);
+               _scrollTimeout = setTimeout(function() {
+                   console.log("Haven't scrolled in 1s");
+                   $("#me2d").attr("src","images/me_walk2.png");
+
+               }, 200);
+          
+        
+               var _scrollTimeout = null;
+               clearTimeout(_scrollTimeout);
+               _scrollTimeout = setTimeout(function() {
+                   console.log("Haven't scrolled in 1s");
+                   $("#me2d").attr("src","images/me_walk3.png");
+
+               }, 250);
+ 
+               var _scrollTimeout = null;
+               clearTimeout(_scrollTimeout);
+               _scrollTimeout = setTimeout(function() {
+                   console.log("Haven't scrolled in 1s");
+                   $("#me2d").attr("src","images/me.png");
+
+               }, 350);
+
+               if(position >3475){
+                window.scrollTo( 0,1000);        
+                    //  $('html,body').animate({
+                    //         scrollTop: $("#me").offset().top},
+                    //         'slow');
+
+                    $('#me').css({border:'3px solid #eee',borderRadius:'300px',padding:'20px',backgroundColor: 'rgba(90,42,205,0.5)'});
+                    $('.submarine').css({top: '-2250px', position:'relative'});
+                    $('#bubbles').css({display:'block'});
+                  
+                    $('html_level').css({display: 'flex'});
+                    $('.html_level').animate({left:'470px'},2800);
+                    $('.css_level').animate({left:'475px'},3500);
+                    $('.js_level').animate({left:'450px'},4200);
+                    $('.php_level').animate({left:'450px'},4900);
+               }
+              if(position<3499 && position <=0){
+                
+        //         $('html,body').animate({
+        //   scrollTop: 0},
+        //   'slow');
+         }
+         //     $('html,body').animate({
+        //         scrollTop: $("#me").offset().top},
+        //         'slow');
+         
+          
+            if (position > 3499) {
+                $('#me').addClass('me');
+                $('#me').slideDown(1000);
+
+                 $('#me2d').css({top: '0px', position:'relative'});
+
+           
+            } else {
+        
+                //$('#me2d').slideUp(300);
+                $('#me').removeClass('me');
+                $('#me2d').css({top: '0px', position:'relative'});
+                $('#me').css({border:'0px solid white',borderRadius:'300px',padding:'0px',backgroundColor: 'rgba(0,0,0,0)'});
+                $('#bubbles').css({display:'none'});
+            }
+
+            if (position < 3499){
+                
+                $('#me').css({top: '340px', position:'fixed'})
+                //    $('html,body').animate({
+                //     scrollTop: $("#me").offset().top},
+                //     'slow');
+                $('.submarine').css({top: '-3350px', position:'relative'});
+                $('#me').css({border:'0px solid white',borderRadius:'300px',padding:'0px',backgroundColor: 'rgba(0,0,0,0)'});
+                window.scrollTo( 0,0);   
+
+            }
+          
+
+            if (position > 8690){
+
+                $('#me2d').css({top: '0px', position:'relative'});
+                $('.submarine').css({top: '-3350px', position:'relative'});
+              //  $('#me').css({border:'0px solid white',borderRadius:'300px',padding:'0px',backgroundColor: 'rgba(0,0,0,0)'});
+                window.scrollTo( 0,0);   
+                $('#me').removeClass('me');
+                $('#bubbles').css({display:'none'});
+                
+            }
+            if (position > 8710){
+                $('#me').css({border:'0px solid white',borderRadius:'300px',padding:'20px',backgroundColor: 'rgba(0,0,0,0)'});   
+            }
+        else if(position <= 8690 && position>=3499){
+            $('.submarine').css({top: '-2250px', position:'relative'});
+            //$('#me2d').slideUp(300);
+            $('#me2d').css({top: '0px', position:'relative'});
+            $('#me').addClass('me');
+            $('#bubbles').css({display:'block'});
+        }
+             
+            // if (position >=0 && position < 3799){
+            //     $('#me').css({top: '305px', position:'fixed'})
+            //    $('html,body').animate({
+            //     scrollTop: $(".scene2").offset().top},
+            //     'slow');
+           
+            //     }
+                //$('#me').css({top: '305px', position:'fixed'});
+                if (position > 900) {
+                     $('.greet').fadeIn(300);
+                   // alert('hello');
+                 } else {
+                      $('.greet').fadeOut(300);
+                 }
+                 if (position > 2200) {
+                    $('.educ').slideDown(500);
+                  // alert('hello');
+                } else {
+                     $('.educ').slideUp(500);
+                }
+
+                if (position > 2200) {
+                    $('#cloud1').css({position:'absolute'});
+                  // alert('hello');
+                } 
+                if (position > 2200) {
+                    $('#cloud2').css({position:'absolute'});
+                  // alert('hello');
+                } 
+
+                 if (position >3490) {
+                    $('.submarine').fadeIn(200);
+                    $('.submarine').css({zIndex:'99'});
+                  $('.submarine').animate({left:'20px'},2800);
+                  // alert('hello');
+
+                } 
+           if(position >= 3600) {
+              
+                $('.submarine').animate({left:'4500px'},2800);
+                // $('.submarine').fadeOut(300);
+                 }
+
+        
+       })
+       
+       
+   // };
+   
+//});
+
+    }
+ 
+    
+    if (touchendX > touchstartX) {
+        console.log('Swiped right');
+    }
+    
+    if (touchendY < touchstartY) {
+        console.log('Swiped up');
+    }
+    
+    if (touchendY > touchstartY) {
+       console.log('Swiped down');
+    }
+    
+    if (touchendY === touchstartY) {
+       console.log('Tap');
+    }
+  
+}
 </script>
 
    
