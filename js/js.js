@@ -106,6 +106,8 @@ jQuery(function ($) {
                 //    $('html,body').animate({
                 //     scrollTop: $("#me").offset().top},
                 //     'slow');
+                $('#cloud1').css({position:'fixed'});
+                $('#cloud2').css({position:'fixed'});
                 $('.submarine').css({top: '-3350px', position:'relative'});
                 $('#me').css({border:'0px solid white',borderRadius:'300px',padding:'0px',backgroundColor: 'rgba(0,0,0,0)'});
                 window.scrollTo( 0,0);   
@@ -143,7 +145,10 @@ jQuery(function ($) {
             //     }
                 //$('#me').css({top: '305px', position:'fixed'});
                 if (position > 900) {
-                     $('.greet').fadeIn(300);
+                   // $('.greet').css('');
+                     $('.greet').slideDown(500);
+
+
                    // alert('hello');
                  } else {
                       $('.greet').fadeOut(300);
@@ -155,14 +160,20 @@ jQuery(function ($) {
                      $('.educ').slideUp(500);
                 }
 
-                if (position > 2200) {
+                if (position > 3490) {
                     $('#cloud1').css({position:'absolute'});
                   // alert('hello');
                 } 
-                if (position > 2200) {
+                if (position > 3490) {
                     $('#cloud2').css({position:'absolute'});
                   // alert('hello');
                 } 
+
+                if (position < 3440) {
+                  
+               
+                } 
+             
 
                  if (position >3490) {
                     $('.submarine').fadeIn(200);
