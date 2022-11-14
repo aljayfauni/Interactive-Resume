@@ -23,9 +23,7 @@ jQuery(function ($) {
                if(position <= x ){
                 $("#me2d").attr("src","images/go_left1.png");
             
-                if(position >x ){
-                    $("#me2d").attr("src","images/me_wal2.png");
-                }
+            
                }
                if(position >x ){
                 $("#me2d").attr("src","images/me_walk.png");
@@ -436,4 +434,97 @@ $(document).ready(function() {
 
 // }
 
+window.addEventListener('wheel', function(event)
+{
+ if (event.deltaY < 0)
+ {
+    //$("#me2d").attr("src","images/go_left1.png");
+    var _scrollTimeout = null;
+    clearTimeout(_scrollTimeout);
+    _scrollTimeout = setTimeout(function() {
+        console.log("Haven't scrolled in 1s");
+        $("#me2d").attr("src","images/go_left1.png");
+
+    }, 200);
+    var _scrollTimeout = null;
+    clearTimeout(_scrollTimeout);
+    _scrollTimeout = setTimeout(function() {
+        console.log("Haven't scrolled in 1s");
+        $("#me2d").attr("src","images/go_left1.png");
+
+    }, 250);
+    var _scrollTimeout = null;
+    clearTimeout(_scrollTimeout);
+    _scrollTimeout = setTimeout(function() {
+        console.log("Haven't scrolled in 1s");
+        $("#me2d").attr("src","images/go_left1.png");
+
+    }, 300);
+   
+
+ 
+    var _scrollTimeout = null;
+    clearTimeout(_scrollTimeout);
+    _scrollTimeout = setTimeout(function() {
+        console.log("Haven't scrolled in 1s");
+        $("#me2d").attr("src","images/go_left4.png");
+
+    }, 350);
+    var _scrollTimeout = null;
+    clearTimeout(_scrollTimeout);
+    _scrollTimeout = setTimeout(function() {
+        console.log("Haven't scrolled in 1s");
+        $("#me2d").attr("src","images/go_left4.png");
+
+    }, 380);
+    var _scrollTimeout = null;
+    clearTimeout(_scrollTimeout);
+    _scrollTimeout = setTimeout(function() {
+        console.log("Haven't scrolled in 1s");
+        $("#me2d").attr("src","images/go_left4.png");
+
+    }, 400);
+    
+
+  
+    var _scrollTimeout = null;
+    clearTimeout(_scrollTimeout);
+    _scrollTimeout = setTimeout(function() {
+        console.log("Haven't scrolled in 1s");
+        $("#me2d").attr("src","images/go_left3.png");
+
+    }, 450);
+    var _scrollTimeout = null;
+    clearTimeout(_scrollTimeout);
+    _scrollTimeout = setTimeout(function() {
+        console.log("Haven't scrolled in 1s");
+        $("#me2d").attr("src","images/go_left3.png");
+
+    }, 480);
+    var _scrollTimeout = null;
+    clearTimeout(_scrollTimeout);
+    _scrollTimeout = setTimeout(function() {
+        console.log("Haven't scrolled in 1s");
+        $("#me2d").attr("src","images/go_left3.png");
+
+    }, 500);
+   
+   
+
+    var _scrollTimeout = null;
+    clearTimeout(_scrollTimeout);
+    _scrollTimeout = setTimeout(function() {
+        console.log("Haven't scrolled in 1s");
+        $("#me2d").attr("src","images/me.png");
+
+    }, 700);
+  console.log('scrolling up');
+
+ }
+ else if (event.deltaY > 0)
+ {
+  console.log('scrolling down');
+ 
+ }
+});
 
