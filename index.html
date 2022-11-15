@@ -1,442 +1,532 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=0.4">
-    <link rel="icon" type="image/x-icon" href="images/favicon.JPG">
-    <link rel="stylesheet" href="styles/bg.css">
-    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js" integrity="sha512-f5HTYZYTDZelxS7LEQYv8ppMHTZ6JJWglzeQmr0CVTS70vJgaJiIO15ALqI7bhsracojbXkezUIL+35UXwwGrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script
-    src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="crossorigin="anonymous"></script>
-    <script src="js/js.js"></script>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=0.4">
+      <link rel="icon" type="image/x-icon" href="images/favicon.JPG">
+      <link rel="stylesheet" href="styles/bg.css">
+      <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js" integrity="sha512-f5HTYZYTDZelxS7LEQYv8ppMHTZ6JJWglzeQmr0CVTS70vJgaJiIO15ALqI7bhsracojbXkezUIL+35UXwwGrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script
+         src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="crossorigin="anonymous"></script>
+      <script src="js/js.js"></script>
+      
+      <title>Alj Interactive Resume</title>
+      <style>
+         body ,h3{
+         font-weight: 300;
+         -webkit-overflow-scrolling: touch;
+         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+         }
+         h1,h2{
+         font-family: 'Lobster';
+         font-weight: 100; 
+         }
+         .greet > h1 ,h2{
+         width:400px;
+         }
+         @media only screen and (max-width: 800px) {
+    ::-webkit-scrollbar {
+        --webkit-appearance: none;
+     
+    }
+    html{
+    
+    --webkit-appearance: none;
+    overflow-y: hidden;
+    overflow-x: hidden; 
    
-    <title>Alj Interactive Resume</title>
-    <style>
-        body ,h3{
-    font-weight: 300;
-    -webkit-overflow-scrolling: touch;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  scroll-behavior: auto; 
 }
-h1,h2{
-    font-family: 'Lobster';
-    font-weight: 100; 
+#box{
+overflow-y: auto;
+overflow-x: auto;
+
 }
-.greet > h1 ,h2{
-    width:400px;
+body{
+--webkit-appearance: none;
+
 }
-    </style>
-</head>
-<body >
-    <div id="loading" style="position:absolute;top:0px;left:0px;margin:0 auto;min-height:3000px;background:blueviolet;width:100%;border: px solid red;z-index:999;">
-            <div id="loading_img">
+}
+    
+    html{
+    
+            --webkit-appearance: none;
+            overflow-y: hidden;
+            overflow-x: hidden; 
+           
+          scroll-behavior: no; 
+    }
+    #box{
+        overflow-y: auto;
+        overflow-x: auto;
+     
+    }
+    body{
+        --webkit-appearance: none;
+       
+    }
+
+
+      </style>
+   </head>
+   <body >
+      <div id="loading" style="position:absolute;top:0px;left:0px;margin:0 auto;min-height:3000px;background:blueviolet;width:100%;border: px solid red;z-index:999;">
+         <div id="loading_img">
             <img src="images/loading.png" alt="" srcset="" style="width:350px;">
-            </div>
-        </div>
-    <div id="box">
-       
-        <div id="me" style="border:px solid red;max-width:100%;padding:5px;position:fixed;top:340px;z-index: 99;left:500px;">
-         
-            <img src="images/me.png" id ="me2d" alt="" srcset="" style="width:94px;height:auto;position:relative; z-index: 99;">
-        </div>
-        <div id="bubbles"style="display:none;position:fixed;top:350px;left:570px;z-index: 99;width:10px;height:10px;border-radius:100px;border:2px solid white;"></div>
-        <div class="scene1 scene" style="color:white;">
+         </div>
+      </div>
+      <div id="box">
+         <div id="me" style="border:px solid red;max-width:100%;padding:5px;position:fixed;top:340px;z-index: 99;left:500px;">
+            <img src="images/me.png" id ="me2d" alt="" srcset="" style="width:94px;height:auto;position:relative; z-index: 99;border:px solid violet;">
+         </div>
+         <div id="bubbles"style="display:none;position:fixed;top:350px;left:570px;z-index: 99;width:10px;height:10px;border-radius:100px;border:2px solid white;"></div>
+         <div class="scene1 scene" style="color:white;">
             <div class="scene1-wrapper">
-                <div id="cloud1" style="flex:0;position:fixed;top:35px;left:30px;background-image:url('images/cloud.png');width:180px;height: 120px;  background-repeat: no-repeat;background-size: cover;"></div>
-                <div id="cloud2" style="flex:0;position:fixed;top:20px;left:900px;background-image:url('images/cloud.png');width:180px;height: 120px;  background-repeat: no-repeat;background-size: cover;"></div>
-       
-              <div class="scene1-items " style="position: relative; z-index:3;display:flex;flex-wrap:wrap;border:px solid green;width:100%;height:auto;padding:10px;margin-top:0px;align-items: center;">
-                <div class="start" style="flex:0 0 400px;margin-top:-280px;margin-left:350px;border:px solid white;width:0px;height:auto;">
-                <h1 style="z-index:1;font-size: 120px;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color:rgb(243, 240, 240);border:px solid rgb(219, 71, 71);width:400px;">START</h1>
-                <div class='scroll'style="color:white;background-color:#fb4848;font-size: 28px;width:400px;border:px solid blue;width:400px;"><h1 style="font-size: 28px;">Scroll down To Interact</h1></div>
-               </div> 
-                 <div class="house" style="margin-top:0px;flex:0 0 400px;border:px solid red;border:px solid yellow;">
-                    <img src="images/house1.png" alt="" srcset=""style="width:650px;margin-top:150px;">  
-                </div>
-                
-                   
-                    <div class="about-wrapper" style="flex:0;margin-top:-300px;margin-left:100px;">
-                    <div style="z-index:1;border:2px solid white;padding:12px;width:400px;background-color:dodgerblue;" >
-                        <h2 style="color:white;font-size: 28px;">About Me</h2>  
-                    </div>
-                    <div class ='greet'style="z-index:1;border:2px solid white;width:400px;background-color:#f43269;padding:12px;display:none;" >
+               <div id="cloud1" style="flex:0;position:absolute;top:35px;left:30px;background-image:url('images/cloud.png');width:180px;height: 120px;  background-repeat: no-repeat;background-size: cover;"></div>
+               <div id="cloud2" style="flex:0;position:absolute;top:20px;left:900px;background-image:url('images/cloud.png');width:180px;height: 120px;  background-repeat: no-repeat;background-size: cover;"></div>
+               <div id="cloud3" style="flex:0;position:absolute;top:36px;left:1900px;background-image:url('images/cloud.png');width:180px;height: 120px;  background-repeat: no-repeat;background-size: cover;"></div>
+               <div id="cloud4" style="flex:0;position:absolute;top:20px;left:3300px;background-image:url('images/cloud.png');width:180px;height: 120px;  background-repeat: no-repeat;background-size: cover;"></div>
+               <div id="cloud5" style="flex:0;position:absolute;top:35px;left:4200px;background-image:url('images/cloud.png');width:180px;height: 120px;  background-repeat: no-repeat;background-size: cover;"></div>
+               <div class="scene1-items " style="position: relative; z-index:3;display:flex;flex-wrap:wrap;border:px solid green;width:100%;height:auto;padding:10px;margin-top:0px;align-items: center;">
+                  <div class="start" style="flex:0 0 400px;margin-top:-280px;margin-left:350px;border:px solid white;width:0px;height:auto;">
+                     <h1 style="z-index:1;font-size: 120px;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color:rgb(243, 240, 240);border:px solid rgb(219, 71, 71);width:400px;">START</h1>
+                     <div class='scroll'style="color:white;background-color:#fb4848;font-size: 28px;width:400px;border:px solid blue;width:400px;">
+                        <h1 style="font-size: 28px;">Scroll down To Interact</h1>
+                     </div>
+                  </div>
+                  <div class="house" style="margin-top:0px;flex:0 0 400px;border:px solid red;border:px solid yellow;">
+                     <img src="images/house1.png" alt="" srcset=""style="width:650px;margin-top:150px;">  
+                  </div>
+                  <div class="about-wrapper" style="flex:0;margin-top:-300px;margin-left:100px;">
+                     <div style="z-index:1;border:2px solid white;padding:12px;width:400px;background-color:dodgerblue;" >
+                        <h2 style="color:white;font-size: 28px;">About Me</h2>
+                     </div>
+                     <div class ='greet'style="z-index:1;border:2px solid white;width:400px;background-color:#f43269;padding:12px;display:none;" >
                         <h3 style="color:white;font-size: 28px;">Hi! I'm Alj</h3>
                         <h3 style="color:white;font-size: 24px;">"Programmer / Web Developer  .</h3>
-                    </div>
-                </div>
-                    <!-- end about -->
-                    <div class="school" style="flex:0;border:px solid rgb(60, 42, 176);width:800px;margin-top:0px;margin-left:300px;z-index: auto;">
-                        <img src="images/school.png" alt="" srcset=""style="width:500px;margin-top:35px;">
-                    </div>
-                    <div class="education-wrapper" style="flex:0;margin-top:-300px;margin-left:100px;">
-                    <div style="z-index:1;border:2px solid white;width:400px;padding:12px;background-color:#ff1e6c;" >
+                     </div>
+                  </div>
+                  <!-- end about -->
+                  <div class="school" style="flex:0;border:px solid rgb(60, 42, 176);width:800px;margin-top:0px;margin-left:300px;z-index: auto;">
+                     <img src="images/school.png" alt="" srcset=""style="width:500px;margin-top:35px;">
+                  </div>
+                  <div class="education-wrapper" style="flex:0;margin-top:-300px;margin-left:100px;">
+                     <div style="z-index:1;border:2px solid white;width:400px;padding:12px;background-color:#ff1e6c;" >
                         <h1 style="color:white;font-size: 28px;">Educational Attainment</h1>
-    
-                    </div>
-                    <div class ='educ'style="z-index:1;border:2px solid white;width:400px;background-color:#5b65dc;padding:12px;display:none;" >
+                     </div>
+                     <div class ='educ'style="z-index:1;border:2px solid white;width:400px;background-color:#5b65dc;padding:12px;display:none;" >
                         <h3 style="color:white;font-size: 20px;">> Imus Institute of Science and Technology<br>Bachelor Of Science In Computer Science </h3>
-                        
                         <h3 style="color:white;font-size: 20px;">> Datacom Institute of Computer Technology<br> Associate Degree 2years course <br>Multimedia and Information Technology</h3>
-                    </div>
-                    </div> 
-                         <!-- end education -->
-                    <div class="skill" style="flex:0;width:100%;margin-top:-25px;margin-left:310px;height:290px;    background-repeat: no-repeat;background-size:100%;z-index: 99;">
-                        <img src="images/skills.png" alt="" srcset=""style="width:430px;"> 
-                   </div>
-                </div>
+                     </div>
+                  </div>
+                  <!-- end education -->
+                  <div class="skill" style="flex:0;width:100%;margin-top:-25px;margin-left:310px;height:290px;    background-repeat: no-repeat;background-size:100%;z-index: 99;">
+                     <img src="images/skills.png" alt="" srcset=""style="width:430px;"> 
+                  </div>
+               </div>
             </div>
-
-                <!-- <end scene1 items > -->
-                <div class="ground" style="position: relative;margin-top:550px;background-image:url('images/ground.png');width:100%;height:3000px;background-size: 110px 50px;  background-repeat: repeat;z-index:3;"></div>
-                
-                <div class="grass1" style="position: relative;margin-top:-3000px;background-image:url('images/green.png');background-size: 110px 50px;    background-repeat: repeat-x;border:px solid red;z-index:3;">
+            <!-- <end scene1 items > -->
+            <div class="ground" style="position: relative;margin-top:550px;background-image:url('images/ground.png');width:100%;height:3000px;background-size: 110px 50px;  background-repeat: repeat;z-index:3;"></div>
+            <div class="grass1" style="position: relative;margin-top:-3000px;background-image:url('images/green.png');background-size: 110px 50px;    background-repeat: repeat-x;border:px solid red;z-index:3;">
             </div>
-                 
-                 
-        </div>
-       <div class="scene2 scene">&nbsp;&nbsp;
-        <div class="sea-top" style="position:relative;top:395px;   background-size:550px 40px;background-image:url(images/sea-top.png);background-repeat:repeat-x;width:100%;margin-left:-1px;height:40px; z-index:2; "></div>
-        <div class="sea-deep" style="position:relative;top:380px;background:linear-gradient(0deg, rgba(11, 111, 208, 0.5), rgb(0, 128, 225)), url(images/sea.jpg);background-position:top;background-repeat:repeat;width:100%;margin-left:-1px;height:3000px; z-index:0;  "></div>
-        <div class="skills" style="display:block;position:relative;top:-2250px;left:750px;z-index: 4;width:600px;height:50px;padding:5px;border:0px solid white;background-color: #e90a58;">
-            <h1 style="font-size:32px;font-weight: 300;">{ Programming Languages / Database }</h1>
-        </div>
-        <div class="programming-skill">
-            <div class="level_skills" style="display:flex;flex-wrap:wrap;flex-direction:row;position:relative;top:-2150px;left:400px;z-index: 4;width:150px;height:auto;padding:5px;border-left:1px solid rgb(241, 238, 238); text-align: center;">
-                <h1 style="font-size:24px;font-weight: 300;background-color: #3f1674;width:100%;margin:5px;padding:2px;">Expert</h1>
-                <h1 style="font-size:24px;font-weight: 300;background-color: #3f1674;width:100%;margin:5px;padding:2px;">Advance</h1>
-                <h1 style="font-size:24px;font-weight: 300;background-color: #3f1674;width:100%;margin:5px;padding:2px;">Intermediate</h1>
-                <h1 style="font-size:24px;font-weight: 300;background-color: #3f1674;width:100%;margin:5px;padding:2px;">Elementary</h1>
-                <h1 style="font-size:24px;font-weight: 300;background-color: #3f1674;width:100%;margin:5px;padding:2px;">Beginner</h1>
-                
+         </div>
+         <div class="scene2 scene">
+            &nbsp;&nbsp;
+            <div class="sea-top" style="position:relative;top:395px;   background-size:550px 40px;background-image:url(images/sea-top.png);background-repeat:repeat-x;width:100%;margin-left:-1px;height:40px; z-index:2; "></div>
+            <div class="sea-deep" style="position:relative;top:380px;background:linear-gradient(0deg, rgba(11, 111, 208, 0.5), rgb(0, 128, 225)), url(images/sea.jpg);background-position:top;background-repeat:no-repeat;width:100%;margin-left:-1px;height:3000px; z-index:0; background-size: contain; "></div>
+            <div class="skills" style="display:block;position:relative;top:-2250px;left:750px;z-index: 4;width:600px;height:50px;padding:5px;border:0px solid white;background-color: #e90a58;">
+               <h1 style="font-size:32px;font-weight: 300;">{ Programming Languages / Database }</h1>
             </div>
-
-            <div class="html_level" style="display:flex;flex-wrap:wrap;flex-direction:column;position:relative;top:-2150px;left:1200px;z-index: 4;width:150px;height:auto;padding:5px;border-left:0px solid rgb(241, 238, 238); text-align: center;">
-                <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">
-                <img src="images/fish.png" alt="" srcset=""  style="width:50px;margin:10px;">
-                <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">
-                <img src="images/fish.png" alt="" srcset=""  style="width:50px;margin:10px;">
-                <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">
+            <div class="programming-skill">
+               <div class="level_skills" style="display:flex;flex-wrap:wrap;flex-direction:row;position:relative;top:-2150px;left:400px;z-index: 4;width:150px;height:auto;padding:5px;border-left:1px solid rgb(241, 238, 238); text-align: center;">
+                  <h1 style="font-size:24px;font-weight: 300;background-color: #3f1674;width:100%;margin:5px;padding:2px;">Expert</h1>
+                  <h1 style="font-size:24px;font-weight: 300;background-color: #3f1674;width:100%;margin:5px;padding:2px;">Advance</h1>
+                  <h1 style="font-size:24px;font-weight: 300;background-color: #3f1674;width:100%;margin:5px;padding:2px;">Intermediate</h1>
+                  <h1 style="font-size:24px;font-weight: 300;background-color: #3f1674;width:100%;margin:5px;padding:2px;">Elementary</h1>
+                  <h1 style="font-size:24px;font-weight: 300;background-color: #3f1674;width:100%;margin:5px;padding:2px;">Beginner</h1>
+               </div>
+               <div class="html_level" style="display:flex;flex-wrap:wrap;flex-direction:column;position:relative;top:-2150px;left:1200px;z-index: 4;width:150px;height:auto;padding:5px;border-left:0px solid rgb(241, 238, 238); text-align: center;">
+                  <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">
+                  <img src="images/fish.png" alt="" srcset=""  style="width:50px;margin:10px;">
+                  <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">
+                  <img src="images/fish.png" alt="" srcset=""  style="width:50px;margin:10px;">
+                  <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">
+               </div>
+               <div class="css_level" style="display:flex;flex-wrap:wrap;flex-direction:column;position:relative;top:-2150px;left:1400px;z-index: 4;width:150px;height:auto;padding:5px;border-left:0px solid rgb(241, 238, 238); text-align: center;">
+                  <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">
+                  <img src="images/fish.png" alt="" srcset=""  style="width:50px;margin:10px;">
+                  <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">
+                  <img src="images/fish.png" alt="" srcset=""  style="width:50px;margin:10px;">
+                  <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">   
+               </div>
+               <div class="js_level" style="display:flex;flex-wrap:wrap;flex-direction:column;position:relative;top:-2050px;left:1700px;z-index: 4;width:150px;height:auto;padding:5px;border-left:0px solid rgb(241, 238, 238); text-align: center;">
+                  <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">
+                  <img src="images/fish.png" alt="" srcset=""  style="width:50px;margin:10px;">
+                  <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">   
+               </div>
+               <div class="php_level" style="display:flex;flex-wrap:wrap;flex-direction:column;position:relative;top:-2100px;left:2000px;z-index: 4;width:150px;height:auto;padding:5px;border-left:0px solid rgb(241, 238, 238); text-align: center;">
+                  <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">
+                  <img src="images/fish.png" alt="" srcset=""  style="width:50px;margin:10px;">
+                  <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">
+                  <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">    
+               </div>
+               <div class="skill_html" style="display:flex;flex-wrap:wrap;flex-direction:row;position:relative;top:-2240px;left:-220px;z-index: 4;width:1200px;height:50px;margin: 10px;">
+                  <h1 style="font-size:24px;font-weight: 300;background-color: #e90a58;border:2px solid white;padding:5px;margin:10px;">HTML/HTML5</h1>
+                  <h1 style="font-size:24px;font-weight: 300;background-color: #1b1269;border:2px solid white;padding:5px;margin:10px;">CSS/CSS3</h1>
+                  <h1 style="font-size:24px;font-weight: 300;background-color: #1dcebf;padding:5px;border:2px solid white;padding: 5px;margin:10px;">Javascript</h1>
+                  <h1 style="font-size:24px;font-weight: 300;background-color: #f7aa53;border:2px solid white;padding: 5px;margin:10px;width:120px;">PHP</h1>
+                  <h1 style="font-size:24px;font-weight: 300;background-color: #b553f7;border:2px solid white;padding: 5px;margin:10px;width:120px;">MYSQL</h1>
+                  <h1 style="font-size:24px;font-weight: 300;background-color: #611579;padding: 5px;border:2px solid white;margin:10px;width:120px;">MSSQL</h1>
+               </div>
+            </div>
+            <div class="submarine" style="display:none;border:px solid rgb(60, 42, 176);width:800px;position:relative;top:-2180px;left:400px;z-index: auto;">
+               <img src="images/submarine.png" alt="" srcset=""style="width:600px;">
+            </div>
+         </div>
+         <div class="scene3 scene" style="color:white;">
+            <span style="position: relative;">&nbsp;
+            <div class="exp" style="position:relative;bottom:25px;left:-1850px;width:100%;margin-left:-3px;height:300px;    background-repeat: no-repeat;background-size:100%;z-index: 99;">
+               <img src="images/exp.png" alt="" srcset=""style="width:430px;"> 
+            </div>
+            <div class="wood-deck" style="position:relative;bottom:65px;left:-2070px;width:100%;margin-left:-3px;height:auto;    background-repeat: no-repeat;background-size:100%;">
+               <img src="images/wood-decking.png" alt="" srcset=""style="width:270px;"> 
+            </div>
+            <div  style="perspective: 500px;width:100%;height:100px;z-index:99;border:px solid red;">
+               <div class="road" style="position:relative;bottom:225px;background-image:url(images/road.png);background-size:900px 80px;background-repeat:repeat-x;width:100%;margin-left:31px;min-height:100%; z-index:3; transform-style: preserve-3d;
+                  transform: rotateX(20deg);"></div>
+            </div>
+            <div class="ground-deep" style="z-index:1;position:relative;bottom:253px;background-color: rgb(77, 76, 76);width:100%;margin-left:-7px;height:3000px;   "></div>
+            <div style="position:relative;top:-910px;left:1900px;z-index:1;border:2px solid white;width:400px;padding:12px;background-color:dodgerblue;" >
+            </div>
+         </div>
+         <div class="scene4 scene"></div>
+         <div class="scene5  scene"></div>
+         <div class="scene6 scene"></div>
+      </div>
+      s
+   </body>
+   <script>
+      $(window).on("load",function(){
+      	 $("#loading").slideToggle(3000);
+      })
+      
+      let touchstartX = 0;
+      let touchstartY = 0;
+      let touchendX = 0;
+      let touchendY = 0;
+      
+      const gestureZone = document.getElementById('box');
+      
+      gestureZone.addEventListener('touchstart', function(event) {
+          touchstartX = event.changedTouches[0].screenX;
+          touchstartY = event.changedTouches[0].screenY;
+          //$('#box').hscroll(60); // You can pass (optionally) scrolling amount
+      }, false);
+      
+      gestureZone.addEventListener('touchend', function(event) {
+          touchendX = event.changedTouches[0].screenX;
+          touchendY = event.changedTouches[0].screenY;
+          handleGesture();
+      }, false); 
+      
+      function handleGesture() {
+          if (touchendX < touchstartX) {
+              console.log('Swiped left');
+      
+             // jQuery(function ($) {
+         // $.fn.hscroll = function (amount) {
+           //   amount = amount || 120;
            
+           
+             $('#box').bind(" touchmove", function (event) {
+                  var oEvent = event.originalEvent, 
+                     // direction = oEvent.detail ? oEvent.detail * - : oEvent.wheelDelta, 
+                      position = $(this).scrollLeft();
+                      positionX =  $(this).scrollLeft();
+                 
+                      console.log(position);
+                  ;
+                  const container = document.querySelector('#box')
+                     var me_ofset =  document.getElementById('box');
+                     x = container.scrollLeft = '0' ;
+                     console.log(x);
+                    // position += direction > 0 ? -amount : amount;
+                     $(this).scrollLeft(position);
+                     //event.preventDefault();
+                  
+                     if(position <= x ){
+                      $("#me2d").attr("src","images/go_left1.png");
+                  
+                      if(position >x ){
+                          $("#me2d").attr("src","images/me_wal2.png");
+                      }
+                     }
+                     if(position >x ){
+                      $("#me2d").attr("src","images/me_walk.png");
+                  
+                     }
+      
+                     var _scrollTimeout = null;
+                     clearTimeout(_scrollTimeout);
+                     _scrollTimeout = setTimeout(function() {
+                         console.log("Haven't scrolled in 1s");
+                         $("#me2d").attr("src","images/me_walk2.png");
+      
+                     }, 200);
+                
+              
+                     var _scrollTimeout = null;
+                     clearTimeout(_scrollTimeout);
+                     _scrollTimeout = setTimeout(function() {
+                         console.log("Haven't scrolled in 1s");
+                         $("#me2d").attr("src","images/me_walk3.png");
+      
+                     }, 250);
+       
+                     var _scrollTimeout = null;
+                     clearTimeout(_scrollTimeout);
+                     _scrollTimeout = setTimeout(function() {
+                         console.log("Haven't scrolled in 1s");
+                         $("#me2d").attr("src","images/me.png");
+      
+                     }, 350);
+      
+                     if(position >3475){
+                      window.scrollTo( 0,1000);        
+                          //  $('html,body').animate({
+                          //         scrollTop: $("#me").offset().top},
+                          //         'slow');
+      
+                          $('#me').css({border:'3px solid #eee',borderRadius:'300px',padding:'20px',backgroundColor: 'rgba(90,42,205,0.5)'});
+                          $('.submarine').css({top: '-2250px', position:'relative'});
+                          $('#bubbles').css({display:'block'});
+                        
+                          $('html_level').css({display: 'flex'});
+                          $('.html_level').animate({left:'470px'},2800);
+                          $('.css_level').animate({left:'475px'},3500);
+                          $('.js_level').animate({left:'450px'},4200);
+                          $('.php_level').animate({left:'450px'},4900);
+                     }
+                    if(position<3499 && position <=0){
+                      
+              //         $('html,body').animate({
+              //   scrollTop: 0},
+              //   'slow');
+               }
+               //     $('html,body').animate({
+              //         scrollTop: $("#me").offset().top},
+              //         'slow');
                
                 
-            </div>
-            <div class="css_level" style="display:flex;flex-wrap:wrap;flex-direction:column;position:relative;top:-2150px;left:1400px;z-index: 4;width:150px;height:auto;padding:5px;border-left:0px solid rgb(241, 238, 238); text-align: center;">
-                <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">
-                <img src="images/fish.png" alt="" srcset=""  style="width:50px;margin:10px;">
-                <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">
-                <img src="images/fish.png" alt="" srcset=""  style="width:50px;margin:10px;">
-                <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">   
-            </div>
-
-            <div class="js_level" style="display:flex;flex-wrap:wrap;flex-direction:column;position:relative;top:-2050px;left:1700px;z-index: 4;width:150px;height:auto;padding:5px;border-left:0px solid rgb(241, 238, 238); text-align: center;">
-
-                <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">
-                <img src="images/fish.png" alt="" srcset=""  style="width:50px;margin:10px;">
-                <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">   
-            </div>
-
-            <div class="php_level" style="display:flex;flex-wrap:wrap;flex-direction:column;position:relative;top:-2100px;left:2000px;z-index: 4;width:150px;height:auto;padding:5px;border-left:0px solid rgb(241, 238, 238); text-align: center;">
-
-                <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">
-                <img src="images/fish.png" alt="" srcset=""  style="width:50px;margin:10px;">
-                <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">
-                <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">    
-            </div>
-          
-        
-        <div class="skill_html" style="display:flex;flex-wrap:wrap;flex-direction:row;position:relative;top:-2240px;left:-220px;z-index: 4;width:1200px;height:50px;margin: 10px;">
-            <h1 style="font-size:24px;font-weight: 300;background-color: #e90a58;border:2px solid white;padding:5px;margin:10px;">HTML/HTML5</h1>
-        
-        
-            <h1 style="font-size:24px;font-weight: 300;background-color: #1b1269;border:2px solid white;padding:5px;margin:10px;">CSS/CSS3</h1>
-       
-        
-            <h1 style="font-size:24px;font-weight: 300;background-color: #1dcebf;padding:5px;border:2px solid white;padding: 5px;margin:10px;">Javascript</h1>
-       
-        
-            <h1 style="font-size:24px;font-weight: 300;background-color: #f7aa53;border:2px solid white;padding: 5px;margin:10px;width:120px;">PHP</h1>
-    
-        
-            <h1 style="font-size:24px;font-weight: 300;background-color: #b553f7;border:2px solid white;padding: 5px;margin:10px;width:120px;">MYSQL</h1>
+                  if (position > 3499) {
+                      $('#me').addClass('me');
+                      $('#me').slideDown(1000);
       
-       
-            <h1 style="font-size:24px;font-weight: 300;background-color: #611579;padding: 5px;border:2px solid white;margin:10px;width:120px;">MSSQL</h1>
-        </div>
-        
-    </div> 
-        <div class="submarine" style="display:none;border:px solid rgb(60, 42, 176);width:800px;position:relative;top:-2180px;left:400px;z-index: auto;">
-            <img src="images/submarine.png" alt="" srcset=""style="width:600px;">
-       
-        </div>
-       
-
-       </div>
-       <div class="scene3 scene" style="color:white;"><span style="position: relative;">&nbsp;
-        
-        <div class="exp" style="position:relative;bottom:25px;left:-1850px;width:100%;margin-left:-3px;height:300px;    background-repeat: no-repeat;background-size:100%;z-index: 99;">
-            <img src="images/exp.png" alt="" srcset=""style="width:430px;"> 
-       </div>
-        <div class="wood-deck" style="position:relative;bottom:65px;left:-2070px;width:100%;margin-left:-3px;height:auto;    background-repeat: no-repeat;background-size:100%;">
-             <img src="images/wood-decking.png" alt="" srcset=""style="width:270px;"> 
-        </div>
+                       $('#me2d').css({top: '0px', position:'relative'});
       
-        <div  style="perspective: 500px;width:100%;height:100px;z-index:99;border:px solid red;">
-        <div class="road" style="position:relative;bottom:225px;background-image:url(images/road.png);background-size:900px 80px;background-repeat:repeat-x;width:100%;margin-left:31px;min-height:100%; z-index:3; transform-style: preserve-3d;
-        transform: rotateX(20deg);"></div></div>
-        <div class="ground-deep" style="z-index:1;position:relative;bottom:253px;background-color: rgb(77, 76, 76);width:100%;margin-left:-7px;height:3000px;   "></div>
-    
-        <div style="position:relative;top:-910px;left:1900px;z-index:1;border:2px solid white;width:400px;padding:12px;background-color:dodgerblue;" >
-           
-       </div>
-     
-       </div>
-       <div class="scene4 scene"></div>
-       <div class="scene5  scene"></div>
-       <div class="scene6 scene"></div>
-     
-     </div>s
-    
-</body>
-<script>
- 
-$(window).on("load",function(){
-	 $("#loading").slideToggle(3000);
-})
-
-
-
-
-let touchstartX = 0;
-let touchstartY = 0;
-let touchendX = 0;
-let touchendY = 0;
-
-const gestureZone = document.getElementById('box');
-
-gestureZone.addEventListener('touchstart', function(event) {
-    touchstartX = event.changedTouches[0].screenX;
-    touchstartY = event.changedTouches[0].screenY;
-    //$('#box').hscroll(60); // You can pass (optionally) scrolling amount
-}, false);
-
-gestureZone.addEventListener('touchend', function(event) {
-    touchendX = event.changedTouches[0].screenX;
-    touchendY = event.changedTouches[0].screenY;
-    handleGesture();
-}, false); 
-
-function handleGesture() {
-    if (touchendX < touchstartX) {
-        console.log('Swiped left');
-
-       // jQuery(function ($) {
-   // $.fn.hscroll = function (amount) {
-     //   amount = amount || 120;
-     
-     
-       $('#box').bind(" touchmove", function (event) {
-            var oEvent = event.originalEvent, 
-               // direction = oEvent.detail ? oEvent.detail * - : oEvent.wheelDelta, 
-                position = $(this).scrollLeft();
-                positionX =  $(this).scrollLeft();
-           
-                console.log(position);
-            ;
-            const container = document.querySelector('#box')
-               var me_ofset =  document.getElementById('box');
-               x = container.scrollLeft = '0' ;
-               console.log(x);
-              // position += direction > 0 ? -amount : amount;
-               $(this).scrollLeft(position);
-               //event.preventDefault();
-            
-               if(position <= x ){
-                $("#me2d").attr("src","images/go_left1.png");
-            
-                if(position >x ){
-                    $("#me2d").attr("src","images/me_wal2.png");
-                }
-               }
-               if(position >x ){
-                $("#me2d").attr("src","images/me_walk.png");
-            
-               }
-
-               var _scrollTimeout = null;
-               clearTimeout(_scrollTimeout);
-               _scrollTimeout = setTimeout(function() {
-                   console.log("Haven't scrolled in 1s");
-                   $("#me2d").attr("src","images/me_walk2.png");
-
-               }, 200);
-          
-        
-               var _scrollTimeout = null;
-               clearTimeout(_scrollTimeout);
-               _scrollTimeout = setTimeout(function() {
-                   console.log("Haven't scrolled in 1s");
-                   $("#me2d").attr("src","images/me_walk3.png");
-
-               }, 250);
- 
-               var _scrollTimeout = null;
-               clearTimeout(_scrollTimeout);
-               _scrollTimeout = setTimeout(function() {
-                   console.log("Haven't scrolled in 1s");
-                   $("#me2d").attr("src","images/me.png");
-
-               }, 350);
-
-               if(position >3475){
-                window.scrollTo( 0,1000);        
-                    //  $('html,body').animate({
-                    //         scrollTop: $("#me").offset().top},
-                    //         'slow');
-
-                    $('#me').css({border:'3px solid #eee',borderRadius:'300px',padding:'20px',backgroundColor: 'rgba(90,42,205,0.5)'});
-                    $('.submarine').css({top: '-2250px', position:'relative'});
-                    $('#bubbles').css({display:'block'});
-                  
-                    $('html_level').css({display: 'flex'});
-                    $('.html_level').animate({left:'470px'},2800);
-                    $('.css_level').animate({left:'475px'},3500);
-                    $('.js_level').animate({left:'450px'},4200);
-                    $('.php_level').animate({left:'450px'},4900);
-               }
-              if(position<3499 && position <=0){
-                
-        //         $('html,body').animate({
-        //   scrollTop: 0},
-        //   'slow');
-         }
-         //     $('html,body').animate({
-        //         scrollTop: $("#me").offset().top},
-        //         'slow');
-         
-          
-            if (position > 3499) {
-                $('#me').addClass('me');
-                $('#me').slideDown(1000);
-
-                 $('#me2d').css({top: '0px', position:'relative'});
-
-           
-            } else {
-        
-                //$('#me2d').slideUp(300);
-                $('#me').removeClass('me');
-                $('#me2d').css({top: '0px', position:'relative'});
-                $('#me').css({border:'0px solid white',borderRadius:'300px',padding:'0px',backgroundColor: 'rgba(0,0,0,0)'});
-                $('#bubbles').css({display:'none'});
-            }
-
-            if (position < 3499){
-                
-                $('#me').css({top: '340px', position:'fixed'})
-                //    $('html,body').animate({
-                //     scrollTop: $("#me").offset().top},
-                //     'slow');
-                $('.submarine').css({top: '-3350px', position:'relative'});
-                $('#me').css({border:'0px solid white',borderRadius:'300px',padding:'0px',backgroundColor: 'rgba(0,0,0,0)'});
-                window.scrollTo( 0,0);   
-
-            }
-          
-
-            if (position > 8690){
-
-                $('#me2d').css({top: '0px', position:'relative'});
-                $('.submarine').css({top: '-3350px', position:'relative'});
-              //  $('#me').css({border:'0px solid white',borderRadius:'300px',padding:'0px',backgroundColor: 'rgba(0,0,0,0)'});
-                window.scrollTo( 0,0);   
-                $('#me').removeClass('me');
-                $('#bubbles').css({display:'none'});
-                
-            }
-            if (position > 8710){
-                $('#me').css({border:'0px solid white',borderRadius:'300px',padding:'20px',backgroundColor: 'rgba(0,0,0,0)'});   
-            }
-        else if(position <= 8690 && position>=3499){
-            $('.submarine').css({top: '-2250px', position:'relative'});
-            //$('#me2d').slideUp(300);
-            $('#me2d').css({top: '0px', position:'relative'});
-            $('#me').addClass('me');
-            $('#bubbles').css({display:'block'});
-        }
-             
-            // if (position >=0 && position < 3799){
-            //     $('#me').css({top: '305px', position:'fixed'})
-            //    $('html,body').animate({
-            //     scrollTop: $(".scene2").offset().top},
-            //     'slow');
-           
-            //     }
-                //$('#me').css({top: '305px', position:'fixed'});
-                if (position > 900) {
-                     $('.greet').fadeIn(300);
-                   // alert('hello');
-                 } else {
-                      $('.greet').fadeOut(300);
-                 }
-                 if (position > 2200) {
-                    $('.educ').slideDown(500);
-                  // alert('hello');
-                } else {
-                     $('.educ').slideUp(500);
-                }
-
-                if (position > 2200) {
-                    $('#cloud1').css({position:'absolute'});
-                  // alert('hello');
-                } 
-                if (position > 2200) {
-                    $('#cloud2').css({position:'absolute'});
-                  // alert('hello');
-                } 
-
-                 if (position >3490) {
-                    $('.submarine').fadeIn(200);
-                    $('.submarine').css({zIndex:'99'});
-                  $('.submarine').animate({left:'20px'},2800);
-                  // alert('hello');
-
-                } 
-           if(position >= 3600) {
+                 
+                  } else {
               
-                $('.submarine').animate({left:'4500px'},2800);
-                // $('.submarine').fadeOut(300);
-                 }
+                      //$('#me2d').slideUp(300);
+                      $('#me').removeClass('me');
+                      $('#me2d').css({top: '0px', position:'relative'});
+                      $('#me').css({border:'0px solid white',borderRadius:'300px',padding:'0px',backgroundColor: 'rgba(0,0,0,0)'});
+                      $('#bubbles').css({display:'none'});
+                  }
+      
+                  if (position < 3499){
+                      
+                      $('#me').css({top: '340px', position:'fixed'})
+                      //    $('html,body').animate({
+                      //     scrollTop: $("#me").offset().top},
+                      //     'slow');
+                      $('.submarine').css({top: '-3350px', position:'relative'});
+                      $('#me').css({border:'0px solid white',borderRadius:'300px',padding:'0px',backgroundColor: 'rgba(0,0,0,0)'});
+                      window.scrollTo( 0,0);   
+      
+                  }
+                
+      
+                  if (position > 8690){
+      
+                      $('#me').css({top: '340px', position:'fixed'});
+                      $('.submarine').css({top: '-3350px', position:'relative'});
+                      //$('#me').css({border:'0px solid white',borderRadius:'300px',padding:'0px',backgroundColor: 'rgba(0,0,0,0)'});
+                       
 
+                      $('#me').removeClass('me');
+                      $('#bubbles').css({display:'none'});
+                      window.scrollTo( 0,0);  
+                  }
+                  if (position > 8720){
+                      $('#me').css({border:'0px solid white',borderRadius:'300px',padding:'20px',backgroundColor: 'rgba(0,0,0,0)'});   
+                  }
+               if(position <= 8690 && position>=3499){
+                  $('.submarine').css({top: '-2250px', position:'relative'});
+                  //$('#me2d').slideUp(300);
+                  $('#me2d').css({top: '0px', position:'relative'});
+                  $('#me').addClass('me');
+                  $('#bubbles').css({display:'block'});
+              }
+                   
+                  // if (position >=0 && position < 3799){
+                  //     $('#me').css({top: '305px', position:'fixed'})
+                  //    $('html,body').animate({
+                  //     scrollTop: $(".scene2").offset().top},
+                  //     'slow');
+                 
+                  //     }
+                      //$('#me').css({top: '305px', position:'fixed'});
+                      if (position > 900) {
+                           $('.greet').fadeIn(300);
+                         // alert('hello');
+                       } else {
+                            $('.greet').fadeOut(300);
+                       }
+                       if (position > 2200) {
+                          $('.educ').slideDown(500);
+                        // alert('hello');
+                      } else {
+                           $('.educ').slideUp(500);
+                      }
+      
+                      if (position > 2200) {
+                          $('#cloud1').css({position:'absolute'});
+                        // alert('hello');
+                      } 
+                      if (position > 2200) {
+                          $('#cloud2').css({position:'absolute'});
+                        // alert('hello');
+                      } 
+      
+                       if (position >3490) {
+                          $('.submarine').fadeIn(200);
+                          $('.submarine').css({zIndex:'99'});
+                        $('.submarine').animate({left:'20px'},2800);
+                        // alert('hello');
+      
+                      } 
+                 if(position >= 3600) {
+                    
+                      $('.submarine').animate({left:'4500px'},2800);
+                      // $('.submarine').fadeOut(300);
+                       }
+      
+              
+             })
+             
+             
+      
+      
+          }
+       
+          
+          if (touchendX > touchstartX) {
+              console.log('Swiped right');
+      
+          //$("#me2d").attr("src","images/go_left1.png");
+          var _scrollTimeout = null;
+          clearTimeout(_scrollTimeout);
+          _scrollTimeout = setTimeout(function() {
+              console.log("Haven't scrolled in 1s");
+              $("#me2d").attr("src","images/go_left1.png");
+      
+          }, 200);
+          var _scrollTimeout = null;
+          clearTimeout(_scrollTimeout);
+          _scrollTimeout = setTimeout(function() {
+              console.log("Haven't scrolled in 1s");
+              $("#me2d").attr("src","images/go_left1.png");
+      
+          }, 250);
+          var _scrollTimeout = null;
+          clearTimeout(_scrollTimeout);
+          _scrollTimeout = setTimeout(function() {
+              console.log("Haven't scrolled in 1s");
+              $("#me2d").attr("src","images/go_left1.png");
+      
+          }, 300);
+         
+      
+       
+          var _scrollTimeout = null;
+          clearTimeout(_scrollTimeout);
+          _scrollTimeout = setTimeout(function() {
+              console.log("Haven't scrolled in 1s");
+              $("#me2d").attr("src","images/go_left4.png");
+      
+          }, 350);
+          var _scrollTimeout = null;
+          clearTimeout(_scrollTimeout);
+          _scrollTimeout = setTimeout(function() {
+              console.log("Haven't scrolled in 1s");
+              $("#me2d").attr("src","images/go_left4.png");
+      
+          }, 380);
+          var _scrollTimeout = null;
+          clearTimeout(_scrollTimeout);
+          _scrollTimeout = setTimeout(function() {
+              console.log("Haven't scrolled in 1s");
+              $("#me2d").attr("src","images/go_left4.png");
+      
+          }, 400);
+          
+      
         
-       })
+          var _scrollTimeout = null;
+          clearTimeout(_scrollTimeout);
+          _scrollTimeout = setTimeout(function() {
+              console.log("Haven't scrolled in 1s");
+              $("#me2d").attr("src","images/go_left3.png");
+      
+          }, 450);
+          var _scrollTimeout = null;
+          clearTimeout(_scrollTimeout);
+          _scrollTimeout = setTimeout(function() {
+              console.log("Haven't scrolled in 1s");
+              $("#me2d").attr("src","images/go_left3.png");
+      
+          }, 480);
+          var _scrollTimeout = null;
+          clearTimeout(_scrollTimeout);
+          _scrollTimeout = setTimeout(function() {
+              console.log("Haven't scrolled in 1s");
+              $("#me2d").attr("src","images/go_left3.png");
+      
+          }, 500);
+         
+         
+      
+          var _scrollTimeout = null;
+          clearTimeout(_scrollTimeout);
+          _scrollTimeout = setTimeout(function() {
+              console.log("Haven't scrolled in 1s");
+              $("#me2d").attr("src","images/me.png");
+      
+          }, 700);
+      
+      
        
-       
-   // };
-   
-//});
-
-    }
- 
-    
-    if (touchendX > touchstartX) {
-        console.log('Swiped right');
-    }
-    
-    if (touchendY < touchstartY) {
-        console.log('Swiped up');
-    }
-    
-    if (touchendY > touchstartY) {
-       console.log('Swiped down');
-    }
-    
-    if (touchendY === touchstartY) {
-       console.log('Tap');
-    }
-  
-}
-</script>
-
-   
+      
+      
+      
+      
+          }
+          
+          if (touchendY < touchstartY) {
+              console.log('Swiped up');
+          }
+          
+          if (touchendY > touchstartY) {
+             console.log('Swiped down');
+          }
+          
+          if (touchendY === touchstartY) {
+             console.log('Tap');
+          }
+        
+      }
+   </script>
 </html>

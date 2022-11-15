@@ -2,7 +2,7 @@
 html{
     overflow-y: hidden;
     overflow-x: hidden;
-     scroll-behavior: smooth; 
+      scroll-behavior: smooth;   
 }
 body{
     background-color: rgb(113, 173, 252);
@@ -15,6 +15,7 @@ body{
 .scroll > h1{
     animation: blink-animation 1s steps(5, start) infinite;
     -webkit-animation: blink-animation 1s steps(5, start) infinite;
+
 }
 @keyframes blink-animation {
     to {
@@ -170,7 +171,7 @@ background-color: rgb(113, 173, 252);
     vertical-align: top;
     text-align: center;
 }
-@media screen and (max-width: 768px){
+@media only screen and (max-width: 900px) {
     ::-webkit-scrollbar {
         --webkit-appearance: none;
         /* scroll-behavior: smooth; */
@@ -179,10 +180,10 @@ background-color: rgb(113, 173, 252);
     html{
     
             --webkit-appearance: none;
-            /* overflow-y: hidden;
-            overflow-x: hidden; */
+            overflow-y: hidden;
+            overflow-x: hidden; 
            
-         scroll-behavior: smooth; 
+          scroll-behavior: no; 
     }
     #box{
         overflow-y: auto;
