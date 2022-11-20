@@ -43,9 +43,9 @@ var loader = document.querySelector("#loader"),
     negativepositionEndGround2 = -Math.abs(positionEndGround2),
    
 // --- start ---set position of elements and images
-$(start).css({bottom:400  }),
-$(start).css({left: 0}),
-    $(house).css({ left: $(window).width() / 1 - house.clientWidth / 1}),
+$(start).css({bottom:370  }),
+$(start).css({left: 3}),
+    $(house).css({ left: $(start).width() / 1 - start.clientWidth / 1 + 400}),
    // $(about).css({ left: $(house).width() / 1 - house.clientWidth / 1}),
  
    $(school).css({ left: 1600}),
@@ -57,9 +57,9 @@ $(start).css({left: 0}),
   
  
    
-    $(cloud1).css({ top: 70 }),
+    $(cloud1).css({ top: 25 }),
     $(cloud1).css({ left: 100 }),
-    $(cloud2).css({ top: 30 }),
+    $(cloud2).css({ top: 70 }),
     $(cloud2).css({ left: 800 }),
     $(cloud3).css({ top: 120 }),
     $(cloud3).css({ left: 1700 }),
