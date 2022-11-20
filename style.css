@@ -13,7 +13,7 @@ body {
     background: #7a1de4;
     height: 100vh;
     position: fixed;
-    width: 100vw;
+    width: 100%;
     z-index: 10019;
     display: flex;
     align-items: center
@@ -212,7 +212,7 @@ padding: 0;
    
    
 
-    animation: walk .5s steps(4 ) infinite;
+    animation: walk .4s steps(4 ) infinite;
 
 
 
@@ -226,7 +226,7 @@ padding: 0;
     width: 100px;
 
     background-size: cover;
-    animation: walk .5s steps(4) infinite;
+    animation: walk .4s steps(4) infinite;
 
 
 }

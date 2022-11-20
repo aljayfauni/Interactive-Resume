@@ -44,8 +44,9 @@ var loader = document.querySelector("#loader"),
    
 // --- start ---set position of elements and images
 $(start).css({bottom:370  }),
-$(start).css({left: 3}),
-    $(house).css({ left: $(start).width() / 1 - start.clientWidth / 1 + 400}),
+$(loader).css({left: 0}),
+$(start).css({left: 300}),
+    $(house).css({ left: $(start).width() / 1 - start.clientWidth / 1 +700}),
    // $(about).css({ left: $(house).width() / 1 - house.clientWidth / 1}),
  
    $(school).css({ left: 1600}),
