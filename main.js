@@ -95,6 +95,9 @@ $(start).css({left: 300}),
            $(blue).animate({ bottom: 0 }, 600, "linear"),
             $(ground2).animate({ bottom: ground.clientHeight - 50 }, 600, "linear"),
             $(me).animate({ bottom: 50 }, 600, "linear");
+            $('.html_level').animate({left:'500px'},2800);
+            $('.css_level').animate({left:'520px'},3500);
+            $('.js_level').animate({left:'530px'},4200);
          //
         //    $(bubble).css({ display: "block" });
            
@@ -106,6 +109,9 @@ $(start).css({left: 300}),
     function AbbassaSabbia() {
         $(ground3).animate({ bottom: 103 - ground.clientHeight }, 100, "linear"),
         $(me).animate({ bottom: 103 }, 100, "linear")
+        $('.html_level').animate({left:'2100px'},2800);
+        $('.css_level').animate({left:'2300px'},3500);
+        $('.js_level').animate({left:'2500px'},4200);
    ;
     }
     function AbbassaMare() {
@@ -113,6 +119,9 @@ $(start).css({left: 300}),
             $(blue).animate({ bottom: 103 - ground.clientHeight }, 100, "linear"),
             $(ground2).animate({ bottom: 53 }, 100, "linear"),
             $(me).animate({ bottom: 103 }, 100, "linear");
+            $('.html_level').animate({left:'2100px'},2800);
+            $('.css_level').animate({left:'2300px'},3500);
+            $('.js_level').animate({left:'2500px'},4200);
             // $(mountainbrown).animate({ bottom: 103 }, 100, "linear"),
             // $(statue).animate({ bottom: 103 }, 100, "linear"),
             // $(nybuilding).animate({ bottom: 103 }, 100, "linear"),

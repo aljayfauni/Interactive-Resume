@@ -219,6 +219,21 @@ padding: 0;
 
     
 }
+.programming-skill{
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    color: white;
+
+}
+.skills{
+    color: white;
+    text-align: center;
+}
 
 .walk-left {
     background-image: url(./images/going_left.png);
