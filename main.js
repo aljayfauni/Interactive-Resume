@@ -1,5 +1,5 @@
-var lastScrollTop = 0,
-isFirstTimeSea = (isFirstTimeSand = isFirstTimeFinal = isFirstTimeResume = isFirstTimeSocial = !0),
+var lastScrollTop = 0,isFirstTimeSea
+in_the_sea = (isFirstTimeSand = isFirstTimeFinal = isFirstTimeResume = isFirstTimeSocial = !0),
 isFirstTimebackSea = (isFirstTimebackSand = !1);
  window.addEventListener("load", function (e) {
     setTimeout(function () {
@@ -43,22 +43,24 @@ var loader = document.querySelector("#loader"),
     negativepositionEndGround2 = -Math.abs(positionEndGround2),
    
 // --- start ---set position of elements and images
-    $(house).css({ left: $(window).width() / 1 - house.clientWidth / 1}),
+$(start).css({bottom:370  }),
+$(loader).css({left: 0}),
+$(start).css({left: 300}),
+    $(house).css({ left: $(start).width() / 1 - start.clientWidth / 1 +700}),
    // $(about).css({ left: $(house).width() / 1 - house.clientWidth / 1}),
  
    $(school).css({ left: 1600}),
-    $(education).css({ left: 1900}),
+    $(education).css({ bottom:200,left: 1900}),
     $(skill_post).css({ left: 2800}),
-    $(start).css({ left: $(window).height() / 1 - house.clientHeight / 1}),
+   // $(start).css({ left: $(window).height() / 1 - house.clientHeight / 1}),
   //  $(about).css({ left: $(window).width() /1 - about.clientWidth *2}),
     $(loader).css({ left: $(window).height() / 1 - loader.clientHeight / 1}),
-    $(start).css({top: 100 }),
-    $(start).css({left: 350 }),
+  
  
    
-    $(cloud1).css({ top: 70 }),
+    $(cloud1).css({ top: 25 }),
     $(cloud1).css({ left: 100 }),
-    $(cloud2).css({ top: 30 }),
+    $(cloud2).css({ top: 70 }),
     $(cloud2).css({ left: 800 }),
     $(cloud3).css({ top: 120 }),
     $(cloud3).css({ left: 1700 }),
@@ -67,7 +69,7 @@ var loader = document.querySelector("#loader"),
     $(me).css({ "z-index": 9998 });
     $(me).css({ "bottom": '103px' });
    
-   // $(me).css({ "left": '103px' });
+
     body = document.getElementsByTagName("body")[0];
     document_height = $(document).height() - $(window).height(),
     height_device = $(window).height(),
@@ -136,13 +138,17 @@ var loader = document.querySelector("#loader"),
                     l = window_width * (i / document_height) * 0.4,
                     n = window_width * (i / document_height) * 0.5,
                     s = window_width * (i / document_height) * 0.2;
-                   
-                    $(house).css({ left: $(window).width() / 1 - house.clientWidth / 1 + o }),
+                    
+                   // $(ground2).css({ left: scene1.clientHeight + o }),
+                    // $(house).css({ left: $(window).width() / 2 - house.clientWidth / 2 + o }),
+
+                    $(start).css({ left: 300 + o }),
+                    $(house).css({ left: $(start).position().left + start.clientWidth + 400 }),
                    // $(about).css({ left: $(window).width() / 1 - about.clientWidth / 1 + o }),
                     $(about).css({ left: $(house).position().left + house.clientWidth + 300 }),
                     $(school).css({ left: $(about).position().left + about.clientWidth + 600 }),
                     $(education).css({ left: $(school).position().left + school.clientWidth + 100 }),
-                    $(skill_post).css({ left: $(education).position().left + education.clientWidth + 1850 }),
+                    $(skill_post).css({ left: $(education).position().left + education.clientWidth + 1700 }),
                     //$(about).css({ left: 1800  }),
                     $(cloud1).css({ left: 100 + s }),
                     $(cloud2).css({ left: 800 + s }),
@@ -160,9 +166,9 @@ var loader = document.querySelector("#loader"),
                 $(ground2).css({ left: part1.clientHeight + o }),
                 $(ground3).css({ left: ground.clientWidth + blue.clientWidth + o }),
                 $(ground).position().left < negativepositionEndGround1 &&
-                    (this.isFirstTimeSea && (this.dive_in_the_sea(), (this.isFirstTimeSea = !1), (this.isFirstTimebackSea = !0))),
+                    (this.in_the_sea && (this.dive_in_the_sea(), (this.in_the_sea = !1), (this.isFirstTimebackSea = !0))),
                     $(blue).position().left < negativepositionEndGround2 && this.isFirstTimeSand && (this.AbbassaMare(), this.AbbassaSabbia(), (this.isFirstTimeSand = !1), (this.isFirstTimebackSand = !0)),
-                    $(ground).position().left > negativepositionEndGround1 && this.isFirstTimebackSea && (this.AbbassaMare(), (this.isFirstTimebackSea = !1), (this.isFirstTimeSea = !0)),
+                    $(ground).position().left > negativepositionEndGround1 && this.isFirstTimebackSea && (this.AbbassaMare(), (this.isFirstTimebackSea = !1), (this.in_the_sea = !0)),
                    $(blue).position().left > negativepositionEndGround2 && this.isFirstTimebackSand && (this.dive_in_the_sea(), this.AlzaSabbia(), (this.isFirstTimebackSand = !1), (this.isFirstTimeSand = !0)),
                     t > lastScrollTop
                         ? (function (e) {

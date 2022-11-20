@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Fredoka+One&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap);
 *{
 margin:0
 ;
@@ -10,7 +12,7 @@ body {
 #loader {
     background: #7a1de4;
     height: 100vh;
-    position: relative;
+    position: fixed;
     width: 100%;
     z-index: 10019;
     display: flex;
@@ -39,7 +41,9 @@ body {
 }
 #start{
   
-    position: relative;
+    position: fixed;
+
+
     height:380px;
     max-width:480px;
     text-align: center;
@@ -53,8 +57,8 @@ body {
     height:380px;
     max-width:480px;
     text-align: center;
-    font-family: lobster;
-    font-weight:300;
+    font-family: Fredoka One;
+    font-weight:100;
     bottom:200px;
     left:1700px;
   
@@ -81,8 +85,8 @@ body {
 }
 #education ,.edu {
   position: fixed;
-top:100px;
-font-family: lobster;
+
+font-family:Fredoka One;
 font-weight: 100;
 text-align: center;
    
@@ -107,7 +111,8 @@ text-align: center;
     background:linear-gradient(0deg, rgba(11, 111, 208, 0.5), rgb(0, 128, 225)), url(images/sea.jpg);
     /* background: #368fee; */
     background-position: top;
-    background-repeat: repeat-x;
+    background-size: cover;
+
 
 
     bottom: 0;
@@ -120,12 +125,13 @@ text-align: center;
     border:1px solid rgb(9, 255, 0);
 }
 #part3>#ground3 {
-background-color: rgb(92, 92, 92);
+background-color: rgb(161, 161, 161);
     bottom: 0;
     background-position: 0 top;
     background-repeat: repeat;
     width: 9610px;
     position: fixed;
+    /* border-:10px solid rgb(126, 126, 126); */
 }
 #part4 {
     height: 8400px
@@ -146,7 +152,7 @@ background-color: rgb(92, 92, 92);
 }
 #ground-sea{
 height: 50px;
-background: #c69c6d;
+background: #2b3f58;
 width: 6500px;
 position: absolute
 }
@@ -176,6 +182,9 @@ padding: 0;
     z-index: -99999
 
 }
+#scrollText{
+    font-family:lobster ;font-weight: 300;padding:0px;margin-left:350px;color:white;background-color:4848;font-size: 28px;width:400px;border:px solid blue;width:400px;text-align: center;
+}
 
 .right {
     background-image: url(./images/me.png);
@@ -203,7 +212,7 @@ padding: 0;
    
    
 
-    animation: walk .5s steps(4 ) infinite;
+    animation: walk .4s steps(4 ) infinite;
 
 
 
@@ -217,7 +226,7 @@ padding: 0;
     width: 100px;
 
     background-size: cover;
-    animation: walk .5s steps(4) infinite;
+    animation: walk .4s steps(4) infinite;
 
 
 }
@@ -244,3 +253,9 @@ padding: 0;
       visibility: hidden;
     }
   }
+  @media only screen and (max-width: 900px) {
+  #scrollText{
+    margin-left: 0px;
+  }
+    }
+    
