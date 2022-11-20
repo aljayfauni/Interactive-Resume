@@ -91,10 +91,14 @@ $(start).css({left: 300}),
         function dive_in_the_sea() {
   
            
-            $(ground).animate({ bottom: 0 }, 600, "linear"),
-           $(blue).animate({ bottom: 0 }, 600, "linear"),
+            $(ground).animate({ bottom: 95 }, 600, "linear"),
+            $(ground3).animate({ bottom: 95 }, 600, "linear"),
+
+           $(blue).animate({ bottom: -25 }, 600, "linear"),
+           $(blue).css({ height: 700 - 50 }),
             $(ground2).animate({ bottom: ground.clientHeight - 50 }, 600, "linear"),
-            $(me).animate({ bottom: 50 }, 600, "linear");
+            $(me).animate({ bottom: 0 }, 600, "linear");
+        
             $('.html_level').animate({left:'500px'},2800);
             $('.css_level').animate({left:'520px'},3500);
             $('.js_level').animate({left:'530px'},4200);
@@ -107,6 +111,8 @@ $(start).css({left: 300}),
         $(ground3).animate({ bottom: 0 }, 600, "linear");
     }
     function AbbassaSabbia() {
+        $(blue).css({ height: ground.clientHeight - 50 }),
+        $(ground).animate({ bottom: 0 }, 600, "linear"),
         $(ground3).animate({ bottom: 103 - ground.clientHeight }, 100, "linear"),
         $(me).animate({ bottom: 103 }, 100, "linear")
         $('.html_level').animate({left:'2100px'},2800);
@@ -115,6 +121,7 @@ $(start).css({left: 300}),
    ;
     }
     function AbbassaMare() {
+        $(blue).css({ height: ground.clientHeight - 50 }),
         $(ground).animate({ bottom: 103 - ground.clientHeight }, 100, "linear"),
             $(blue).animate({ bottom: 103 - ground.clientHeight }, 100, "linear"),
             $(ground2).animate({ bottom: 53 }, 100, "linear"),
