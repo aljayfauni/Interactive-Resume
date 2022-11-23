@@ -140,6 +140,7 @@ background-color: rgb(161, 161, 161);
     background-color: rgb(133, 94, 37);
     position:fixed;
     width: 6500px;
+    z-index: 10001;
 }
 
 #grass1{

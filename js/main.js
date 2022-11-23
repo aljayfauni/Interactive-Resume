@@ -79,7 +79,7 @@ $(start).css({left: 300}),
         $(grass1).css({ bottom: 103 - $(grass1).clientHeight }),
         $(me).css({ left: -me.clientWidth / 2 + $(window).width() / 2 }),
         $(ground2).css({ bottom: 53 }),
-        $(blue).css({ height: ground.clientHeight - 50 }),
+         $(blue).css({ height:580 }),
         $(blue).css({ bottom: 103 - ground.clientHeight }),
        $(ground3).css({ height: ground.clientHeight }),
        $(ground3).css({ left: ground.clientWidth + blue.clientWidth }),
@@ -104,11 +104,16 @@ $(start).css({left: 300}),
            $(blue).css({ height: 700 - 50 }),
             $(ground2).animate({ bottom: ground.clientHeight - 50 }, 600, "linear"),
             $(me).animate({ bottom: 0 }, 600, "linear");
-        
-            $('.html_level').animate({left:'500px'},2800);
-            $('.css_level').animate({left:'520px'},3500);
-            $('.js_level').animate({left:'530px'},4200);
-         //
+      
+            //programming level animate here!
+            $('.html_level').animate({left:'490px'},2800);
+            $('.css_level').animate({left:'500px'},3500);
+            $('.js_level').animate({left:'500px'},4200);
+            $('.php_level').animate({left:'490px'},4200);
+            $('.mysql_level').animate({left:'490px'},4200);
+            $('.mssql_level').animate({left:'490px'},4200);
+         
+            //
         //    $(bubble).css({ display: "block" });
            
     }
