@@ -100,15 +100,17 @@ text-align: center;
     border:1px solid rgb(0, 17, 255);
 }
 #part2>#ground2 {
-    height: 19px;
-
-    width: 3500px;
+    height: 25px;
+     background-size: 700px 35px; 
+ background-repeat: repeat-x;
+background-image: url('../images/sea-top.png');
+    width: 4500px;
     position: fixed;
  
 }
 
 #part2>#ground2>#blue {
-    background:linear-gradient(0deg, rgba(11, 111, 208, 0.5), rgb(0, 128, 225)), url(../images/sea.jpg);
+    background:linear-gradient(0deg, rgba(35, 82, 235, 0.5), rgb(48, 82, 233)), url(../images/sea.jpg);
     /* background: #368fee; */
     background-position: top;
     background-size: cover;
@@ -274,4 +276,26 @@ padding: 0;
     margin-left: 0px;
   }
     }
+
+    #bubble{
+        position: fixed ;
+        -webkit-animation: floatBubble 1.5s infinite;
+           /* // -webkit-animation-direction:alternate; */
+          }
+        
+        
+        @-webkit-keyframes floatBubble{
+         from{
+                top:560px;
+                -webkit-animation-timing-function: ease-in;
+        
+           }
+        
+        
+           to {
+              top: 200px;
+              -webkit-animation-timing-function: ease-out;
+           }
+        
+        }
     

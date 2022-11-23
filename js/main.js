@@ -34,6 +34,7 @@ var loader = document.querySelector("#loader"),
     school = document.querySelector("#school"),
     education = document.querySelector("#education"),
     skill_post = document.querySelector("#skills"),
+    bubble = document.querySelector('#bubble'),
     groundSea = document.querySelector("#ground-sea"),
     grass1 = document.querySelector("#grass1"),
     ground3 = document.querySelector("#ground3"),
@@ -80,13 +81,13 @@ $(start).css({left: 300}),
         $(me).css({ left: -me.clientWidth / 2 + $(window).width() / 2 }),
         $(ground2).css({ bottom: 53 }),
          $(blue).css({ height:580 }),
-        $(blue).css({ bottom: 103 - ground.clientHeight }),
+        $(blue).css({ bottom: 53 - ground.clientHeight }),
        $(ground3).css({ height: ground.clientHeight }),
        $(ground3).css({ left: ground.clientWidth + blue.clientWidth }),
         $(groundSea).css({ bottom: -blue.clientHeight }),
         window_width = $(window).width() - (part1.clientHeight + part2.clientHeight + part3.clientHeight ),
         window_width_sea = $(window).width() - part1.clientHeight;
-
+        $(me).css({ border:'0',borderRadius:0,backgroundColor:'rgba(0,0,0,0,0)'});
 
         function dive_in_the_sea() {
   
@@ -102,9 +103,10 @@ $(start).css({left: 300}),
 
            $(blue).animate({ bottom: -25 }, 600, "linear"),
            $(blue).css({ height: 700 - 50 }),
-            $(ground2).animate({ bottom: ground.clientHeight - 50 }, 600, "linear"),
-            $(me).animate({ bottom: 0 }, 600, "linear");
-      
+            $(ground2).animate({ bottom: ground.clientHeight - 75 }, 600, "linear"),
+            $(me).animate({ bottom: 0 }, 600, "linear"),
+            $(me).css({ border:'3px solid white',borderRadius:50,backgroundColor:'rgba(0,0,0,0.5)'});
+            $(bubble).css({display:'block'});
             //programming level animate here!
             $('.html_level').animate({left:'490px'},2800);
             $('.css_level').animate({left:'500px'},3500);
@@ -121,12 +123,14 @@ $(start).css({left: 300}),
     function AlzaSabbia() {
         $(ground3).animate({ bottom: 0 }, 600, "linear");
     }
-    function AbbassaSabbia() {
+    function AbbassaSabbia() {//part3 ground 3
+        $(me).css({ border:'0',borderRadius:0,backgroundColor:''});
+        $(bubble).css({display:'none'});
         $(blue).css({ height: ground.clientHeight - 50 }),
         $(ground).animate({ bottom: 103 }, 600, "linear"),
         $(ground).css({ height: height_device - 50 }),
         //   $(about).css({ bottom: 103 - $(house).clientHeight }),
-           
+       // $(ground2).css({ bottom: 53 }),
         $(ground3).animate({ bottom: 103 - ground.clientHeight }, 100, "linear"),
         $(ground3).css({ height: height_device - 50 }),
         //   $(about).css({ bottom: 103 - $(house).clientHeight }),
@@ -137,7 +141,10 @@ $(start).css({left: 300}),
         $('.js_level').animate({left:'2500px'},4200);
    ;
     }
-    function AbbassaMare() {
+    function AbbassaMare() { //part 1 back to part 1 or ground 1
+       // $(ground2).css({ bottom: 103 }),
+       $(bubble).css({display:'none'});
+       $(me).css({ border:'0',borderRadius:0,backgroundColor:''});
         $(blue).css({ height: ground.clientHeight - 50 }),
         $(ground).animate({ bottom: 103 - ground.clientHeight }, 100, "linear"),
             $(blue).animate({ bottom: 103 - ground.clientHeight }, 100, "linear"),
@@ -187,12 +194,21 @@ $(start).css({left: 300}),
                     $(cloud2).css({ left: 800 + s }),
                     $(cloud3).css({ left: 1700 + s }),
                     console.log(i);
+                    if(i>=9200){
+                        $('.laravel_level').animate({left:'2050px'},2800);
+                        $('.node_level').animate({left:'2180px'},3500);
+                        $('.ejs_level').animate({left:'2310px'},4200);
+                        $('.react_level').animate({left:'2450px'},4200);
+                        $('.vue_level').animate({left:'2580px'},4200);
+                     
+                    }
                     if(i >= 9700){
                         $(cloud3).hide();
                     }
                     if(i <= 9820){
                         $(cloud3).show();
                     }
+                
               
                 
                 $(ground).css({ left: o }),
