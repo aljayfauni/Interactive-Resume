@@ -65,6 +65,10 @@ body {
   
 
 }
+.exp1-wrapper, .exp2-wrapper{
+    font-family: Fredoka One;
+    font-weight:100;
+}
 #house{
   
     position: fixed;

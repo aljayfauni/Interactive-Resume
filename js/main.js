@@ -103,7 +103,7 @@ $(start).css({left: 300}),
 
             $(blue).animate({ bottom: -25 }, 600, "linear"),
             $(blue).css({ height: 700 - 50 }),
-            $(ground2).animate({ bottom: ground.clientHeight - 75 }, 600, "linear"),
+            $(ground2).animate({ bottom: ground.clientHeight - 76 }, 600, "linear"),
             $(me).animate({ bottom: 0 }, 600, "linear"),
             $(me).css({ border:'3px solid white',borderRadius:50,backgroundColor:'rgba(0,0,0,0.5)'});
             $(bubble).css({display:'block'});
@@ -206,8 +206,38 @@ $(start).css({left: 300}),
                     $(cloud5).css({ left: 3450 + s }),
                     console.log(i);
 
+                    if(i > 1000){
+                        
+                   
+                        // $('.greet-about').css({display:'block'});
+                        $('.greet-about').slideDown(800);
+                       
+                    }
+                    if(i < 1000){
+                        
+                   
+                        // $('.greet-about').css({display:'block'});
+                        $('.greet-about').slideUp(800);
+                       
+                    }
+                    if(i > 3300){
+                        
+                   
+                        // $('.greet-about').css({display:'block'});
+                        $('.educ-greet').slideDown(800);
+                       
+                    }
+                    if(i < 3300){
+                        
+                   
+                        // $('.greet-about').css({display:'block'});
+                        $('.educ-greet').slideUp(800);
+                       
+                    }
+
                     if(i >= 7000){
                         $(cloud3).hide();
+                        $(cloud4).hide();
                        
                     }
                     if(i >= 7300){
@@ -216,8 +246,40 @@ $(start).css({left: 300}),
                     }
                     if(i <= 7220){
                         $(cloud3).show();
+                        $(cloud4).show();
                         $('body').css({background:'#59b5f3'})
                     }
+                    if(i >= 12300){
+                        $(cloud3).show();
+                        $(cloud4).show();
+                       
+
+
+                       
+                    }
+                    if(i >= 12900){
+                        $('.exp1').slideDown(600);
+                       
+
+
+                       
+                    }
+                    if(i >= 14900){
+                        $('.exp2').slideDown(600);
+                       
+
+
+                       
+                    }
+                    if(i < 12900){
+                        $('.exp1').slideUp(600);
+                        $('.exp2').slideUp(600);
+                       
+
+
+                       
+                    }
+                   
 
                 $(ground).css({ left: o }),
                 $(ground2).css({ left: part1.clientHeight + o }),
