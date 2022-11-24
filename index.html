@@ -3,13 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Aljay Ramile Interactive Resume, Alj Interactive resume,Interactive Resume Html Css Javascript Jquery">
+    <meta name="keywords" content="Alj Interactive resume,Aljay Ramile,Interactive resume using Html Css Javascript,alj interactive resume,aljay">
+    <meta name="author" content="aljay vampire">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
     <link rel="icon" type="image/x-icon" href="images/favicon.JPG">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <title>Alj Interactive Resume</title>
 </head>
+<style>
+    body ,h3{
+         font-weight: 300;
+         -webkit-overflow-scrolling: touch;
+         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+         }
+         h1,h2{
+         font-family: 'fredoka one';
+         font-weight: 100; 
+         }
+</style>
 <body>
    
     <div id="container">
@@ -18,6 +32,9 @@
             <div id="cloud1" class="cloud"></div>
             <div id="cloud2" class="cloud"></div>
             <div id="cloud3" class="cloud"></div>
+            <div id="cloud4" class="cloud"></div>
+            <div id="cloud5" class="cloud"></div>
+       
 
             <div id="start" style="width:0px;height:auto;">
                 <h1 style="z-index:1;font-size: 90px;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color:rgb(243, 240, 240);border:px solid rgb(219, 71, 71);width:400px;">START</h1>
@@ -29,7 +46,7 @@
                 <div style="z-index:1;border:2px solid white;padding:12px;width:400px;background-color:dodgerblue;" >
                    <span style="color:white;font-size: 28px;">About Me</span>
                 </div>
-                <div class ='greet'style="z-index:1;border:2px solid white;width:400px;background-color:#eb4747;padding:12px;" >
+                <div class ='greet greet-about'style="display:none;z-index:1;border:2px solid white;width:400px;background-color:#eb4747;padding:12px;" >
                    <span style="color:white;font-size: 24px;">Hi! I'm Alj</span><br>
                    <span style="color:white;font-size: 20px;">"Programmer / Web Developer"  .</span>
                    <span style="color:white;font-size: 24px;">Summary:</span>
@@ -42,7 +59,7 @@
                 <div style="z-index:1;border:2px solid white;width:400px;padding:12px;background-color:#3c72d8;" >
                    <h1 style="color:white;font-size: 28px;">Educational Attainment</h1>
                 </div>
-                <div class ='educ'style="z-index:1;border:2px solid white;width:400px;background-color:#eb4747;padding:12px;display:;" >
+                <div class ='educ educ-greet'style="display:none;z-index:1;border:2px solid white;width:400px;background-color:#eb4747;padding:12px;display:;" >
                    <span style="color:white;font-size: 20px;">> Imus Institute of Science and Technology<br>Bachelor Of Science In Computer Science  ->Graduated November, 2019 <br<br></span><br><br>
                    <span style="color:white;font-size: 20px;">> Datacom Institute of Computer Technology<br> Associate Degree 2years course <br>Multimedia and Information Technology <br>->Graduated April, 2016</span>
                 </div>
@@ -57,8 +74,127 @@
             <div id="part2">
                 <div id="ground2">
                     <div id="blue">
-                        deep sea
+                     <div class="skills" style="display:block;position:relative;top:10px;left:800px;z-index: 4;width:620px;height:50px;padding:5px;border:0px solid white;background-color: #e90a58;">
+                        <h1 style="font-size:32px;font-weight: 300;">{ Programming Languages}</h1>
+                     </div>
+                     <div class="programming-skill">
+                        <div class="level_skills" style="display:flex;flex-wrap:wrap;flex-direction:row;position:relative;top:105px;left:400px;z-index: 4;width:150px;height:auto;padding:5px;border-left:1px solid rgb(241, 238, 238); text-align: center;">
+                           <h1 style="font-size:24px;font-weight: 300;background-color: #3f1674;width:100%;margin:5px;padding:5px;">Expert</h1>
+                           <h1 style="font-size:24px;font-weight: 300;background-color: #3f1674;width:100%;margin:5px;padding:5px;">Advance</h1>
+                           <h1 style="font-size:24px;font-weight: 300;background-color: #3f1674;width:100%;margin:5px;padding:5px;">Intermediate</h1>
+                           <h1 style="font-size:24px;font-weight: 300;background-color: #3f1674;width:100%;margin:5px;padding:5px;">Elementary</h1>
+                           <h1 style="font-size:24px;font-weight: 300;background-color: #3f1674;width:100%;margin:5px;padding:5px;">Beginner</h1>
                         </div>
+                        <div class="html_level" style="display:flex;flex-wrap:wrap;flex-direction:column;position:relative;top:105px;left:1900px;z-index: 4;width:150px;height:auto;padding:5px;border-left:0px solid rgb(241, 238, 238); text-align: center;">
+                           <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">
+                           <img src="images/fish.png" alt="" srcset=""  style="width:50px;margin:10px;">
+                           <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">
+                           <img src="images/fish.png" alt="" srcset=""  style="width:50px;margin:10px;">
+                           <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">
+                        </div>
+                        <div class="css_level" style="display:flex;flex-wrap:wrap;flex-direction:column;position:relative;top:105px;left:2100px;z-index: 4;width:150px;height:auto;padding:5px;border-left:0px solid rgb(241, 238, 238); text-align: center;">
+                           <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">
+                           <img src="images/fish.png" alt="" srcset=""  style="width:50px;margin:10px;">
+                           <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">
+                           <img src="images/fish.png" alt="" srcset=""  style="width:50px;margin:10px;">
+                           <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">   
+                        </div>
+                        <div class="js_level" style="display:flex;flex-wrap:wrap;flex-direction:column;position:relative;top:205px;left:2400px;z-index: 4;width:150px;height:auto;padding:5px;border-left:0px solid rgb(241, 238, 238); text-align: center;">
+                           <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">
+                           <img src="images/fish.png" alt="" srcset=""  style="width:50px;margin:10px;">
+                           <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">   
+                        </div>
+                        <div class="php_level" style="display:flex;flex-wrap:wrap;flex-direction:column;position:relative;top:155px;left:2000px;z-index: 4;width:150px;height:auto;padding:5px;border-left:0px solid rgb(241, 238, 238); text-align: center;">
+                           <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">
+                           <img src="images/fish.png" alt="" srcset=""  style="width:50px;margin:10px;">
+                           <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">
+                           <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">    
+                        </div>
+                        <div class="java_level" style="display:flex;flex-wrap:wrap;flex-direction:column;position:relative;top:205px;left:2800px;z-index: 4;width:150px;height:auto;padding:5px;border-left:0px solid rgb(241, 238, 238); text-align: center;">
+                           <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">
+                           <img src="images/fish.png" alt="" srcset=""  style="width:50px;margin:10px;">
+                           <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">
+                              
+                        </div>
+                        <div class="csharp_level" style="display:flex;flex-wrap:wrap;flex-direction:column;position:relative;top:255px;left:2800px;z-index: 4;width:150px;height:auto;padding:5px;border-left:0px solid rgb(241, 238, 238); text-align: center;">
+                           <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">
+                           <img src="images/fish.png" alt="" srcset=""  style="width:50px;margin:10px;">
+                   
+                        </div>
+                        <div class="python_level" style="display:flex;flex-wrap:wrap;flex-direction:column;position:relative;top:255px;left:2800px;z-index: 4;width:150px;height:auto;padding:5px;border-left:0px solid rgb(241, 238, 238); text-align: center;">
+                           <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">
+                           <img src="images/fish.png" alt="" srcset=""  style="width:50px;margin:10px;">
+                            
+                        </div>
+                        <div class="skill_html" style="display:flex;flex-wrap:wrap;flex-direction:row;position:relative;top:30px;left:-710px;z-index: 4;width:1200px;height:50px;margin: 10px;text-align: center;">
+                           <h1 style="font-size:24px;font-weight: 300;background-color: #e90a58;border:2px solid white;padding:5px;margin:10px;">HTML/HTML5</h1>
+                           <h1 style="font-size:24px;font-weight: 300;background-color: #1b1269;border:2px solid white;padding:5px;margin:10px;">CSS/CSS3</h1>
+                           <h1 style="font-size:24px;font-weight: 300;background-color: #1dcebf;padding:5px;border:2px solid white;padding: 5px;margin:10px;">Javascript</h1>
+                           <h1 style="font-size:24px;font-weight: 300;background-color: #f7aa53;border:2px solid white;padding: 5px;margin:10px;width:120px;">PHP</h1>
+                           <h1 style="font-size:24px;font-weight: 300;background-color: #3cce8a;border:2px solid white;padding: 5px;margin:10px;width:120px;">Java</h1>
+                           <h1 style="font-size:24px;font-weight: 300;background-color: #b553f7;border:2px solid white;padding: 5px;margin:10px;width:120px;">C#</h1>
+                           <h1 style="font-size:24px;font-weight: 300;background-color: #611579;padding: 5px;border:2px solid white;margin:10px;width:120px;">Python</h1>
+                        </div>
+                        </div>
+                        <!-- frameworks skill -->
+                        <div class="skills" style="display:block;position:relative;top:-318px;left:2030px;z-index: 4;width:620px;height:50px;padding:5px;border:0px solid white;background-color: #31247e;color: white;">
+                           <h1 style="font-size:32px;font-weight: 300;">{ Frameworks & Libraries }</h1>
+                        </div>
+                        <div class="skill_html" style="color:white;display:flex;flex-wrap:wrap;flex-direction:row;position:relative;top:-300px;left:2000px;z-index: 4;width:1200px;height:50px;margin: 10px;text-align: center;">
+                           <h1 style="font-size:24px;font-weight: 300;background-color: #e90a58;border:2px solid white;padding:5px;margin:10px;width:100px;">Laravel</h1>
+                           <h1 style="font-size:24px;font-weight: 300;background-color: #5ca739;border:2px solid white;padding:5px;margin:10px;width:100px;">Node JS</h1>
+                           <h1 style="font-size:24px;font-weight: 300;background-color: #1dcebf;padding:5px;border:2px solid white;padding: 5px;margin:10px;width:100px;">EJS</h1>
+                           <h1 style="font-size:24px;font-weight: 300;background-color: #53a0f7;border:2px solid white;padding: 5px;margin:10px;width:120px;width:100px;">React JS</h1>
+                           <h1 style="font-size:24px;font-weight: 300;background-color: #20d873;border:2px solid white;padding: 5px;margin:10px;width:120px;width:100px;">Vue JS</h1>
+                           <!-- <h1 style="font-size:24px;font-weight: 300;background-color: #611579;padding: 5px;border:2px solid white;margin:10px;width:120px;"></h1> -->
+                        </div>
+                        <div class="framework-skill">
+                           <div class="level_skills" style="display:flex;flex-wrap:wrap;flex-direction:row;position:relative;top:-290px;left:1820px;z-index: 4;width:150px;height:auto;padding:5px;border-left:1px solid rgb(241, 238, 238); text-align: center;color: white;">
+                              <h1 style="font-size:24px;font-weight: 300;background-color: #ff9634;width:100%;margin:5px;padding:5px;">Expert</h1>
+                              <h1 style="font-size:24px;font-weight: 300;background-color: #ff9634;width:100%;margin:5px;padding:5px;">Advance</h1>
+                              <h1 style="font-size:24px;font-weight: 300;background-color: #ff9634;width:100%;margin:5px;padding:5px;">Intermediate</h1>
+                              <h1 style="font-size:24px;font-weight: 300;background-color: #ff9634;width:100%;margin:5px;padding:5px;">Elementary</h1>
+                              <h1 style="font-size:24px;font-weight: 300;background-color: #ff9634;width:100%;margin:5px;padding:5px;">Beginner</h1>
+                           </div>
+                           <div class="laravel_level" style="display:flex;flex-wrap:wrap;flex-direction:column;position:relative;top:-500px;left:4050px;z-index: 4;width:150px;height:auto;padding:5px;border-left:0px solid rgb(241, 238, 238); text-align: center;">
+                            
+                              <img src="images/fish_lara.png" alt="" srcset=""  style="width:50px;margin:10px;">
+                              <img src="images/fish_lara.png" alt="" srcset="" style="width:50px;margin:10px;">
+                              <img src="images/fish_lara.png" alt="" srcset=""  style="width:50px;margin:10px;">
+                              <img src="images/fish_lara.png" alt="" srcset="" style="width:50px;margin:10px;">
+                           </div>
+                           <div class="node_level" style="display:flex;flex-wrap:wrap;flex-direction:column;position:relative;top:-665px;left:4180px;z-index: 4;width:150px;height:auto;padding:5px;border-left:0px solid rgb(241, 238, 238); text-align: center;">
+                              <img src="images/fish_node.png" alt="" srcset="" style="width:50px;margin:10px;">
+                              <img src="images/fish_node.png" alt="" srcset=""  style="width:50px;margin:10px;">
+                              <img src="images/fish_node.png" alt="" srcset="" style="width:50px;margin:10px;">
+                              
+                           </div>
+                           <div class="ejs_level" style="display:flex;flex-wrap:wrap;flex-direction:column;position:relative;top:-830px;left:4310px;z-index: 4;width:150px;height:auto;padding:5px;border-left:0px solid rgb(241, 238, 238); text-align: center;">
+                              <img src="images/fish_ejs.png" alt="" srcset="" style="width:50px;margin:10px;">
+                              <img src="images/fish_ejs.png" alt="" srcset=""  style="width:50px;margin:10px;">
+                              <img src="images/fish_ejs.png" alt="" srcset="" style="width:50px;margin:10px;">   
+                           </div>
+                           <div class="react_level" style="display:flex;flex-wrap:wrap;flex-direction:column;position:relative;top:-945px;left:4450px;z-index: 4;width:150px;height:auto;padding:5px;border-left:0px solid rgb(241, 238, 238); text-align: center;">
+                           
+                              <img src="images/fish_react.png" alt="" srcset=""  style="width:50px;margin:10px;">
+                              <img src="images/fish_react.png" alt="" srcset="" style="width:50px;margin:10px;">
+                              
+                           </div>
+                           <div class="vue_level" style="display:flex;flex-wrap:wrap;flex-direction:column;position:relative;top:-1060px;left:4580px;z-index: 4;width:150px;height:auto;padding:5px;border-left:0px solid rgb(241, 238, 238); text-align: center;">
+                             
+                              <img src="images/fish_vue.png" alt="" srcset=""  style="width:50px;margin:10px;">
+                              <img src="images/fish_vue.png" alt="" srcset="" style="width:50px;margin:10px;">
+                         
+                           </div>
+                           <!-- <div class="mssql_level" style="display:flex;flex-wrap:wrap;flex-direction:column;position:relative;top:155px;left:2800px;z-index: 4;width:150px;height:auto;padding:5px;border-left:0px solid rgb(241, 238, 238); text-align: center;">
+                              <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">
+                              <img src="images/fish.png" alt="" srcset=""  style="width:50px;margin:10px;">
+                              <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">
+                              <img src="images/fish.png" alt="" srcset="" style="width:50px;margin:10px;">    
+                           </div> -->
+                           
+                     
+                           </div>
                         <div id="ground-sea">
                            bottom of the sea
                             </div>
@@ -66,16 +202,51 @@
                 </div>
             </div>
             <div id="part3">
-            <div id="ground3"></div>
+            <div id="ground3">
+               <div class="exp" style="position:relative;bottom:395px;left:0px;width:100%;margin-left:-3px;height:300px;    background-repeat: no-repeat;background-size:100%;z-index: 0;">
+                  <img src="images/exp.png" alt="" srcset=""style="width:430px;"> 
+               </div>
+               <div class="exp1-wrapper" style="position:relative;bottom:750px;left:600px;" >
+                  <div style="z-index:1;border:2px solid white;padding:12px;width:400px;background-color:dodgerblue;" >
+                     <span style="color:white;font-size: 28px;">Web Designer</span>
+                  </div>
+                  <div class ='greet exp1'style="display:none;z-index:1;border:2px solid white;width:400px;background-color:#eb4747;padding:12px;" >
+                     <span style="color:white;font-size: 24px;">Personiv - Manila</span><br>
+                     <span style="color:white;font-size: 20px;">December, 2016 - April, 2017.</span>
+       
+                   
+                  </div>
+               </div>
+               <div class="personi" style="position:relative;bottom:1018px;left:1000px;width:100%;margin-left:-3px;height:300px;    background-repeat: no-repeat;background-size:100%;z-index: 0;">
+                  <img src="images/personiv.png" alt="" srcset=""style="width:600px;"> 
+               </div>
+
+               <div class="exp2-wrapper" style="position:relative;bottom:1265px;left:1900px;" >
+                  <div style="z-index:1;border:2px solid white;padding:12px;width:400px;background-color:dodgerblue;" >
+                     <span style="color:white;font-size: 28px;">Web Developer</span>
+                  </div>
+                  <div class ='greet exp2'style="display:none;z-index:1;border:2px solid white;width:400px;background-color:#eb4747;padding:12px;" >
+                     <span style="color:white;font-size: 24px;">Aventus Medical Care Inc - Makati</span><br>
+                     <span style="color:white;font-size: 20px;">March, 2021 - May, 2022 .</span>
+                    
+                     
+                  </div>
+               </div>
+               <div class="aventus" style="position:relative;bottom:1477px;left:2400px;width:100%;margin-left:-3px;height:300px;    background-repeat: no-repeat;background-size:100%;z-index: 0;">
+                  <img src="images/aventus.png" alt="" srcset=""style="width:1000px;"> 
+               </div>
+            </div>
             </div>
           
         </div> 
         <div id="part4"></div>   
+       
      <div  class="me right">
-
+      <span id="bubble" style="position:fixed;top:560px;left:855px;display:none ;padding:5px;width:5px;height:5px;border:3px solid white;border-radius: 30px;"></span>
     </div>   
-    <script src="main.js"></script>
-    <script src="jquery.js"></script>
+   
+    <script src="js/main.js"></script>
+    <script src="js/jquery.js"></script>
 
 </body>
 </html>

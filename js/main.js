@@ -14,7 +14,7 @@ isFirstTimebackSea = (isFirstTimebackSand = !1);
             $(body).css({ "overflow-y": "scroll" });
         }, 2e3);
 }),
-    1
+    0
 var loader = document.querySelector("#loader"),
     container = document.querySelector("#container"),
     part1 = document.querySelector("#part1"),
@@ -34,6 +34,7 @@ var loader = document.querySelector("#loader"),
     school = document.querySelector("#school"),
     education = document.querySelector("#education"),
     skill_post = document.querySelector("#skills"),
+    bubble = document.querySelector('#bubble'),
     groundSea = document.querySelector("#ground-sea"),
     grass1 = document.querySelector("#grass1"),
     ground3 = document.querySelector("#ground3"),
@@ -64,6 +65,12 @@ $(start).css({left: 300}),
     $(cloud2).css({ left: 800 }),
     $(cloud3).css({ top: 120 }),
     $(cloud3).css({ left: 1700 }),
+
+    $(cloud4).css({ top: 70 }),
+    $(cloud4).css({ left: 2780 }),
+
+    $(cloud5).css({ top: 120 }),
+    $(cloud5).css({ left: 3480 }),
  
 
     $(me).css({ "z-index": 9998 });
@@ -78,57 +85,99 @@ $(start).css({left: 300}),
         $(ground).css({ bottom: 103 - ground.clientHeight }),
         $(grass1).css({ bottom: 103 - $(grass1).clientHeight }),
         $(me).css({ left: -me.clientWidth / 2 + $(window).width() / 2 }),
-        $(ground2).css({ bottom: 53 }),
-        $(blue).css({ height: ground.clientHeight - 50 }),
-        $(blue).css({ bottom: 0 - ground.clientHeight }),
-       $(ground3).css({ height: ground.clientHeight }),
-       $(ground3).css({ left: ground.clientWidth + blue.clientWidth }),
+        $(ground2).css({ bottom: 40 }),
+        $(blue).css({ height:700 -50 }),
+        $(blue).css({ bottom: -600}),
+        $(ground3).css({ height: ground.clientHeight }),
+        $(ground3).css({ left: ground.clientWidth + blue.clientWidth }),
         $(groundSea).css({ bottom: -blue.clientHeight }),
         window_width = $(window).width() - (part1.clientHeight + part2.clientHeight + part3.clientHeight ),
         window_width_sea = $(window).width() - part1.clientHeight;
+        $(me).css({ border:'0',borderRadius:0,backgroundColor:'rgba(0,0,0,0,0)'});
 
+    function dive_in_the_sea() {
+            $(ground).animate({ bottom: -25 }, 600, "linear"),
+            $(ground).css({ height: 750 - 50 }),
+            $(ground3).animate({ bottom: -25 }, 600, "linear"),
+            $(ground3).css({ height: 750 - 50 }),
 
-        function dive_in_the_sea() {
-  
+            $(blue).animate({ bottom: -25 }, 600, "linear"),
+            $(blue).css({ height: 700 - 50 }),
+            $(ground2).animate({ bottom: ground.clientHeight - 76 }, 600, "linear"),
+            $(me).animate({ bottom: 0 }, 600, "linear"),
+            $(me).css({ border:'3px solid white',borderRadius:50,backgroundColor:'rgba(0,0,0,0.5)'});
+            $(bubble).css({display:'block'});
+            //programming level animate here!
+            $('.html_level').animate({left:'490px'},2800);
+            $('.css_level').animate({left:'500px'},3500);
+            $('.js_level').animate({left:'500px'},4200);
+            $('.php_level').animate({left:'490px'},4200);
+            $('.java_level').animate({left:'490px'},4200);
+            $('.csharp_level').animate({left:'490px'},4200);
+            $('.python_level').animate({left:'490px'},4200);
            
-            $(ground).animate({ bottom: 0 }, 600, "linear"),
-           $(blue).animate({ bottom: 0 }, 600, "linear"),
-            $(ground2).animate({ bottom: ground.clientHeight - 50 }, 600, "linear"),
-            $(me).animate({ bottom: 50 }, 600, "linear");
-         //
-        //    $(bubble).css({ display: "block" });
+            $('.laravel_level').animate({left:'2050px'},2800);
+            $('.node_level').animate({left:'2180px'},3500);
+            $('.ejs_level').animate({left:'2310px'},4200);
+            $('.react_level').animate({left:'2450px'},4200);
+            $('.vue_level').animate({left:'2580px'},4200);
            
     }
-
-    function AlzaSabbia() {
-        $(ground3).animate({ bottom: 0 }, 600, "linear");
-    }
-    function AbbassaSabbia() {
+    function go_in_part3() {//part3 ground 3
+    //    function go_in_part3() {//part3 ground 3
+        $(me).css({ border:'0',borderRadius:0,backgroundColor:''});
+        $(bubble).css({display:'none'});
+        $(blue).css({ height: ground.clientHeight - 50 }),
+        $(ground).animate({ bottom: 103 }, 600, "linear"),
+        $(ground).css({ height: height_device - 50 }),
+        //   $(about).css({ bottom: 103 - $(house).clientHeight }),
+       // $(ground2).css({ bottom: 53 }),
         $(ground3).animate({ bottom: 103 - ground.clientHeight }, 100, "linear"),
+        $(ground3).css({ height: height_device - 50 }),
+
+             
         $(me).animate({ bottom: 103 }, 100, "linear")
+        $('.html_level').animate({left:'4100px'},2800);
+        $('.css_level').animate({left:'4300px'},3500);
+        $('.js_level').animate({left:'4500px'},4200);
+        $('.php_level').animate({left:'4690px'},4200);
+        $('.java_level').animate({left:'4890px'},4200);
+        $('.csharp_level').animate({left:'4990px'},4200);
+        $('.python_level').animate({left:'4990px'},4200);
+        $('.laravel_level').animate({left:'4050px'},2800);
+        $('.node_level').animate({left:'4180px'},3500);
+        $('.ejs_level').animate({left:'4310px'},4200);
+        $('.react_level').animate({left:'4450px'},4200);
+        $('.vue_level').animate({left:'4580px'},4200);
    ;
     }
-    function AbbassaMare() {
+    function in_part1() { //part 1 back to part 1 or ground 1
+      //  function in_part1() { //part 1 back to part 1 or ground 1
+       // $(ground2).css({ bottom: 103 }),
+       $(bubble).css({display:'none'});
+       $(me).css({ border:'0',borderRadius:0,backgroundColor:''});
+        $(blue).css({ height: ground.clientHeight - 50 }),
         $(ground).animate({ bottom: 103 - ground.clientHeight }, 100, "linear"),
             $(blue).animate({ bottom: 103 - ground.clientHeight }, 100, "linear"),
             $(ground2).animate({ bottom: 53 }, 100, "linear"),
             $(me).animate({ bottom: 103 }, 100, "linear");
+            $('.html_level').animate({left:'4100px'},2800);
+            $('.css_level').animate({left:'4300px'},3500);
+            $('.js_level').animate({left:'4500px'},4200);
+            $('.php_level').animate({left:'4690px'},4200);
+            $('.java_level').animate({left:'4890px'},4200);
+            $('.csharp_level').animate({left:'4990px'},4200);
+            $('.python_level').animate({left:'4990px'},4200);
             // $(mountainbrown).animate({ bottom: 103 }, 100, "linear"),
-            // $(statue).animate({ bottom: 103 }, 100, "linear"),
-            // $(nybuilding).animate({ bottom: 103 }, 100, "linear"),
-            // $(empire).animate({ bottom: 103 }, 100, "linear"),
-            // $(skills).animate({ bottom: 103 }, 100, "linear"),
-            // $(skillsright).animate({ bottom: 103 }, 100, "linear"),
-            // $(skilltext).animate({ bottom: skills.clientHeight + 24 }, 100, "linear"),
-            // $(usabanner).animate({ bottom: house.clientHeight + 200 }, 100, "linear"),
-            // $(goldengate).animate({ bottom: 103 }, 100, "linear"),
+            $('.laravel_level').animate({left:'4050px'},2800);
+            $('.node_level').animate({left:'4180px'},3500);
+            $('.ejs_level').animate({left:'4310px'},4200);
+            $('.react_level').animate({left:'4450px'},4200);
+            $('.vue_level').animate({left:'4580px'},4200);
            
      
     }
-
-
-
-
+//when scroll
         window.addEventListener(
             "scroll",
             function (e) {
@@ -153,23 +202,93 @@ $(start).css({left: 300}),
                     $(cloud1).css({ left: 100 + s }),
                     $(cloud2).css({ left: 800 + s }),
                     $(cloud3).css({ left: 1700 + s }),
+                    $(cloud4).css({ left: 2750 + s }),
+                    $(cloud5).css({ left: 3450 + s }),
                     console.log(i);
-                    if(i >= 9700){
+
+                    if(i > 1000){
+                        
+                   
+                        // $('.greet-about').css({display:'block'});
+                        $('.greet-about').slideDown(800);
+                       
+                    }
+                    if(i < 1000){
+                        
+                   
+                        // $('.greet-about').css({display:'block'});
+                        $('.greet-about').slideUp(800);
+                       
+                    }
+                    if(i > 3300){
+                        
+                   
+                        // $('.greet-about').css({display:'block'});
+                        $('.educ-greet').slideDown(800);
+                       
+                    }
+                    if(i < 3300){
+                        
+                   
+                        // $('.greet-about').css({display:'block'});
+                        $('.educ-greet').slideUp(800);
+                       
+                    }
+
+                    if(i >= 7000){
                         $(cloud3).hide();
+                        $(cloud4).hide();
+                       
                     }
-                    if(i <= 9820){
+                    if(i >= 7300){
+                      
+                        $('body').css({background:'#1e3658'})
+                    }
+                    if(i <= 7220){
                         $(cloud3).show();
+                        $(cloud4).show();
+                        $('body').css({background:'#59b5f3'})
                     }
-              
-                
+                    if(i >= 12300){
+                        $(cloud3).show();
+                        $(cloud4).show();
+                       
+
+
+                       
+                    }
+                    if(i >= 12900){
+                        $('.exp1').slideDown(600);
+                       
+
+
+                       
+                    }
+                    if(i >= 14900){
+                        $('.exp2').slideDown(600);
+                       
+
+
+                       
+                    }
+                    if(i < 12900){
+                        $('.exp1').slideUp(600);
+                        $('.exp2').slideUp(600);
+                       
+
+
+                       
+                    }
+                   
+
                 $(ground).css({ left: o }),
                 $(ground2).css({ left: part1.clientHeight + o }),
                 $(ground3).css({ left: ground.clientWidth + blue.clientWidth + o }),
                 $(ground).position().left < negativepositionEndGround1 &&
                     (this.in_the_sea && (this.dive_in_the_sea(), (this.in_the_sea = !1), (this.isFirstTimebackSea = !0))),
-                    $(blue).position().left < negativepositionEndGround2 && this.isFirstTimeSand && (this.AbbassaMare(), this.AbbassaSabbia(), (this.isFirstTimeSand = !1), (this.isFirstTimebackSand = !0)),
-                    $(ground).position().left > negativepositionEndGround1 && this.isFirstTimebackSea && (this.AbbassaMare(), (this.isFirstTimebackSea = !1), (this.in_the_sea = !0)),
-                   $(blue).position().left > negativepositionEndGround2 && this.isFirstTimebackSand && (this.dive_in_the_sea(), this.AlzaSabbia(), (this.isFirstTimebackSand = !1), (this.isFirstTimeSand = !0)),
+                    $(blue).position().left < negativepositionEndGround2 && this.isFirstTimeSand && (this.in_part1(), this.go_in_part3(), (this.isFirstTimeSand = !1), (this.isFirstTimebackSand = !0)),
+                    $(ground).position().left > negativepositionEndGround1 && this.isFirstTimebackSea && (this.in_part1(), (this.isFirstTimebackSea = !1), (this.in_the_sea = !0)),
+                   $(blue).position().left > negativepositionEndGround2 && this.isFirstTimebackSand && (this.dive_in_the_sea(), (this.isFirstTimebackSand = !1), (this.isFirstTimeSand = !0)),
                     t > lastScrollTop
                         ? (function (e) {
                               e(function () {
