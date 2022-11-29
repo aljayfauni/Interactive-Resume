@@ -242,7 +242,7 @@ $(start).css({left: 300}),
                     }
                     if(i >= 7300){
                       
-                        $('body').css({background:'#1e3658'})
+                        $('body').css({background:'#59b5f3'})
                     }
                     if(i <= 7220){
                         $(cloud3).show();
