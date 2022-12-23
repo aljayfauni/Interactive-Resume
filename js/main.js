@@ -121,6 +121,13 @@ $(start).css({left: 300}),
             $('.ejs_level').animate({left:'2310px'},4200);
             $('.react_level').animate({left:'2450px'},4200);
             $('.vue_level').animate({left:'2580px'},4200);
+
+
+            $('.mysql_level').animate({left:'3230px'},2800);
+            $('.mssql_level').animate({left:'3360px'},3500);
+            $('.postgre_level').animate({left:'3520px'},4200);
+            $('.firebase_level').animate({left:'3720px'},4200);
+            $('.mongo_level').animate({left:'3880px'},4200);
            
     }
     function go_in_part3() {//part3 ground 3
@@ -144,11 +151,18 @@ $(start).css({left: 300}),
         $('.java_level').animate({left:'4890px'},4200);
         $('.csharp_level').animate({left:'4990px'},4200);
         $('.python_level').animate({left:'4990px'},4200);
+
         $('.laravel_level').animate({left:'4050px'},2800);
         $('.node_level').animate({left:'4180px'},3500);
         $('.ejs_level').animate({left:'4310px'},4200);
         $('.react_level').animate({left:'4450px'},4200);
         $('.vue_level').animate({left:'4580px'},4200);
+
+        $('.mysql_level').animate({left:'3230px'},2800);
+        $('.mssql_level').animate({left:'3360px'},3500);
+        $('.postgre_level').animate({left:'3520px'},4200);
+        $('.firebase_level').animate({left:'3720px'},4200);
+        $('.mongo_level').animate({left:'3880px'},4200);
    ;
     }
     function in_part1() { //part 1 back to part 1 or ground 1
@@ -168,7 +182,7 @@ $(start).css({left: 300}),
             $('.java_level').animate({left:'4890px'},4200);
             $('.csharp_level').animate({left:'4990px'},4200);
             $('.python_level').animate({left:'4990px'},4200);
-            // $(mountainbrown).animate({ bottom: 103 }, 100, "linear"),
+          
             $('.laravel_level').animate({left:'4050px'},2800);
             $('.node_level').animate({left:'4180px'},3500);
             $('.ejs_level').animate({left:'4310px'},4200);
