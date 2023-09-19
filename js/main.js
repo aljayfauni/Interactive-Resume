@@ -101,7 +101,6 @@ var loader = document.querySelector("#loader"),
         $(ground3).animate({ bottom: -25 }, 600, "linear"),
         $(ground3).css({ height: 750 - 50 }),
 
-<<<<<<< HEAD
         $(blue).animate({ bottom: -25 }, 600, "linear"),
         $(blue).css({ height: 700 - 50 }),
         $(ground2).animate({ bottom: ground.clientHeight - 76 }, 600, "linear"),
@@ -122,7 +121,6 @@ var loader = document.querySelector("#loader"),
         $('.ejs_level').animate({left:'2310px'},4200);
         $('.react_level').animate({left:'2450px'},4200);
         $('.vue_level').animate({left:'2580px'},4200);
-=======
             $(blue).animate({ bottom: -25 }, 600, "linear"),
             $(blue).css({ height: 700 - 50 }),
             $(ground2).animate({ bottom: ground.clientHeight - 76 }, 600, "linear"),
@@ -150,7 +148,6 @@ var loader = document.querySelector("#loader"),
             $('.postgre_level').animate({left:'3520px'},4200);
             $('.firebase_level').animate({left:'3720px'},4200);
             $('.mongo_level').animate({left:'3880px'},4200);
->>>>>>> 79cda1edcb6340e2464413f6a44be250dae128bc
            
     }
     function go_in_part3() {//part3 ground 3
@@ -180,9 +177,7 @@ var loader = document.querySelector("#loader"),
         $('.ejs_level').animate({left:'4310px'},4200);
         $('.react_level').animate({left:'4450px'},4200);
         $('.vue_level').animate({left:'4580px'},4200);
-<<<<<<< HEAD
    
-=======
 
         $('.mysql_level').animate({left:'3230px'},2800);
         $('.mssql_level').animate({left:'3360px'},3500);
@@ -190,12 +185,10 @@ var loader = document.querySelector("#loader"),
         $('.firebase_level').animate({left:'3720px'},4200);
         $('.mongo_level').animate({left:'3880px'},4200);
    ;
->>>>>>> 79cda1edcb6340e2464413f6a44be250dae128bc
     }
     function in_part1() { //part 1 back to part 1 or ground 1
       //  function in_part1() { //part 1 back to part 1 or ground 1
        // $(ground2).css({ bottom: 103 }),
-<<<<<<< HEAD
     $(bubble).css({display:'none'});
     $(me).css({ border:'0',borderRadius:0,backgroundColor:''});
     $(blue).css({ height: ground.clientHeight - 50 }),
@@ -215,7 +208,6 @@ var loader = document.querySelector("#loader"),
     $('.ejs_level').animate({left:'4310px'},4200);
     $('.react_level').animate({left:'4450px'},4200);
     $('.vue_level').animate({left:'4580px'},4200);
-=======
        $(bubble).css({display:'none'});
        $(me).css({ border:'0',borderRadius:0,backgroundColor:''});
         $(blue).css({ height: ground.clientHeight - 50 }),
@@ -238,7 +230,6 @@ var loader = document.querySelector("#loader"),
             $('.vue_level').animate({left:'4580px'},4200);
            
      
->>>>>>> 79cda1edcb6340e2464413f6a44be250dae128bc
     }
 //when scroll
         window.addEventListener(
