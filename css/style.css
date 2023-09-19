@@ -65,7 +65,7 @@ body {
   
 
 }
-.exp1-wrapper, .exp2-wrapper{
+.exp1-wrapper, .exp2-wrapper, .exp3-wrapper{
     font-family: Fredoka One;
     font-weight:100;
 }
@@ -126,7 +126,7 @@ background-image: url('../images/sea-top.png');
     position: fixed
 }
 #part3{
-    height: 5800px;
+    height: 7800px;
    
     border:px solid rgb(9, 255, 0);
 }

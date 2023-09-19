@@ -8,7 +8,7 @@ isFirstTimebackSea = (isFirstTimebackSand = !1);
     }, 1e3),
         setTimeout(function () {
             $('#loader').css({ display: "none" });
-         
+        
         }, 2e3),
         setTimeout(function () {
             $(body).css({ "overflow-y": "scroll" });
@@ -43,11 +43,11 @@ var loader = document.querySelector("#loader"),
     negativepositionEndGround1 = -Math.abs(positionEndGround1),
     negativepositionEndGround2 = -Math.abs(positionEndGround2),
    
-// --- start ---set position of elements and images
-$(start).css({bottom:370  }),
-$(loader).css({left: 0}),
-$(start).css({left: 300}),
-    $(house).css({ left: $(start).width() / 1 - start.clientWidth / 1 +700}),
+    // --- start ---set position of elements and images
+    $(start).css({bottom:370  }),
+    $(loader).css({left: 0}),
+    $(start).css({left: 300}),
+        $(house).css({ left: $(start).width() / 1 - start.clientWidth / 1 +700}),
    // $(about).css({ left: $(house).width() / 1 - house.clientWidth / 1}),
  
    $(school).css({ left: 1600}),
@@ -96,31 +96,31 @@ $(start).css({left: 300}),
         $(me).css({ border:'0',borderRadius:0,backgroundColor:'rgba(0,0,0,0,0)'});
 
     function dive_in_the_sea() {
-            $(ground).animate({ bottom: -25 }, 600, "linear"),
-            $(ground).css({ height: 750 - 50 }),
-            $(ground3).animate({ bottom: -25 }, 600, "linear"),
-            $(ground3).css({ height: 750 - 50 }),
+        $(ground).animate({ bottom: -25 }, 600, "linear"),
+        $(ground).css({ height: 750 - 50 }),
+        $(ground3).animate({ bottom: -25 }, 600, "linear"),
+        $(ground3).css({ height: 750 - 50 }),
 
-            $(blue).animate({ bottom: -25 }, 600, "linear"),
-            $(blue).css({ height: 700 - 50 }),
-            $(ground2).animate({ bottom: ground.clientHeight - 76 }, 600, "linear"),
-            $(me).animate({ bottom: 0 }, 600, "linear"),
-            $(me).css({ border:'3px solid white',borderRadius:50,backgroundColor:'rgba(0,0,0,0.5)'});
-            $(bubble).css({display:'block'});
-            //programming level animate here!
-            $('.html_level').animate({left:'490px'},2800);
-            $('.css_level').animate({left:'500px'},3500);
-            $('.js_level').animate({left:'500px'},4200);
-            $('.php_level').animate({left:'490px'},4200);
-            $('.java_level').animate({left:'490px'},4200);
-            $('.csharp_level').animate({left:'490px'},4200);
-            $('.python_level').animate({left:'490px'},4200);
-           
-            $('.laravel_level').animate({left:'2050px'},2800);
-            $('.node_level').animate({left:'2180px'},3500);
-            $('.ejs_level').animate({left:'2310px'},4200);
-            $('.react_level').animate({left:'2450px'},4200);
-            $('.vue_level').animate({left:'2580px'},4200);
+        $(blue).animate({ bottom: -25 }, 600, "linear"),
+        $(blue).css({ height: 700 - 50 }),
+        $(ground2).animate({ bottom: ground.clientHeight - 76 }, 600, "linear"),
+        $(me).animate({ bottom: 0 }, 600, "linear"),
+        $(me).css({ border:'3px solid white',borderRadius:50,backgroundColor:'rgba(0,0,0,0.5)'});
+        $(bubble).css({display:'block'});
+        //programming level animate here!
+        $('.html_level').animate({left:'490px'},2800);
+        $('.css_level').animate({left:'500px'},3500);
+        $('.js_level').animate({left:'500px'},4200);
+        $('.php_level').animate({left:'490px'},4200);
+        $('.java_level').animate({left:'490px'},4200);
+        $('.csharp_level').animate({left:'490px'},4200);
+        $('.python_level').animate({left:'490px'},4200);
+        
+        $('.laravel_level').animate({left:'2050px'},2800);
+        $('.node_level').animate({left:'2180px'},3500);
+        $('.ejs_level').animate({left:'2310px'},4200);
+        $('.react_level').animate({left:'2450px'},4200);
+        $('.vue_level').animate({left:'2580px'},4200);
            
     }
     function go_in_part3() {//part3 ground 3
@@ -135,7 +135,7 @@ $(start).css({left: 300}),
         $(ground3).animate({ bottom: 103 - ground.clientHeight }, 100, "linear"),
         $(ground3).css({ height: height_device - 50 }),
 
-             
+
         $(me).animate({ bottom: 103 }, 100, "linear")
         $('.html_level').animate({left:'4100px'},2800);
         $('.css_level').animate({left:'4300px'},3500);
@@ -149,33 +149,30 @@ $(start).css({left: 300}),
         $('.ejs_level').animate({left:'4310px'},4200);
         $('.react_level').animate({left:'4450px'},4200);
         $('.vue_level').animate({left:'4580px'},4200);
-   ;
+   
     }
     function in_part1() { //part 1 back to part 1 or ground 1
       //  function in_part1() { //part 1 back to part 1 or ground 1
        // $(ground2).css({ bottom: 103 }),
-       $(bubble).css({display:'none'});
-       $(me).css({ border:'0',borderRadius:0,backgroundColor:''});
-        $(blue).css({ height: ground.clientHeight - 50 }),
-        $(ground).animate({ bottom: 103 - ground.clientHeight }, 100, "linear"),
-            $(blue).animate({ bottom: 103 - ground.clientHeight }, 100, "linear"),
-            $(ground2).animate({ bottom: 53 }, 100, "linear"),
-            $(me).animate({ bottom: 103 }, 100, "linear");
-            $('.html_level').animate({left:'4100px'},2800);
-            $('.css_level').animate({left:'4300px'},3500);
-            $('.js_level').animate({left:'4500px'},4200);
-            $('.php_level').animate({left:'4690px'},4200);
-            $('.java_level').animate({left:'4890px'},4200);
-            $('.csharp_level').animate({left:'4990px'},4200);
-            $('.python_level').animate({left:'4990px'},4200);
-            // $(mountainbrown).animate({ bottom: 103 }, 100, "linear"),
-            $('.laravel_level').animate({left:'4050px'},2800);
-            $('.node_level').animate({left:'4180px'},3500);
-            $('.ejs_level').animate({left:'4310px'},4200);
-            $('.react_level').animate({left:'4450px'},4200);
-            $('.vue_level').animate({left:'4580px'},4200);
-           
-     
+    $(bubble).css({display:'none'});
+    $(me).css({ border:'0',borderRadius:0,backgroundColor:''});
+    $(blue).css({ height: ground.clientHeight - 50 }),
+    $(ground).animate({ bottom: 103 - ground.clientHeight }, 100, "linear"),
+    $(blue).animate({ bottom: 103 - ground.clientHeight }, 100, "linear"),
+    $(ground2).animate({ bottom: 53 }, 100, "linear"),
+    $(me).animate({ bottom: 103 }, 100, "linear");
+    $('.html_level').animate({left:'4100px'},2800);
+    $('.css_level').animate({left:'4300px'},3500);
+    $('.js_level').animate({left:'4500px'},4200);
+    $('.php_level').animate({left:'4690px'},4200);
+    $('.java_level').animate({left:'4890px'},4200);
+    $('.csharp_level').animate({left:'4990px'},4200);
+    $('.python_level').animate({left:'4990px'},4200);
+    $('.laravel_level').animate({left:'4050px'},2800);
+    $('.node_level').animate({left:'4180px'},3500);
+    $('.ejs_level').animate({left:'4310px'},4200);
+    $('.react_level').animate({left:'4450px'},4200);
+    $('.vue_level').animate({left:'4580px'},4200);
     }
 //when scroll
         window.addEventListener(
@@ -210,7 +207,7 @@ $(start).css({left: 300}),
                         
                    
                         // $('.greet-about').css({display:'block'});
-                        $('.greet-about').slideDown(800);
+                    $('.greet-about').slideDown(800);
                        
                     }
                     if(i < 1000){
@@ -257,23 +254,31 @@ $(start).css({left: 300}),
 
                        
                     }
-                    if(i >= 12900){
+                    if(i >= 11800){
                         $('.exp1').slideDown(600);
                        
 
 
                        
                     }
-                    if(i >= 14900){
+                    if(i >= 13100){
                         $('.exp2').slideDown(600);
                        
 
 
                        
                     }
-                    if(i < 12900){
+                    if(i >= 15279){
+                        $('.exp3').slideDown(600);
+                       
+
+
+                       
+                    }
+                    if(i < 11800){
                         $('.exp1').slideUp(600);
                         $('.exp2').slideUp(600);
+                        $('.exp3').slideUp(600);
                        
 
 
