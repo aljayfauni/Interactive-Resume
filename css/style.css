@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Fredoka+One&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Oswald&display=swap);
 *{
 margin:0
 ;
@@ -32,27 +33,19 @@ body {
     width:100%;
     border:2px solid rgb(0, 0, 0);
     height:auto;
-
 }
 #part1{
     height:6500px;
-   
     border:px solid red;
 }
 #start{
-  
     position: fixed;
-
-
     height:380px;
     max-width:480px;
     text-align: center;
-  
-  
 
 }
-.about-wrapper{
-  
+.about-wrapper{ 
     position: fixed;
     height:380px;
     max-width:480px;
@@ -61,8 +54,6 @@ body {
     font-weight:100;
     bottom:200px;
     left:1700px;
-  
-  
 
 }
 .exp1-wrapper, .exp2-wrapper, .exp3-wrapper{
@@ -74,29 +65,19 @@ body {
     position: fixed;
     height:380px;
     max-width:480px;
-    bottom:90px;
-  
-
+    bottom:90px; 
 }
 #school{
-  
     position: fixed;
     height:550px;
     max-width:980px;
     bottom:90px;
-  
-
 }
 #education ,.edu {
-  position: fixed;
-
-font-family:Fredoka One;
-font-weight: 100;
-text-align: center;
-   
-   
-  
-
+    position: fixed;
+    font-family:Fredoka One;
+    font-weight: 100;
+    text-align: center;
 }
 #part2{
     height: 3500px;
@@ -105,12 +86,11 @@ text-align: center;
 }
 #part2>#ground2 {
     height: 35px;
-     background-size: 700px 35px; 
- background-repeat: repeat-x;
-background-image: url('../images/sea-top.png');
+    background-size: 700px 35px; 
+    background-repeat: repeat-x;
+    background-image: url('../images/sea-top.png');
     width: 4500px;
     position: fixed;
- 
 }
 
 #part2>#ground2>#blue {
@@ -118,9 +98,6 @@ background-image: url('../images/sea-top.png');
     /* background: #368fee; */
     background-position: top;
     background-size: cover;
-
-
-
     bottom: 0;
     width: 4500px;
     position: fixed
@@ -131,7 +108,7 @@ background-image: url('../images/sea-top.png');
     border:px solid rgb(9, 255, 0);
 }
 #part3>#ground3 {
-background-color: rgb(97, 97, 97);
+    background-color: rgb(97, 97, 97);
     bottom: 0;
     background-position: 0 top;
     background-repeat: repeat;
@@ -172,31 +149,23 @@ textarea{
     z-index: 99;
 }
 #ground-sea{
-height: 50px;
-background: #2b3f58;
-width: 6500px;
-position: absolute
+    height: 50px;
+    background: #2b3f58;
+    width: 6500px;
+    position: absolute
 }
 
-/* me
- */
- .me  {
+.me{
     height: 250px;
     width: 100px;
     position: fixed;
     border:px solid red;
-
-  background-size:cover; 
-        
-margin:0;
-padding: 0;
-  
-
-
+    background-size:cover;         
+    margin:0;
+    padding: 0;
 }
 .cloud{
     background-image: url('../images/cloud.png');
-    /* //background-size: 200px 100px; */
     height: 100px;
     width: 150px;
     position: fixed;
@@ -206,42 +175,25 @@ padding: 0;
 #scrollText{
     font-family:lobster ;font-weight: 300;padding:0px;margin-left:350px;color:white;background-color:4848;font-size: 28px;width:400px;border:px solid blue;width:400px;text-align: center;
 }
-
 .right {
     background-image: url(../images/me.png);
     image-rendering: optimizeQuality;
     height: 230px;
     width: 100px;
     background-size:100px 230px; 
-
 }
-
 .left {
     background-image: url(../images/me.png);
-    /* height: 220px;
-    width: 90px;
-    background-size:90px 220px; */
-
 }
 
 .walk-right {
     background-image: url(../images/going_right.png);
     height: 230px;
     width: 100px;
-
     background-size: cover;
-   
-   
-
     animation: walk .4s steps(4 ) infinite;
-
-
-
-
-    
 }
-.programming-skill{
-    
+.programming-skill{  
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -249,22 +201,17 @@ padding: 0;
     align-items: stretch;
     align-content: stretch;
     color: white;
-
 }
 .skills{
     color: white;
     text-align: center;
 }
-
 .walk-left {
     background-image: url(../images/going_left.png);
     height: 230px;
     width: 100px;
-
     background-size: cover;
     animation: walk .4s steps(4) infinite;
-
-
 }
 @keyframes walk {
     from {
@@ -289,30 +236,26 @@ padding: 0;
       visibility: hidden;
     }
   }
-  @media only screen and (max-width: 900px) {
-  #scrollText{
-    margin-left: 0px;
-  }
+@media only screen and (max-width: 900px) {
+    #scrollText{
+        margin-left: 0px;
     }
+}
 
-    #bubble{
-        position: fixed ;
-        -webkit-animation: floatBubble 1.5s infinite;
-           /* // -webkit-animation-direction:alternate; */
-          }
+#bubble{
+    position: fixed ;
+    -webkit-animation: floatBubble 1.5s infinite;
+    }
+               
+    @-webkit-keyframes floatBubble{
+        from{
+            top:560px;
+            -webkit-animation-timing-function: ease-in;
         
-        
-        @-webkit-keyframes floatBubble{
-         from{
-                top:560px;
-                -webkit-animation-timing-function: ease-in;
-        
-           }
-        
-        
-           to {
-              top: 200px;
-              -webkit-animation-timing-function: ease-out;
+        }
+        to {
+            top: 200px;
+            -webkit-animation-timing-function: ease-out;
            }
         
         }
