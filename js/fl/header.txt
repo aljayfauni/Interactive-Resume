@@ -1,0 +1,1190 @@
+<!-- LAYER -->
+@php
+    use App\Http\Controllers\HeaderSubMenuController;
+@endphp
+<div id="layer"></div>
+
+<!-- SIDEBAR -->
+<div id="sidebar" class="scroll-inner">
+    {{-- <style>
+        .router-link-active{
+            opacity: 1 !important;
+        }
+        .logo{
+            height: 60px;
+        }
+        .prematch-height{
+            height: 83px !important;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            height: 100%;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+        .swiper-image {
+            position: relative;
+            width: 100%;
+            aspect-ratio: auto 1/1;
+            background-color: #0b141c;
+            border: 1px solid #1a1a1a;
+            border-radius: 30px;
+            overflow: hidden;
+            transition: background-color 0.15s, border-color 0.15s;
+        }
+        .swiper-image > img {
+            transform: scale(1);
+            transition: opacity 0.35s, transform 0.35s;
+        }
+        .swiper-title {
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: 400;
+            color: #fff;
+            text-align: center;
+        }
+
+        @media (max-width: 760px) {
+            .swiper-button-next {
+                right: 20px;
+                transform: rotate(90deg);
+            }
+
+            .swiper-button-prev {
+                left: 20px;
+                transform: rotate(90deg);
+            }
+        }
+    </style> --}}
+    <style>
+    /** Sidebar Logo Height on Mobile */
+    /* .logo{
+        height: 60px;
+    } */
+    header .header-top .logo {
+        height: 70px !important;
+    }
+    @media only screen and (max-width:720px){
+        header .header-top .logo {
+            height: 40px !important;
+        }
+    }
+    @media screen and (max-width:455px){
+        header .header-top .logo {
+            height: 40px !important;
+        }
+    }
+    @media screen and (max-width: 900px) {
+  
+        .floating-menu{
+
+            display:none;
+    
+        }
+    }
+    /* Swiper styles */
+    .swiper {
+        position: relative;
+        overflow: hidden;
+    }
+    .sub_menu .swiper-slide {
+        align-items: center;
+        display: flex;
+        font-size: 18px;
+        height: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .swiper-wrapper {
+        display: flex;
+        transition-property: transform;
+        box-sizing: content-box;
+    }
+
+    .swiper-slide {
+        flex-shrink: 0;
+        margin-right: 5px; /* Adjust the spacing between slides */
+    }
+    :root {
+    --swiper-theme-color: #4c185c !important;
+    }
+    /* Navigation buttons styles */
+    .swiper-button-next,.swiper-button-prev {
+        /* background-position:50%; */
+        /* background-repeat:no-repeat; */
+        /* background-size:27px 44px; */
+        color: #7332fe !important;
+        cursor: pointer;
+        height: 44px;
+        margin-top: -22px;
+        position: absolute;
+        top: 43%!important;
+        width: 27px;
+        z-index: 10;
+    }
+    /* SWIPER BUTTON NEXT AND PREVIOUS BACKGROUND IMAGE AND COLOR BLUE */
+    .swiper-button-prev {
+        background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAyNyA0NCc+PHBhdGggZD0nTTAgMjIgMjIgMGwyLjEgMi4xTDQuMiAyMmwxOS45IDE5LjlMMjIgNDQgMCAyMnonIGZpbGw9JyMwMDc1QUZGJy8+PC9zdmc+);
+        /* Set the color to #7332fe */
+        filter: invert(30%) sepia(20%) saturate(3444%) hue-rotate(254deg) brightness(97%) contrast(106%);
+    }
+    .swiper-button-next {
+        background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAyNyA0NCc+PHBhdGggZD0nTTI3IDIyIDUgNDRsLTIuMS0yLjFMMjIuOCAyMiAyLjkgMi4xIDUgMGwyMiAyMnonIGZpbGw9JyMwMDc1QUZGJy8+PC9zdmc+);
+        /* Set the color to #7332fe */
+        filter: invert(30%) sepia(20%) saturate(3444%) hue-rotate(254deg) brightness(97%) contrast(106%);
+    }
+</style>
+
+    <div class="inner">
+        <div class="btn-close_side">
+            <img src="/assets//img/close_white_48dp.svg" alt="">
+        </div>
+        <div class="side-logo">
+            <img src="/assets/img/logo.gif?v=2.2" class="logo" alt="">
+        </div>
+        <div class="account-info active"> <!-- 로그인 상태 class "active" -->
+            <div class="ai-status-login">
+                @auth
+                <div class="asl-detail">
+                    <div class="ad-user">
+                        <span><img src="{{session('userInfo')->icon}}" /></span>
+                        <span>Hello, {{ session('userInfo')->nickname }}!</span>
+                    </div>
+                    <div class="ad-amount">
+                        <div class="aa_cash">
+                            <span class="user-balance"><em>{{ number_format(session('userInfo')->balance) }}</em> 원</span>
+                        </div>
+                        <div class="aa_point">
+                            <span>포인트</span>
+                            <span class="user-points"><em>{{ number_format(session('userInfo')->points) }}</em> P</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="asl-button-row">
+                    <div class="asl-button-column">
+                        {{-- <button type="button" class="btn_large btn-primary">마이페이지</button>
+                        <button type="button" class="btn_large btn-primary bg-deposit">충전하기</button> --}}
+                        <a href="/mypage" class="btn_large btn-primary">마이페이지</a>
+                        <a href="/deposit" class="btn_large btn-primary bg-deposit">충전하기</a>
+                    </div>
+                    <div class="asl-button-column">
+                        {{-- <form method="post" name="logoutForm" role="form" action="/logout" class="asl-button-column"> --}}
+                            {{-- @csrf --}}
+                            <button type="submit" class="btn_large btn-third btn_logout">로그아웃</button>
+                        {{-- </form> --}}
+                        {{-- <button type="" class="btn_large btn-transparent bg-withdraw">환전하기</button> --}}
+                        <a href="/withdraw" class="btn_large btn-primary bg-withdraw">환전하기</a>
+                    </div>
+                </div>
+                @endauth
+                @guest
+                <div class="asl-button-row" style="margin: 12px 0;">
+                    <a class="btn_large btn-primary" id="mbtn_login">로그인</a>
+                    <a class="btn_large btn-primary" style="background-color: #4e3a55; border-color: #3b3042;" id="mbtn_join">회원가입</a>
+                </div>
+                @endguest
+            </div>
+        </div>
+        <div class="side-menu_list">
+            <a data-href="/betradar/page" class="menu bg-color-third"><span>벳레이더 <img class="icon-live" src="/assets/img/live_gif.gif" alt=""></span></a>
+            {{-- @if(in_array((new App\Service\CommonServiceImpl)->getUserIp(), (new App\Service\Api77Service)->allowedIps()))
+            <a data-href="/wbc-sports-inplay" class="menu bg-color-third"><span>실시간</span></a>
+            @endif --}}
+            <a data-href="/wbc-sports" class="menu bg-color-third"><span>클래식스포츠</span></a>
+            <a data-href="/casino" class="menu bg-color-third"><span>카지노</span></a>
+            <a data-href="/tokengames" class="menu bg-color-third"><span>토큰게임</span></a>
+            <a data-href="/slots" class="menu bg-color-third"><span class="active">슬롯</span></a>
+            {{-- <a data-href="/first" class="menu bg-color-third"><span>바둑이/홀덤<img class="icon-new" src="/assets/img/new-icon-black.png" alt="" style="display: none;"></span></a> --}}
+            <a data-href="/first" class="menu bg-color-third"><span>테이블게임</span></a>
+            {{-- <a data-href="/cards" class="menu bg-color-third"><span>카드게임</span></a> --}}
+            <a data-href="/power" class="menu bg-color-third"><span>파워볼</span></a>
+            <a data-href="/minigames" class="menu bg-color-third"><span>미니게임</span></a>
+            @auth
+                <a data-href="/point" class="menu bg-color-primary"><span>포인트전환</span></a>
+                <a data-href="/message" class="menu bg-color-primary"><span>쪽지</span></a>
+                <a data-href="/friend" class="menu bg-color-primary"><span>지인관리</span></a>
+                <a data-href="/history" class="menu bg-color-primary"><span>베팅내역</span></a>
+                <a data-href="/reward" class="menu bg-color-primary"><span>보너스혜택</span></a>
+            @endauth
+            <a data-href="/event" class="menu bg-color-primary"><span>이벤트/공지사항</span></a>
+            <a data-href="/guide" class="menu bg-color-primary"><span>질문사항</span></a>
+        </div>
+    </div>
+    <script>
+        (() => {
+            $(".btn-close_side").on("click", () => {
+                $("body").removeClass("scrollLock");
+                $("#sidebar").removeClass("active");
+            });
+        })();
+    </script>
+</div>
+
+<!-- HEADER -->
+<header class="wrapper">
+    <div class="header-top" class="prematch-height"> <!-- isPrematch == true ? 'prematch-height' : '' -->
+        <div class="header-top-logo">
+            <a href="/">
+                <img src="/assets/img/logo.gif?v=2.2" class="logo" alt="">
+            </a>
+        </div>
+        <div class="log-info">
+            @auth
+            <!-- Display for Users -->
+            <span class="big-event-header-mob logged-in">
+                <a href="{{route('bigevent.index')}}" class="link-glow"><span>1500만원 받는 방법</span></a>
+            </span>
+            <span><img src="{{session('userInfo')->icon}}" /></span>
+            <div class="user-log">
+                <span>{{ session('userInfo')->nickname }}</span>
+            </div>
+            <div class="own-amount">
+                {{-- <span class="user-balance"><em>{{ number_format(session('userInfo')->balance) }}</em> 원</span> --}}
+                <span class="user-balance"><em>{{ number_format(session('userInfo')->balance) }}</em> 원</span>
+                <span class="user-points"><em>{{ number_format(session('userInfo')->points) }}</em> P</span>
+            </div>
+            {{-- <form method="post" name="logoutForm" role="form"  action="/logout">
+                @csrf --}}
+                <div  class="btn_down">
+                    <img src="/assets/img/arrow-down-2.svg" alt="">
+                    <div class="dropdown_menu">
+                        <ul>
+                            <li><a href="/mypage"  onclick="closeUserTopBar()">마이페이지</a></li>
+                            <li><a href="/history" onclick="closeUserTopBar()">베팅내역</a></li>
+                            <li><button type="submit" class="btn_logout">로그아웃</button></li>
+                            <li><a href="/guide" onclick="closeUserTopBar()">질문사항</a></li>
+                        </ul>
+                    </div>
+                </div>
+            {{-- </form> --}}
+            <div class="lg-btns">
+                <a href="/deposit" class="btn_bubble button">충전</a>
+                <a href="/withdraw" class="btn_bubble button">환전</a>
+                <a href="/inquiry" class="btn_bubble button inquiryLink">
+                    문의
+                    <span @class([
+                        'inquiry-message-count', 
+                        'hideThis' => session('userInfo')->cs_msg_count == 0
+                        ])>
+                    </span>
+                    <span></span>
+                </a>
+                <audio id="msg-inquiry">
+                    <source src="/assets/img/audio/inquiry.mp3" type="audio/mp3">
+                </audio>
+            </div>
+            <div class="alert">
+                <a href="/message" onclick="modifyFlag()">
+                    <div style="width: 25px !important;">
+                        <img src="/assets/img/message-icons/empty-message.svg" alt="">
+                        <span id="note-message" @class([
+                            'note-message', 
+                            'hideThis' => session('userInfo')->msg_count == 0
+                            ])>
+                        </span>
+                        </span>
+                    </div>
+                </a>
+                <audio id="msg-notif">
+                    <source src="/assets/img/audio/message-notif.mp3" type="audio/mp3">
+                </audio>
+            </div>
+            <!-- End Display for Users -->
+            @endauth
+            @guest
+            {{-- big event waiting on hold --}}
+            {{-- <span class="big-event-header-mob logged-out">
+                <a href="{{route('bigevent.index')}}" class="link-glow"><span>1500만원 받는 방법</span></a>
+            </span> --}}
+            <!-- Display for Non-Users -->
+            <div class="social-container">
+                <a href="https://t.me/tp7788" target="_blank">
+                    <img src="/assets/img/icons/social-media/telegram.svg?v=1" class="social-icon" alt="tele-icon">
+                </a>
+                <a href="https://open.kakao.com/o/sfSLFhgf" target="_blank">
+                    <img src="/assets/img/icons/social-media/kakao.svg?v=1" class="social-icon kakao"
+                        alt="kakao-icon">
+                </a>
+                <a href="https://t.me/top1123" target="_blank">
+                    <img src="/assets/img/icons/social-media/telegram-news.svg?v=1" class="social-icon tele-news"
+                        alt="tele-icon2">
+                </a>
+                <a href="https://탑1.com/" target="_blank">
+                    <img src="/assets/img/icons/social-media/web.svg?v=1" class="social-icon last" alt="web-icon">
+                </a>
+                <!-- <a href="https://twitter.com/g2gcasino" target="_blank">
+                    <img src="/assets/img/icons/social-media/twitter.svg?v=1" class="social-icon last" style="width: 26px;" alt="twitter-icon">
+                </a> -->
+            </div>
+            
+            <a class="btn-log" id="btn_login">로그인</a>
+            <a class="btn-log" id="btn_join">회원가입</a>
+            <!-- End Display for Non-Users -->
+            @endguest
+            <!-- <a class="btn-log">출석체크</a> -->
+
+            <div class="lg-btns">
+                <a href="javascript:void(0)" class="btn-event" data-href="/event"><img src="/assets/img/g2g-event-banner.gif" class="event-game-icon">이벤트/공지사항</a>
+                <a href="{{route('bigevent.index')}}" class="link-glow"><span>1500만원 받는 방법</span></a>
+            </div>
+        </div>
+
+        <button type="button" class="btn_sidebar">
+            <img src="/assets/img/menu.svg?v=1" alt="">
+        </button>
+    </div>
+    <div class="gnb inner">
+        <div class="gnb_main">
+            <div class="all_page">
+                <button type="button">
+                    <img src="/assets/img/menu.svg?v=1" alt="">
+                </button>
+
+                <div class="gnb_sub">
+                    <div class="sub-list">
+                        <ul class="menu-list">
+                            <li class="tit"><span><a data-href="/betradar/page">벳레이더</a></span></li>
+                            <li class="menu"><a href="javascript:void(0)" onclick="pageLinkUrl('{{ route('betradar.game', ['PageCode' => 'sportsbookNEW']) }}')">벳레이더 스포츠</a></li>
+                            <li class="menu"><a href="javascript:void(0)" onclick="pageLinkUrl('{{ route('betradar.game', ['PageCode' => 'esport']) }}')">벳레이더 E스포츠</a></li>
+                            <li class="menu"><a data-href="/guide?select=betradar">벳레이더 이용가이드</a></li>
+                        </ul>
+                        {{-- 개발 완료될때까지 개발팀과 테스트ip만 허용 --}}
+                        
+                        <ul class="menu-list">
+                            {{-- @if(in_array((new App\Service\CommonServiceImpl)->getUserIp(), (new App\Service\Api77Service)->allowedIps()))
+                            <li class="tit"><span><a data-href="/wbc-sports-inplay">실시간</a></span></li>
+                            @endif --}}
+                            <li class="tit"><span><a data-href="/wbc-sports">클래식스포츠</a></span></li>
+                        </ul>
+                        
+
+                        
+                        <ul class="menu-list">
+                            <li class="tit"><span><a data-href="/casino">카지노</a></span></li>
+                            <li class="menu"><a data-href="/game/15804">에볼루션</a></li>
+                            <li class="menu"><a data-href="/casino#sec_12">코리안딜러</a></li>
+                            <li class="menu"><a data-href="/casino#sec_6">VIP살롱</a></li>
+                            <li class="menu"><a data-href="/casino#sec_13">TV쇼게임</a></li> 
+                            <li class="menu"><a data-href="/casino#sec_7">바카라</a></li>
+                            <li class="menu"><a data-href="/casino#sec_10">홀덤/포커</a></li>
+                        </ul>
+                        <ul class="menu-list">
+                            <li class="tit"><span><a data-href="/tokengames">토큰게임</a></span></li>
+                            <!--li class="menu"><a data-href="/game/null">실전경마</a></li-->
+                            <li class="menu"><a data-href="/game/20578">T-룰렛</a></li>
+                            <li class="menu"><a data-href="/game/20579">T-하이로우</a></li>
+                            <li class="menu"><a data-href="/game/20582">T-바카라</a></li>
+                            <li class="menu"><a data-href="/game/20583">T-경마</a></li>
+                            <li class="menu"><a data-href="/game/20576">T-달팽이</a></li>
+                        </ul>
+                        <ul class="menu-list">
+                            <li class="tit"><span><a data-href="/slots">슬롯</a></span></li>
+                            <li class="menu"><a data-href="/slots#sec_3">로비</a></li>
+                            <li class="menu"><a data-href="/slots#sec_4">프리스핀 게임</a></li>
+                            <li class="menu"><a data-href="/slots#sec_5">인기게임</a></li>
+                            <li class="menu"><a data-href="/slots#sec_6">신규게임</a></li>
+                            <li class="menu"><a data-href="/slots#sec_7">이벤트게임</a></li>
+                        </ul>
+                        <ul class="menu-list">
+                            <li class="tit"><span><a data-href="/first">테이블게임</a></span></li>
+                            <li class="menu"><a data-href="/game/18798">바카라</a></li>
+                            <li class="menu"><a data-href="/game/18843">라이트닝바카라</a></li>
+                            <li class="menu"><a data-href="/game/18831">룰렛</a></li>
+                            <li class="menu"><a data-href="/game/18810">라이트닝룰렛</a></li>
+                            <li class="menu"><a data-href="/game/18906">블랙잭</a></li>
+                            <li class="menu"><a data-href="/game/18787">드래곤타이거</a></li>
+                        </ul>
+                        {{-- <ul class="menu-list">
+                            <li class="tit"><span><a data-href="/bolegaming">바둑이/홀덤</a></span></li>
+                            <li class="menu"><a data-href="/game/15802">바둑이</a></li>
+                            <li class="menu"><a data-href="/game/18884">홀덤</a></li>
+                        </ul> --}}
+                        <ul class="menu-list">
+                            <li class="tit"><span><a data-href="/power">파워볼</a></span></li>
+                            <li class="menu"><a data-href="/game/15366">EVO파워볼</a></li>
+                        </ul>
+            
+                        {{-- minigame --}}
+                        <ul class="menu-list">
+                            <li class="tit"><span><a data-href="/minigames">미니 게임</a></span></li>
+                            <li class="menu"><a data-href="/minigames#sec_1">아케이드</a></li>
+                            <li class="menu"><a data-href="/minigames#sec_2">사행성복권</a></li>
+                            <li class="menu"><a data-href="/minigames#sec_3">성인PC</a></li>
+                            <li class="menu"><a data-href="/minigames#sec_4">캐쥬얼게임</a></li>
+                        </ul>
+            
+                    
+                        {{-- <ul class="menu-list">
+                            <li class="tit"><span><a data-href="/card">카드게임</a></span></li>
+                            <li class="menu"><a data-href="/game/18849">카드3장</a></li>
+                            <li class="menu"><a data-href="/game/18836">슈퍼 안다르 바하</a></li>
+                            <li class="menu"><a data-href="/game/18869">죽음 또는 생존</a></li>
+                        </ul> --}}
+            
+                        {{-- <ul class="menu-list">
+                            <li class="tit"><span><a href="/sub/5">가상스포츠</a></span></li>
+                            <li class="menu"><a href="/sub/5#sec_3">LEAP</a></li>
+                        </ul> --}}
+                        <ul class="menu-list">
+                            <a data-href="/guide"><li class="tit"><span>질문사항</span></li></a>
+                            {{-- <li onclick="actionUpdateSelectedTab('faq')" class="menu"> <a href="/guide">자주 묻는 질문</a></li> --}}
+                            {{-- <li onclick="actionUpdateSelectedTab('terms')" class="menu"><a href="{ path: '/guide', query: { tab: 'terms'} }">이용 약관 및 일반 규정</a></li>
+                            <li onclick="actionUpdateSelectedTab('rules')" class="menu"><a href="{ path: '/guide', query: { tab: 'rules'} }">스포츠 베팅 규정</a></li>
+                            <li onclick="actionUpdateSelectedTab('casino-guide')" class="menu"><a href="{ path: '/guide', query: { tab: 'casino-guide'} }">카지노 가이드</a></li>
+                            <li onclick="actionUpdateSelectedTab('user-guide')" class="menu"><a href="{ path: '/guide', query: { tab: 'user-guide'} }">이용자 가이드</a></li> --}}
+                            <li {{--onclick="actionUpdateSelectedTab('faq')"--}} class="menu"> <a data-href="/guide">자주 묻는 질문</a></li>
+                            <li {{-- onclick="actionUpdateSelectedTab('terms')" --}} class="menu"><a data-href="/guide?tab=terms">이용 약관 및 일반 규정</a></li>
+                            <li {{--onclick="actionUpdateSelectedTab('rules')" --}} class="menu"><a data-href="/guide?tab=rules">스포츠 베팅 규정</a></li>
+                            <li {{--onclick="actionUpdateSelectedTab('casino-guide')"--}} class="menu"><a data-href="/guide?tab=casino-guide">카지노 가이드</a></li>
+                            <li {{--onclick="actionUpdateSelectedTab('user-guide')"--}} class="menu"><a data-href="/guide?tab=user-guide">이용자 가이드</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <ul class="gnb-list">
+                <li>
+                    <a href="javascript:void(0)" class="gnb-menu-link" onclick="pageLinkUrl('/betradar/page')">
+                        <span class="img-marker"><img src="/assets/img/live_gif.gif" alt=""></span>
+                        <span class="menu_tit">벳레이더</span>
+                    </a>
+                    <div class="sub_menu sub_menu_betradar">
+                        <div class="item-list inner" style="justify-content: center;">
+                            <a class="item" href="javascript:void(0)" onclick="pageLinkUrl('{{ route('betradar.game', ['PageCode' => 'sportsbookNEW']) }}')" >
+                                <div class="img">
+                                    <img src="/assets/img/esports/guide/betradar-sports-shohei-ohtani-lobby-3-betradar.png" alt="" width="179" height="179">
+                                    <div class="figcaption">
+                                        <span>description</span>
+                                    </div>
+                                </div>
+                                <div class="tit" >벳레이더 스포츠</div>
+                            </a>
+                            <a class="item" href="javascript:void(0)" onclick="pageLinkUrl('{{ route('betradar.game', ['PageCode' => 'esport']) }}')">
+                                <div class="img">
+                                    <img src="/assets/img/esports/guide/betradar-esports-lobby.png" alt="" width="179" height="179">
+                                    <div class="figcaption">
+                                        <span>description</span>
+                                    </div>
+                                </div>
+                                <div class="tit">벳레이더 E스포츠</div>
+                            </a>
+                            <a class="item" href="javascript:void(0)" onclick="pageLinkUrl('{{ route('guide.index', ['section' => 'betradar']) }}')">
+                                <div class="img">
+                                    <img src="/assets/img/esports/guide/betradar-guide-2.png" alt="" width="179" height="179">
+                                    <div class="figcaption">
+                                        <span>description</span>
+                                    </div>
+                                </div>
+                                <div class="tit">벳레이더 이용가이드</div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                {{-- 개발 완료될때까지 개발팀과 테스트ip만 허용 --}}
+                {{-- @if(in_array((new App\Service\CommonServiceImpl)->getUserIp(), (new App\Service\Api77Service)->allowedIps()))
+                <li>
+                    <a href="javascript:void(0)" class="wbc_sports_inplay_menu_link"onclick="pageLinkUrl('/wbc-sports-inplay')">
+                        <span class="menu_tit">실시간</span>
+                    </a>
+                </li>
+                @endif --}}
+                
+                <li>
+                    <a href="javascript:void(0)" class="wbc_sports_menu_link" onclick="pageLinkUrl('/wbc-sports')">
+                        <span class="menu_tit">클래식스포츠</span>
+                    </a>
+                </li>
+                
+
+
+
+
+                {{-- <li>
+                    <a href='/casino'>
+                        <span class="menu_tit">카지노</span>
+                    </a>
+                    <div class="sub_menu">
+                        <div class="item-list inner" style="justify-content:center;">
+                            <a class="item"  href="/game/15804">
+                                <div class="img">
+                                    <img src="/assets/img/casino/cx/evolution-gaming-casino.png" alt="" width="179" height="179">
+                                    <div>
+                                        <span>description</span>
+                                    </div>
+                                </div>
+                                <div class="tit">에볼루션</div>
+                            </a>
+                            <a class="item "  href="/game/17461">
+                                <div class="img">
+                                    <img src="/assets/img/casino/cx/pragmatic-play-casino.png" alt="" width="179" height="179">
+                                    <div>
+                                        <span>description</span>
+                                    </div>
+                                </div>
+                                <div class="tit">프라그마틱 라이브</div>
+                            </a>
+                            <a class="item "  href="/game/16427">
+                                <div class="img">
+                                    <img src="/assets/img/casino/cx/dream-gaming-lobby.png" alt="" width="179" height="179">
+                                    <div>
+                                        <span>description</span>
+                                    </div>
+                                </div>
+                                <div class="tit">드림게이밍</div>
+                            </a>
+                            <a class="item" href='/game/18366' href="/game/18366">
+                                <div class="img">
+                                    <img src="/assets/img/casino/cx/dowinn-vip-club-okada.png" alt="" width="179" height="179">
+                                    <div>
+                                        <span>description</span>
+                                    </div>
+                                </div>
+                                <div class="tit">두윈호텔 카지노</div>
+                            </a>
+                            <a class="item "  href="/game/17240">
+                                <div class="img">
+                                    <img src="/assets/img/casino/cx/asia-gaming-lobby.png" alt="" width="179" height="179">
+                                    <div>
+                                        <span>description</span>
+                                    </div>
+                                </div>
+                                <div class="tit">아시아게이밍</div>
+                            </a>
+                        </div>
+                    </div>
+                </li> --}}
+                <li>
+                    <a href="javascript:void(0)"  class="gnb-menu-link" onclick="pageLinkUrl('/casino')">
+                        <span class="menu_tit">카지노</span>
+                    </a>
+                    <div class="sub_menu sub_menu_casino">
+                        <div class="item-list inner special-inner" style="justify-content:center;">
+                            <div class="swiper swiper-container swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+                                <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+                                    @foreach($casinoMenu as $key => $casino_menu_list)
+                                    {{-- show 6 sub menu links for every next slide --}}
+                                        @if($key % 6 === 0)
+                                            <div class="swiper-slide" style="gap: 10px;">
+                                        @endif
+                                            <a class="item" href="javascript:void(0)" onclick="pageLinkUrl('{{ $casino_menu_list['link'] }}')">
+                                                <div class="img">
+                                                    <img src="{{ $casino_menu_list['img'] }}" alt="">
+                                                    <div>
+                                                        <span>description</span>
+                                                    </div>
+                                                </div>
+                                                <div class="tit">{{ $casino_menu_list['title']}}</div>
+                                            </a>
+                                        @if(($key + 1) % 6 === 0 || $key === count($casinoMenu) - 1)
+                                            </div>
+                                        @endif
+                                    @endforeach
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev menu-links-prev"></div> <!-- Previous button -->
+                            <div class="swiper-button-next menu-links-next"></div> <!-- Next button -->
+                        </div>
+                        {{-- <div class="item-list inner special-inner" style="justify-content:center;">
+                            <div class="swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+                                <div  class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+                                    <div  class="swiper-slide swiper-slide-active" style="gap: 10px; width: 1240px;">
+                                        <a class="item" href="javascript:void(0)" onclick="pageLinkUrl('/game/15804')">
+                                            <div class="img">
+                                                <img src="/assets/img/casino/cx/evolution-lobby-4.png" alt="" width="179" height="179">
+                                                <div>
+                                                    <span>description</span>
+                                                </div>
+                                            </div>
+                                            <div class="tit">에볼루션</div>
+                                        </a>
+                                        <a class="item" href="javascript:void(0)" onclick="pageLinkUrl('/game/17461')">
+                                            <div class="img">
+                                                <img src="/assets/img/casino/cx/pragmatic-play-lobby-4.png" alt="" width="179" height="179">
+                                                <div>
+                                                    <span>description</span>
+                                                </div>
+                                            </div>
+                                            <div class="tit">프라그마틱 라이브</div>
+                                        </a>
+                                        <a class="item" href="javascript:void(0)" onclick="pageLinkUrl('/game/16427')">
+                                            <div class="img">
+                                                <img src="/assets/img/casino/cx/dream-gaming-lobby-4.png" alt="" width="179" height="179">
+                                                <div>
+                                                    <span>description</span>
+                                                </div>
+                                            </div>
+                                            <div class="tit">드림게이밍</div>
+                                        </a>
+                                        <a class="item" href="javascript:void(0)" onclick="pageLinkUrl('/game/17240')">
+                                            <div class="img">
+                                                <img src="/assets/img/casino/cx/asia-gaming-lobby-4.png" alt="" width="179" height="179">
+                                                <div>
+                                                    <span>description</span>
+                                                </div>
+                                            </div>
+                                            <div class="tit">아시아게이밍</div>
+                                        </a>
+                                        <a class="item" href="javascript:void(0)" onclick="pageLinkUrl('/game/17239')">
+                                            <div class="img">
+                                                <img src="/assets/img/casino/cx/tgpd-casino-menu.svg" alt="" width="179" height="179">
+                                                <div>
+                                                    <span>description</span>
+                                                </div>
+                                            </div>
+                                            <div class="tit">VIP 아바타 카지노</div>
+                                        </a>
+                                        <a class="item" href="javascript:void(0)" onclick="pageLinkUrl('/game/18367')">
+                                            <div class="img">
+                                                <img src="/assets/img/casino/cx/microgaming-menu.svg" alt="" width="179" height="179">
+                                                <div>
+                                                    <span>description</span>
+                                                </div>
+                                            </div>
+                                            <div class="tit">마이크로게이밍</div>
+                                        </a>
+                                    </div>
+                                    <div  class="swiper-slide swiper-slide-next" style="gap: 10px; width: 1240px;">
+                                        <a class="item" href="javascript:void(0)" onclick="pageLinkUrl('/game/18366')">
+                                            <div class="img">
+                                                <img src="/assets/img/casino/cx/dowinn-vip-club-okada.png" alt="" width="179" height="179">
+                                                <div>
+                                                    <span>description</span>
+                                                </div>
+                                            </div>
+                                            <div class="tit">두윈호텔 카지노</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev menu-links-prev"></div> <!-- Previous button -->
+                            <div class="swiper-button-next menu-links-next"></div> <!-- Next button -->
+                        </div> --}}
+                    </div>
+                </li>    
+                <!-- Token Games -->
+                <li>
+                    <a href="javascript:void(0)"  class="gnb-menu-link" onclick="pageLinkUrl('/tokengames')">
+                        <span class="menu_tit">토큰게임</span>
+                    </a>
+                    <div class="sub_menu sub_menu_tokengames">
+                        <div class="item-list inner special-inner" style="justify-content:center;">
+                            <div class="swiper swiper-container swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+                                <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+                                    @foreach($tokenGamesMenu as $key => $tokengames_menu_list)
+                                    {{-- show 6 sub menu links for every next slide --}}
+                                        @if($key % 6 === 0)
+                                            <div class="swiper-slide" style="gap: 10px;">
+                                        @endif
+                                            <a class="item" href="javascript:void(0)" onclick="pageLinkUrl('{{ $tokengames_menu_list['link'] }}')">
+                                                <div class="img">
+                                                    <img src="{{ $tokengames_menu_list['img'] }}" alt="">
+                                                    <div>
+                                                        <span>description</span>
+                                                    </div>
+                                                </div>
+                                                <div class="tit">{{ $tokengames_menu_list['title']}}</div>
+                                            </a>
+                                        @if(($key + 1) % 6 === 0 || $key === count($tokenGamesMenu) - 1)
+                                            </div>
+                                        @endif
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- Token Games -->
+                <li>
+                    <a href='javascript:void(0)'  class="gnb-menu-link" onclick="pageLinkUrl('/slots')">
+                        <span class="menu_tit">슬롯</span>
+                    </a>
+                    <div class="sub_menu sub_menu_slots">
+                        <div class="item-list inner special-inner" style="justify-content:center;">
+                            <div class="swiper swiper-container swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+                                <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+                                    @foreach ($slotsMenu as $key => $slots_menu_list)
+                                        {{-- Show 6 sub menu links for every next slide --}}
+                                        @if($key % 6 === 0)
+                                            <div class="swiper-slide" style="gap: 10px; ">
+                                        @endif
+                                        @if($key === 0)    
+                                            <a class="item" href="javascript:void(0)"  onclick="showSlotMod('{{ $slots_menu_list['provider'] }}')">
+                                        @else
+                                            <a class="item" href="javascript:void(0)" onclick="pageLinkUrl('{{ $slots_menu_list['link'] }}')">        
+                                        @endif 
+
+                                        {{-- show hacksaw for testuser only --start --}}
+                                        @php $testUser = [22948]; @endphp
+                                        @if(Auth::check() && in_array(Auth::user()->id, $testUser))
+                                            <div class="img">
+                                                <img src="{{ $slots_menu_list['img'] }}" alt="">
+                                                <div>
+                                                    <span>description</span>
+                                                </div>
+                                            </div>
+                                            <div class="tit">{{ $slots_menu_list['title'] }}</div>
+                                        @endif
+                                        {{-- show hacksaw for testuser only --end --}}
+
+                                        @if(!Auth::check() && $key !=0 && )
+                                        <div class="img">
+                                            <img src="{{ $slots_menu_list['img'] }}" alt="">
+                                            <div>
+                                                <span>description</span>
+                                            </div>
+                                        </div>
+                                        <div class="tit">{{ $slots_menu_list['title'] }}</div>
+                                        @endif
+
+                                        </a>
+                                        @if(($key + 1) % 6 === 0 || $key === count($slotsMenu) - 1)
+                                            </div> <!-- Close the swiper-slide -->
+                                        @endif
+                                    @endforeach
+
+                                </div> <!-- Close the swiper-wrapper -->
+                            </div> <!-- Close the swiper -->
+                            <div class="swiper-button-prev menu-links-prev"></div> <!-- Previous button -->
+                            <div class="swiper-button-next menu-links-next"></div> <!-- Next button -->
+                        </div> <!-- Close the item-list inner special-inner -->
+                    </div> <!-- Close the sub_menu -->
+                </li>
+                {{-- bole --}}
+                {{-- <li>
+                    <a href="javascript:void(0)" onclick="pageLinkUrl('/bolegaming')"> --}}
+                        {{-- <span class="img-marker2"><img src="/assets/img/new-icon-black.png" alt=""></span> --}}
+                        {{-- <span class="menu_tit">바둑이/홀덤</span>
+                    </a>
+                    <div class="sub_menu">
+                        <div class="item-list inner" style="justify-content: center;">
+                            <a class="item" href="javascript:void(0)" onclick="pageLinkUrl('/game/15802')">
+                                <div class="img">
+                                    <img src="/assets/img/bole/badugi.png" alt="" width="179" height="179">
+                                    <div>
+                                        <span>description</span>
+                                    </div>
+                                </div>
+                                <div class="tit">바둑이</div>
+                            </a>
+                            <a class="item" href="javascript:void(0)" onclick="pageLinkUrl('/game/18884')">
+                                <div class="img">
+                                    <img src="/assets/img/bole/holdem.png?v=2" alt="" width="179" height="179">
+                                    <div>
+                                        <span>description</span>
+                                    </div>
+                                </div>  
+                                <div class="tit">홀덤</div>
+                            </a>
+                        </div>
+                    </div>
+                </li> --}}
+                <li>
+                    <a href="javascript:void(0)"  class="gnb-menu-link"  onclick="pageLinkUrl('/first')">
+                        <span class="menu_tit">테이블게임</span>
+                    </a>
+                    <div class="sub_menu sub_menu_first">
+                        <div class="item-list inner special-inner" style="justify-content:center;">
+                            <div class="swiper swiper-container swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+                                <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+                                    @foreach($fpMenuGame as $key => $fp_menu_list)
+                                    {{-- show 6 sub menu links for every next slide --}}
+                                        @if($key % 6 === 0)
+                                            <div class="swiper-slide" style="gap: 10px;">
+                                        @endif
+                                            <a class="item" href="javascript:void(0)" onclick="pageLinkUrl('{{ $fp_menu_list['link'] }}')">
+                                                <div class="img">
+                                                    <img src="{{ $fp_menu_list['img'] }}" alt="">
+                                                    <div>
+                                                        <span>description</span>
+                                                    </div>
+                                                </div>
+                                                <div class="tit">{{ $fp_menu_list['title']}}</div>
+                                            </a>
+                                        @if(($key + 1) % 6 === 0 || $key === count($fpMenuGame) - 1)
+                                            </div>
+                                        @endif
+                                    @endforeach
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev menu-links-prev"></div> <!-- Previous button -->
+                            <div class="swiper-button-next menu-links-next"></div> <!-- Next button -->
+                        </div>
+                    </div>
+                </li>
+                {{-- <li>
+                    <a href="javascript:void(0)" onclick="pageLinkUrl('/card')">
+                        <span class="menu_tit">카드게임</span>
+                    </a>
+                    <div class="sub_menu">
+                        <div class="item-list inner" style="justify-content: center;">
+                            <a class="item" href="javascript:void(0)" onclick="pageLinkUrl('/game/18849')">
+                                <div class="img">
+                                    <img src="/assets/img/evolution/three-card-2-2.png" alt="">
+                                    <div>
+                                        <span>description</span>
+                                    </div>
+                                </div>
+                                <div class="tit">카드3장</div>
+                            </a>
+                            <a class="item" href="javascript:void(0)" onclick="pageLinkUrl('/game/18836')">
+                                <div class="img">
+                                    <img src="/assets/img/evolution/super-andar-bahar-2.png" alt="">
+                                    <div>
+                                        <span>description</span>
+                                    </div>
+                                </div>
+                                <div class="tit">슈퍼 안다르 바하</div>
+                            </a>
+                            <a class="item" href="javascript:void(0)" onclick="pageLinkUrl('/game/18869')">
+                                <div class="img">
+                                    <img src="/assets/img/evolution/triple-card-poker.png" alt="">
+                                    <div>
+                                        <span>description</span>
+                                    </div>
+                                </div>
+                                <div class="tit">트리플 카드 포커</div>
+                            </a>
+                        </div>
+                    </div>
+                </li> --}}
+                <li>
+                    <a href="javascript:void(0)"  class="gnb-menu-link " onclick="pageLinkUrl('{{ route('power.index') }}')">
+                        <span class="menu_tit">파워볼</span>
+                    </a>
+                    <div class="sub_menu sub_menu_power">
+                        <div class="item-list inner" style="justify-content:center;">
+                            <a class="item" href="javascript:void(0)" onclick="pageLinkUrl('/game/15366')">
+                                <div class="img">
+                                    <img src="/assets/img/minigames/powerball-2.png" alt="">
+                                    <div class="figcaption">
+                                        <span>description</span>
+                                    </div>
+                                </div>
+                                <div class="tit">EVO 파워볼</div>
+                            </a>
+                            {{--   게임 정보 노출로 인하여 제거
+                            <a class="item" href="javascript:void(0)" onclick="pageLinkUrl('{{ route('game.powerball') }}')">
+                                <div class="img">
+                                    <img src="/assets/img/minigames/new-powerball-2.png" alt="">
+                                    <div class="figcaption">
+                                        <span>description</span>
+                                    </div>
+                                </div>
+                                <div class="tit">N파워볼</div>
+                            </a>
+                            <a class="item" href="javascript:void(0)" onclick="pageLinkUrl('{{ route('game.powerladder') }}')">
+                                <div class="img">
+                                    <img src="/assets/img/minigames/new-powerladder-2.png" alt="">
+                                    <div class="figcaption">
+                                        <span>description</span>
+                                    </div>
+                                </div>
+                                <div class="tit">N파워사다리</div>
+                            </a>
+                            --}}
+                        </div>
+                    </div>
+                </li>
+                {{-- minigame --}}
+                <li>
+                    <a href="javascript:void(0)"  class="gnb-menu-link " onclick="pageLinkUrl('/minigames')">
+                        <span class="menu_tit">미니게임</span>
+                    </a>
+                    <div class="sub_menu sub_menu_minigames">
+                        <div class="item-list inner special-inner" style="justify-content:center;">
+                            <div class="swiper swiper-container swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+                                <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+                                    @foreach($miniGames as $key => $minigame_list)
+                                    {{-- show 6 sub menu links for every next slide --}}
+                                        @if($key % 6 === 0)
+                                            <div class="swiper-slide" style="gap: 10px;">
+                                        @endif
+                                            <a class="item" href="javascript:void(0)" onclick="pageLinkUrl('{{ $minigame_list['link'] }}')">
+                                                <div class="img img_minigame_menu" style="width:179px;">
+                                                    <img src="{{ $minigame_list['img'] }}" alt="" >
+                                                    <div>
+                                                        <span>description</span>
+                                                    </div>
+                                                </div>
+                                                <div class="tit">{{ $minigame_list['title']}}</div>
+                                            </a>
+                                        @if(($key + 1) % 6 === 0 || $key === count($miniGames) - 1)
+                                            </div>
+                                        @endif
+                                    @endforeach
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev menu-links-prev"></div> <!-- Previous button -->
+                            <div class="swiper-button-next menu-links-next"></div> <!-- Next button -->
+                        </div>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+    <script>
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+                'Accept': 'application/json',
+                'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+            }
+        });
+
+        $(document).ready(function () {
+            var currentUrl = window.location.href;
+            window.hideLoader();
+            setInterval(function() {
+                const isLoggingIn = localStorage.getItem('isLoggingIn');
+                const isAuth = localStorage.getItem('isAuth');
+
+                if (isLoggingIn != 1 && isAuth == 1) {
+                    $.ajax({
+                        url: '/check-auth',
+                        success: function(res) {
+                            if (!res.is_auth && isAuth == 1) {
+                                localStorage.removeItem('isAuth');
+                                alertPopup('로그아웃 되었습니다.');
+
+                                setTimeout(() => {
+                                    window.location.reload();
+                                }, 1500);
+                            }
+                        },
+                        error: function(err) {
+                            localStorage.removeItem('isAuth');
+                            alertPopup('로그아웃 되었습니다.');
+
+                            setTimeout(() => {
+                                window.location.reload();
+                            }, 1500);
+                        }
+                    });
+                }
+            }, 3000);
+            $('.btn_logout').on('click', () => {
+                $.ajax({
+                    url: '/api/v1/logout',
+                    method: 'POST',
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    contentType: 'application/json',
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    success: function(res) {
+                        //localStorage.clear();
+                        window.location.href = '/';
+                    },
+                    error: function(err) {
+                        alertPopup('로그아웃하지 못했습니다. 다시 시도해 주세요.');
+                    }
+                });
+            });
+
+            $(".btn_down > img").on("click", () => {
+                $(".btn_down").toggleClass("active");
+            });
+
+            $('html').click(function (e) {
+                if ($(e.target).parents('.btn_down').length < 1) {
+                    $(".btn_down").removeClass("active");
+                }
+            });
+
+            $(".btn_sidebar").on("click", () => {
+                $("body").addClass("scrollLock");
+                $("#sidebar").addClass("active");
+            });
+
+            /** switching tabs 
+            for questions , terms ,rules ,guide links in  footer
+            set active gamelist game-item tab **/
+            var tabMap = {
+                'terms': { tabId: 'tab_2', dataIndex: 2 },
+                'rules': { tabId: 'tab_3', dataIndex: 3 },
+                'casino-guide': { tabId: 'tab_4', dataIndex: 4 },
+                'user-guide': { tabId: 'tab_5', dataIndex: 5 }
+            };
+            
+            Object.entries(tabMap).forEach(function(entry) {    
+                var tabName = entry[0];
+                var tab = entry[1];
+                if (currentUrl.includes('tab=' + tabName)) {
+                    setGameItemActiveTab(tab);
+                }
+            });
+
+            /** for scroll menu links next ,previous alternative to swiper */
+            $('.menu-links-prev').click(function(){
+                $(".swiper").animate({scrollLeft: "-=1240px"});
+            });
+            
+            $('.menu-links-next').click(function(){
+                $(".swiper").animate({scrollLeft: "+=1240px"});
+            });
+
+            /** FOR PAGE LINKS AND TAB BUTTON Opening pagelink*/
+            $('.btn-event, .floating-menu a, .side-menu_list a, .app-footer .app-menu').on('click', (e) => {
+                var pagelink = $(e.currentTarget).data("href");  
+                pageLinkUrl(pagelink);
+            });
+
+            //get current page url and display clicked menu in mobile tab view land scape
+            var mediaQuery = window.matchMedia('(max-width: 900px)');
+            var orientationQuery = window.matchMedia('(orientation: portrait)');
+            var gnbListLinks = $(".gnb_main .gnb-list a");
+            var get_currentPageLink = window.location.pathname;
+            
+            function disableMenuClickOnMobile(current_click_menu_url) {                       
+                var subMenuClass;
+                switch (get_currentPageLink) {
+                case '/betradar/page':
+                    subMenuClass = '.sub_menu_betradar';
+                    break;
+                case '/casino':
+                    subMenuClass = '.sub_menu_casino';
+                    break;
+                case '/slots':
+                    subMenuClass = '.sub_menu_slots';
+                    break;
+                case '/tokengames':
+                    subMenuClass = '.sub_menu_tokengames';
+                    break;
+                case '/first':
+                    subMenuClass = '.sub_menu_first';
+                    break;
+                case '/power':
+                    subMenuClass = '.sub_menu_power';
+                    break;
+                case '/minigames':
+                    subMenuClass = '.sub_menu_minigames';
+                    break;
+                }
+
+                if (subMenuClass) {
+                    $(subMenuClass).css('display', 'flex');
+                }
+
+                //close sub_menu link when click outside
+                $(document).on('click', function (e) {
+                    if ($(e.target).closest(".sub_menu").length === 0) {
+                        $(".sub_menu").css('display','none');
+                    }
+                });
+
+                $('.img_minigame_menu').css('width','130px');
+                
+            }
+            if (mediaQuery.matches || orientationQuery.matches) {
+                $('.floating-menu').css('display','none');
+                disableMenuClickOnMobile(); // Call DISABLE ONCLICK MENU WHEN IN TABLET OR MOBILE initially
+            }
+        
+        });
+
+        function setGameItemActiveTab(tab) {
+            $('#tab_1, #tab_2, #tab_3, #tab_4, #tab_5').removeClass('active');
+            $('.sub-floats .game-list .game_item').removeClass('active');
+            $('#' + tab.tabId).addClass('active');
+            $('.sub-floats .game-list .game_item[data-idx="' + tab.dataIndex + '"]').addClass('active');
+        }
+
+        /** show login modal */
+        function showLoginModal(){
+            $("#layer").addClass("active"); 
+            $("#modal_login").addClass("active");
+        }
+
+        /** check if user is loggin before going to the page links */
+        function openPageLink(pagelink) {     
+            /** Check if user is logged in */
+            if (window.isUserLoggedIn) {
+                /** User is logged in, proceed to the link */
+                window.location.href = pagelink;
+            } else {
+                /** User is not logged in, show login modal */
+                $('#layer').addClass('active');
+                $('#modal_login').addClass('active');
+                $("#sidebar").removeClass("active");
+            }
+        }
+    </script>
+    <script src="/assets/js/swiper.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 'auto',
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+        //show slotsModal
+        function showSlotMod(provider){
+            const layer2 = document.getElementById('layer2');
+            const modal_games = document.getElementById('modal_games');
+            const slot_content = document.getElementById('slot_content');
+
+            layer2.className = 'active';
+            modal_games.className += ' active';
+
+            slot_content.innerHTML = '';
+            window.showLoader();
+            fetch(`/api/v1/rubygames/list/bysubprovider?category=slotmachine&subProviderName=${provider}`, {
+                method: 'GET',
+            })
+            .then(res => res.json())
+            .then(data => {
+                data.forEach(slot => {
+                    const div = document.createElement('div');
+                    div.setAttribute('data-favorite', 'off');
+                    div.className = 'item';
+                    div.innerHTML = `
+                        <div class="img" style="height: 194px; border-radius: 10px !important;">
+                            <img src="${slot.card_image}" alt="">
+                            <a href="javascript:void(0)" onclick="pageLinkUrl('/game/${slot.id}')" >
+                                <div class="figcaption game_link" data-link="/game/${slot.id}">
+                                    <span>${slot.name_kr}</span>
+                                </div>
+                            </a>
+                        </div> 
+                        <div class="desc">
+                            <span>${slot.name_kr}</span>
+                        </div>
+                    `;
+                    slot_content.appendChild(div);
+                });
+                window.hideLoader();
+            });
+        }
+        function hideSlotMod(){
+            const layer2 = document.getElementById('layer2');
+            const modal_games = document.getElementById('modal_games');
+
+            layer2.className = '';
+            modal_games.className = 'modal';
+        }
+    </script>
+
+    @include('include.socket')
+    @include('include.modal-slots')
+</header>
+<!-- HEADER END -->
+
