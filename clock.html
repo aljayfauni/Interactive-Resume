@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Date Example</title>
+</head>
+<body>
+  <div class="date">
+    <span id="dateSpan">2022/10/14 4:46:37 PM GMT+8</span>
+  </div>
+
+  <script>
+    // JavaScript code to manipulate the date
+    // Assuming you want to change the date format
+    document.addEventListener("DOMContentLoaded", function() {
+      updateClock(); // Update the clock immediately
+      setInterval(updateClock, 1000); // Update the clock every second
+    });
+
+    function updateClock() {
+      const dateSpan = document.getElementById("dateSpan");
+      const dateText = dateSpan.textContent.trim();
+      const date = new Date(dateText);
+
+      // Format the date in your desired format
+      const formattedDate = formatDate(date);
+      dateSpan.textContent = formattedDate;
+    }
+
+    function formatDate(date) {
+      const year = date.getFullYear();
+      const month = String(date.getMonth() + 1).padStart(2, '0');
+      const day = String(date.getDate()).padStart(2, '0');
+      let hours = date.getHours();
+      const minutes = String(date.getMinutes()).padStart(2, '0');
+      const seconds = String(date.getSeconds()).padStart(2, '0');
+      const period = (hours >= 12) ? 'PM' : 'AM';
+      hours = (hours % 12) || 12; // Use modulo to convert to 12-hour format
+
+      return `${year}/${month}/${day} ${hours}:${minutes}:${seconds} ${period} GMT+8`;
+    }
+  </script>
+</body>
+</html>

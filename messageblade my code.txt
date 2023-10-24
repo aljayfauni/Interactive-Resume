@@ -1,0 +1,773 @@
+@extends('layouts.sub')
+@section('content')
+<!-- LAYER -->
+<div id="layer"></div>
+<!-- LEFT-FLOATING MENU -->
+<div class="floating-side">
+  <div data-v-6e773cfa="" class="floating-side">
+    <div data-v-6e773cfa="" class="inner">
+      <div data-v-6e773cfa="" class="sub-floats">
+        <div data-v-6e773cfa="" class="menu-header">
+          <div data-v-6e773cfa="" class="img">
+            <img data-v-6e773cfa="" src="/assets/img/icon-user.svg" alt="">
+            </div> 
+            <div data-v-6e773cfa="" class="tit">
+              <span data-v-6e773cfa="">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">
+                  my page
+                </font>
+              </font>
+            </span>
+          </div>
+        </div> 
+        <div data-v-6e773cfa="" class="game-list">
+         <div data-v-6e773cfa="" class="game_item">
+          <div data-v-6e773cfa="" class="game_tit item">
+            <span data-v-6e773cfa="" class="tit">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">
+                    Recharge / Exchange
+                </font>
+              </font>
+            </span> 
+           <span data-v-6e773cfa="" class="view-icon">
+          </span>
+        </div> <!----> 
+        <div data-v-6e773cfa="" class="game_menu">
+        <div data-v-6e773cfa="" class="item">
+          <span data-v-6e773cfa="" class="item_tit">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">
+                Recharge application
+              </font>
+            </font>
+          </span>
+        </div> 
+        <div data-v-6e773cfa="" class="item">
+          <span data-v-6e773cfa="" class="item_tit">
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">
+                  Exchange request
+                </font>
+            </font>
+          </span>
+        </div> 
+        <div data-v-6e773cfa="" class="item">
+        <span data-v-6e773cfa="" class="item_tit">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">
+              transaction history
+            </font>
+           </font>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div data-v-6e773cfa="" class="game_item">
+      <div data-v-6e773cfa="" class="game_tit">
+        <span data-v-6e773cfa="" class="tit">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">
+              point
+            </font>
+          </font>
+        </span>
+      </div>
+    </div>
+    <div data-v-6e773cfa="" class="game_item active">
+      <div data-v-6e773cfa="" class="game_tit">
+          <span data-v-6e773cfa="" class="tit">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">
+                Note
+              </font>
+            </font><!---->
+          </span>
+        </div>
+      </div> 
+      <div data-v-6e773cfa="" class="game_item">
+        <div data-v-6e773cfa="" class="game_tit">
+          <span data-v-6e773cfa="" class="tit">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">
+                1:1 inquiry
+              </font>
+            </font><!---->
+          </span>
+        </div>
+      </div>
+      <div data-v-6e773cfa="" class="game_item">
+        <div data-v-6e773cfa="" class="game_tit">
+          <span data-v-6e773cfa="" class="tit">
+            <font style="vertical-align: inherit;">
+              <font style="vertical-align: inherit;">
+                Acquaintance management
+              </font>
+            </font>
+          </span>
+        </div>
+      </div>
+        <div data-v-6e773cfa="" class="game_item">
+          <div data-v-6e773cfa="" class="game_tit">
+            <span data-v-6e773cfa="" class="tit">
+              <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">
+                  betting history
+                </font>
+              </font></span>
+            </div>
+          </div>
+          <div data-v-6e773cfa="" class="game_item">
+            <div data-v-6e773cfa="" class="game_tit">
+              <span data-v-6e773cfa="" class="tit">
+                <font style="vertical-align: inherit;">
+                  <font style="vertical-align: inherit;">
+                    bonus benefits
+                  </font>
+                </font>
+              </span>
+            </div>
+          </div> 
+            <div data-v-6e773cfa="" class="game_item">
+              <div data-v-6e773cfa="" class="game_tit">
+                <span data-v-6e773cfa="" class="tit">
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">
+                      check my rolling
+                    </font>
+                  </font>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div data-v-d7520fae="" data-v-6e773cfa="" class="banners-grid">
+          <a data-v-d7520fae="" href="https://t.me/newfish3333" target="_blank"><img data-v-d7520fae="" src="/assets/img/banners/fish-tele.png?v=1" alt=""></a>
+          <a data-v-d7520fae="" href="#" target="_blank" style="pointer-events: none;"><img data-v-d7520fae="" src="/assets/img/banners/fish-kakao.png?v=1" alt=""></a>
+          <a data-v-d7520fae="" href="https://t.me/fishnotice" target="_blank"><img data-v-d7520fae="" src="/assets/img/banners/fish-news.png?v=1" alt=""></a>
+          <a data-v-d7520fae="" href="https://피쉬도메인.com" target="_blank"><img data-v-d7520fae="" src="/assets/img/banners/fish-address.png?v=1" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<header class="wrapper"></header>
+  <main id="tab_table" class="wrapper">
+    <div class="inner">
+      <div class="tab_table">
+        <div class="tab-head">
+          <button type="button" class="btn_tab active" onclick="showEntire();">전체</button>
+          <button type="button" class="btn_tab" onclick="showNotRead();">안 읽음</button>
+          <button type="button" class="btn_tab" onclick="showRead();">읽음</button>
+        </div>  
+        <div class="tab-body">
+          <div class="tab">
+            <div class="tab_top">
+              <div class="tt_tit">
+                <span>전체</span>                                      
+              </div>
+              <div class="tt-mo-menu">
+                <div class="select-special">
+                  <select class="register-select">
+                    <option class="option-special" value="all">전체</option>
+                    <option class="option-special" value="unread">안 읽음</option>
+                    <option class="option-special" value="read">읽음</option>
+                  </select>
+                </div>
+              </div>    
+              <div style="display: flex; gap: 10px; margin-top: 10px; justify-content: flex-end;">
+                <div class="delete_btn"  id="delete_selected" style="display:none;">
+                  <button>
+                    선택 삭제
+                  </button>
+                </div>
+                <div class="delete_btn" id="read_all_delete" style="background-color: #7c1212 !important;">
+                  <button >
+                    읽음 전체삭제
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="tab-cont" id="tab1" >
+              <div class="table-wrapper mobile-view-row">
+                <table id="msg_table" > 
+                  <thead>
+                    <tr>
+                      <th>date</th>
+                      <th>title</th>
+                      <th>situation</th>     
+                    </tr>
+                  </thead>
+                <tbody id="tab1_tbody1">                        
+                </tbody>
+                </table>
+                <div id="pagination" class="table-pagination">
+                <ul>
+                <li id="list_link"></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+        <div class="tab-cont" id="tab2" style="display:none;">
+          <div class="table-wrapper mobile-view-row">
+            <table id="msg_table" > 
+              <thead>
+                <tr>
+                  <th>date</th>
+                  <th>title</th>
+                  <th>situation</th>     
+                </tr>
+              </thead>
+            <tbody id="tab2_tbody2">                        
+            </tbody>
+            </table>
+            <div id="pagination2" class="table-pagination">
+            <ul>
+            <li id="list_link2"></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+    <div class="tab-cont" id="tab3" style="display:none;">
+      <div class="table-wrapper mobile-view-row">
+        <table id="msg_table" > 
+          <thead>
+            <tr>
+              <th class="checkBox_th" ><input data-v-29956060 class="chk_all_msg " type="checkbox" onchange="check_all_msg();">
+              </th>
+              <th>date</th>
+              <th>title</th>
+              <th>situation</th>     
+            </tr>
+          </thead>
+        <tbody id="tab3_tbody3">                        
+        </tbody>
+        </table>
+        <div id="pagination3" class="table-pagination">
+        <ul>
+        <li id="list_link3"></li>
+        </ul>
+      </div>
+  </div>
+</div>
+  </div>
+  </main>
+
+    <footer class="wrapper"></footer>
+    <!-- RIGHT-FLOATING MENU -->
+    <div id="floating-menu" class="floating-menu"></div>
+    <!-- MOBILE FOOTER -->
+    <div class="app-footer"></div>
+    <!-- SCRIPT -->
+  <script src="/assets/js/jquery-3.3.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    let isMobile = /Mobi/i.test(window.navigator.userAgent);
+    let windowWidth = $(window).width();
+
+    function showTab(tabId) {
+  const tabs = ["tab1", "tab2", "tab3"];
+  tabs.forEach(tab => {
+    document.getElementById(tab)
+      .style.display = (tab === tabId ? "block" : "none");
+  });
+}
+
+function showEntire() {
+  showTab("tab1");
+  document.getElementById('read_all_delete').style.display = 'block';
+  document.getElementById('delete_selected')
+    .style.display = 'none';
+}
+
+function showNotRead() {
+  showTab("tab2");
+  document.getElementById('read_all_delete').style.display = 'none';
+  document.getElementById('delete_selected').style.display = 'none';
+
+}
+
+function showRead() {
+  showTab("tab3");
+  document.getElementById('delete_selected').style.display = 'block';
+  document.getElementById('read_all_delete').style.display = 'block';
+}
+
+$(document)
+  .ready(function() {
+    const apiUrl = "/api/v1/ApiMessage";
+    const messagesPerPage = 5; // Update the number of messages per page
+    let currentPage = 1;
+    let totalPages = 0;
+    let data_results = {};
+    var countMsgStatus = {};
+    let currentStatus = "all";
+
+    function fetchAllMessages(page, status, callBack) { //fetch message in table 1
+      const url = apiUrl + '?status=' + status + '&page=' + page + '&limit=' + messagesPerPage;
+      $.ajax({
+        url: url,
+        method: "GET",
+        success: function(data) {
+          data_results = data.response.message.data;
+          countMsgStatus = data.response.message.count; //count allmessage where status is 1
+          total_count_msg = data.response.message.data.length;
+          totalPages = Math.ceil(total_count_msg / messagesPerPage);
+          displayAllMessages(data_results);
+          displayPagination();
+          console.log(data_results);
+          if (callBack && typeof callBack === "function") {
+            callBack(data_results, countMsgStatus);
+          }
+          emptyMesage(); //call the emptyMessage function
+        },
+        error: function(error) {
+          console.error("Error fetching messages:", error);
+        }
+      });
+    }
+
+    function fetchNotReadMessages(page, status, callBack) { //fetch not read in table 2
+      const url = apiUrl + '?status=' + status + '&page=' + page + '&limit=' + messagesPerPage;
+      console.log(url);
+      $.ajax({
+        url: url,
+        method: "GET",
+        success: function(data) {
+          data_results = data.response.message.data;
+          countMsgStatus = data.response.message.count; //count allmessage where status is 1
+          total_count_msg = data.response.message.data.length;
+          totalPages = Math.ceil(total_count_msg / messagesPerPage);
+          // displayMessages(data_results);
+          displayNotreadMessage(data_results);
+          displayPagination_notread();
+          if (callBack && typeof callBack === "function") {
+            callBack(data_results, countMsgStatus);
+          }
+          emptyMesage(); //call the emptyMessage function
+        },
+        error: function(error) {
+          console.error("Error fetching messages:", error);
+        }
+      });
+    }
+
+    function fetchReadMessages(page, status, callBack) { //fetch read message in table 3
+      const url = apiUrl + '?status=' + status + '&page=' + page + '&limit=' + messagesPerPage;
+      console.log(url);
+      $.ajax({
+        url: url,
+        method: "GET",
+        success: function(data) {
+          data_results = data.response.message.data;
+
+          countMsgStatus = data.response.message.count; //count allmessage where status is 1 
+          total_count_read_msg = data.response.message.data.length;
+          totalPagesRead = Math.ceil(total_count_read_msg / messagesPerPage);
+          displayreadMessage(data_results);
+          displayPagination_read();
+          console.log(data_results);
+          if (callBack && typeof callBack === "function") {
+            callBack(data_results, countMsgStatus);
+          }
+          //if there is no message to display 
+          emptyMesage(); //call the emptyMessage function
+        },
+        error: function(error) {
+          console.error("Error fetching messages:", error);
+        }
+      });
+    }
+
+    function displayNotreadMessage(message, status) {
+      const flteredMessage = message.filter(element => element.status === 0);
+      const startIndex = (currentPage - 1) * messagesPerPage;
+      const endIndex = startIndex + messagesPerPage;
+      const slicedMessages = flteredMessage.slice(startIndex, endIndex);
+      const tableBody2 = $("#tab2_tbody2");
+      tableBody2.empty();
+
+      for (const message of slicedMessages) {
+        const getMsgstatus = message.status;
+        message.status = "<span style='color:#45b845;' > read <span>";
+        message.status = "<span style='color:#f66;'> not read <span>";
+        const row = document.createElement("tr");
+        row.setAttribute("id", message.id);
+        row.innerHTML = "<td>" + message.created_at + "</td>" +
+          "<td>" + message.title + "</td>" +
+          "<td id=td_unread_id" + message.id + " >" + message.status + "</td>";
+        const row_content = document.createElement("tr");
+        row_content.innerHTML = "<td colspan='4'  style='text-align:left; padding: 25px 50px;'  class='td-content'>" + message.content + "</td>";
+        row_content.style.display = "none";
+        row.addEventListener("click", function() {
+          var get_clicked_row_id = $(this)
+            .attr('id');
+          var td_Unread = "td_unread_id" + get_clicked_row_id; //get clicked row id
+          //call the ajax for reading unread message and update 
+          updateMessageStatus(get_clicked_row_id, td_Unread, getMsgstatus);
+          if (row_content.style.display === "none") {
+            row_content.style.display = "table-row";
+          } else {
+            row_content.style.display = "none";
+          }
+        });
+        tableBody2.append(row);
+        tableBody2.append(row_content);
+      }
+    }
+
+    function displayreadMessage(message, status) {
+      const flteredMessage = message.filter(element => element.status === 1);
+      const startIndex = (currentPage - 1) * messagesPerPage;
+      const endIndex = startIndex + messagesPerPage;
+      const slicedMessages = flteredMessage.slice(startIndex, endIndex);
+      const tableBody3 = $("#tab3_tbody3");
+      tableBody3.empty();
+      for (const message of slicedMessages) {
+        message.status = "<span style='color:#45b845;' > read <span>";
+        $('.col_chkbox_msg').show();
+        $('.checkBox_th').show();
+        const row_table3 = document.createElement("tr");
+        row_table3.setAttribute("id", message.id);
+        row_table3.innerHTML = "<td class='col_chkbox_msg'   ><input class='chk_box_msg_id checkedItems'' data-v-29956060 style='width:20px  -webkit-appearance: checkbox;height: 20px; -webkit-border-radius: 0;' style='display:block;' type='checkbox' value=" + message.id + "></td>" +
+          "<td>" + message.created_at + "</td>" +
+          "<td>" + message.title + "</td>" +
+          "<td id=tdStatus" + message.id + " >" + message.status + "</td>";
+        const row_content = document.createElement("tr");
+        row_content.innerHTML = "<td colspan='4'  style='text-align:left; padding: 25px 50px;'  class='td-content'>" + message.content + "</td>";
+        row_content.style.display = "none";
+        row_table3.addEventListener("click", function() {
+          var get_clicked_row_id = $(this)
+            .attr('id');
+
+          if (row_content.style.display === "none") {
+            row_content.style.display = "table-row";
+          } else {
+            row_content.style.display = "none";
+          }
+        });
+        tableBody3.append(row_table3);
+        tableBody3.append(row_content);
+      }
+    }
+    // Display messages in the table
+    function displayAllMessages(messages) {
+      const startIndex = (currentPage - 1) * messagesPerPage;
+      const endIndex = startIndex + messagesPerPage;
+      const slicedMessages = messages.slice(startIndex, endIndex);
+      const tableBody = $("#tab1_tbody1");
+      tableBody.empty();
+      for (const message of slicedMessages) {
+        const getMsgstatus = message.status;
+        if (message.status == '1') {
+          message.status = "<span style='color:#45b845;' > read <span>";
+        } else {
+          message.status = "<span style='color:#f66;'> not read <span>";
+        }
+        const row = document.createElement("tr");
+        row.setAttribute("id", message.id);
+        row.innerHTML = "<td>" + message.created_at + "</td>" +
+          "<td>" + message.title + "</td>" +
+          "<td id=td_read_notread_id" + message.id + " >" + message.status + "</td>";
+        const table1_row_content = document.createElement("tr");
+        table1_row_content.innerHTML = "<td colspan='4'  style='text-align:left; padding: 25px 50px;'  class='tab1_td_content td-content'>" + message.content + "</td>";
+        table1_row_content.style.display = "none";
+        row.addEventListener("click", function(e) {
+          e.preventDefault();
+          var get_clicked_row_id = $(this)
+            .attr('id');
+          var tdStatus = "td_read_notread_id" + get_clicked_row_id; //get clicked row id
+          var contentStatus = message.status;
+
+          //ajax for reading unread message and update 
+          updateMessageStatus(get_clicked_row_id, tdStatus, getMsgstatus);
+
+          if (table1_row_content.style.display === "none") {
+            table1_row_content.style.display = "table-row";
+          } else {
+            table1_row_content.style.display = "none";
+          }
+        });
+        tableBody.append(row);
+        tableBody.append(table1_row_content);
+      }
+    }
+    //function updateMessageStatus(){
+    function updateMessageStatus(get_clicked_row_id, tdStatus, msgstatus) {
+      $.ajax({
+        url: 'api/v1/ApiUnreadMessageUpdate',
+        method: 'post',
+        headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]')
+            .attr('content')
+        },
+        data: {
+          'message_id': get_clicked_row_id,
+          'status': msgstatus
+        },
+        success: function(response) {
+          console.log('Message read successfully!');
+          $('#' + tdStatus)
+            .css('color', '#45b845');
+          $('#' + tdStatus)
+            .text('read');
+          // Retrieve data after update 
+          //retrieving updated messages to read 
+          if (msgstatus == 0 && msgstatus != 1) {
+            //fetchAllMessages(currentPage, currentStatus);
+            fetchNotReadMessages(currentPage, currentStatus);
+            fetchReadMessages(currentPage, currentStatus);
+          }
+
+
+        },
+        error: function(xhr, status, error) {
+          console.log('Error reading message:', error);
+        }
+      });
+    }
+    // Display pagination links
+    function displayPagination() {
+      const paginationContainer = $("#pagination");
+      paginationContainer.empty();
+      // Previous button
+      const prevButton = $("<button></button>");
+      prevButton.html("<img src='./assets/img/page-prev.png' alt='' />");
+      prevButton.addClass("btn-pagi_prev");
+      prevButton.prop("disabled", currentPage === 1);
+      // If previous button is clicked, decrease page number and fetch messages
+      prevButton.on("click", function() {
+        if (currentPage > 1) {
+          currentPage--;
+          fetchAllMessages(currentPage, currentStatus);
+          fetchUnReadMessages(currentPage, currentStatus);
+        }
+      });
+      paginationContainer.append(prevButton);
+      // List pagination links
+      const startPage = Math.max(currentPage - 5, 1);
+      const endPage = Math.min(startPage + 19, totalPages);
+      for (let page = startPage; page <= endPage; page++) {
+        const pageLink = $("<a></a>");
+        pageLink.attr("href", "#");
+        pageLink.addClass("page_num");
+        pageLink.text(page);
+        if (page === currentPage) {
+          pageLink.addClass("active");
+        }
+        pageLink.on("click", function() {
+          currentPage = page;
+          fetchAllMessages(currentPage, currentStatus);
+          fetchNotReadMessages(currentPage, currentStatus);
+        });
+        paginationContainer.append(pageLink);
+      }
+      // Next button
+      const nextButton = $("<button></button>");
+      nextButton.html("<img src='./assets/img/page-next.png' alt='' />");
+      nextButton.addClass("btn-pagi_next");
+      nextButton.prop("disabled", currentPage === totalPages);
+      // If next button is clicked, increase page number and fetch messages
+      nextButton.on("click", function() {
+        if (currentPage < totalPages) {
+          currentPage++;
+          fetchAllMessages(currentPage, currentStatus);
+          fetchNotReadMessages(currentPage, currentStatus);
+        }
+      });
+      paginationContainer.append(nextButton);
+    }
+
+    function displayPagination_notread() {
+      const paginationContainer = $("#pagination2");
+      paginationContainer.empty();
+      // Previous button
+      const prevButton = $("<button></button>");
+      prevButton.html("<img src='./assets/img/page-prev.png' alt='' />");
+      prevButton.addClass("btn-pagi_prev");
+      prevButton.prop("disabled", currentPage === 1);
+      // If previous button is clicked, decrease page number and fetch messages
+      prevButton.on("click", function() {
+        if (currentPage > 1) {
+          currentPage--;
+          fetchNotReadMessages(currentPage, currentStatus);
+        }
+      });
+      paginationContainer.append(prevButton);
+      // List pagination links
+      const startPage = Math.max(currentPage - 5, 1);
+      const endPage = Math.min(startPage + 19, totalPages);
+      for (let page = startPage; page <= endPage; page++) {
+        const pageLink = $("<a></a>");
+        pageLink.attr("href", "#");
+        pageLink.addClass("page_num");
+        pageLink.text(page);
+        if (page === currentPage) {
+          pageLink.addClass("active");
+        }
+        pageLink.on("click", function() {
+          currentPage = page;
+          fetchNotReadMessages(currentPage, currentStatus);
+        });
+        paginationContainer.append(pageLink);
+      }
+      // Next button
+      const nextButton = $("<button></button>");
+      nextButton.html("<img src='./assets/img/page-next.png' alt='' />");
+      nextButton.addClass("btn-pagi_next");
+      nextButton.prop("disabled", currentPage === totalPages);
+      // If next button is clicked, increase page number and fetch messages
+      nextButton.on("click", function() {
+        if (currentPage < totalPages) {
+          currentPage++;
+          fetchAllMessages(currentPage, currentStatus);
+          fetchNotReadMessages(currentPage, currentStatus);
+        }
+      });
+      paginationContainer.append(nextButton);
+    }
+    //display read messages
+    function displayPagination_read() {
+      const paginationContainer = $("#pagination3");
+      paginationContainer.empty();
+      // Previous button
+      const prevButton = $("<button></button>");
+      prevButton.html("<img src='./assets/img/page-prev.png' alt='' />");
+      prevButton.addClass("btn-pagi_prev");
+      prevButton.prop("disabled", currentPage === 1);
+      // If previous button is clicked, decrease page number and fetch messages
+      prevButton.on("click", function() {
+        if (currentPage > 1) {
+          currentPage--;
+          fetchReadMessages(currentPage, currentStatus);
+        }
+      });
+      paginationContainer.append(prevButton);
+      // List pagination links
+      const startPage = Math.max(currentPage - 9, 1);
+      const endPage = Math.min(startPage + 14, totalPages);
+      for (let page = startPage; page <= endPage; page++) {
+        const pageLink = $("<a></a>");
+        pageLink.attr("href", "#");
+        pageLink.addClass("page_num");
+        pageLink.text(page);
+        if (page === currentPage) {
+          pageLink.addClass("active");
+        }
+        pageLink.on("click", function() {
+          currentPage = page;
+          //uncheck box when clicked the paginate links
+          var checkbox_all = document.getElementsByClassName("chk_all_msg")[0];
+          checkbox_all.checked = false;
+          fetchReadMessages(currentPage, currentStatus);
+        });
+        paginationContainer.append(pageLink);
+      }
+      // Next button
+      const nextButton = $("<button></button>");
+      nextButton.html("<img src='./assets/img/page-next.png' alt='' />");
+      nextButton.addClass("btn-pagi_next");
+      nextButton.prop("disabled", currentPage === totalPages);
+      // If next button is clicked, increase page number and fetch messages
+      nextButton.on("click", function() {
+        if (currentPage < totalPages) {
+          currentPage++;
+          fetchAllMessages(currentPage, currentStatus);
+          fetchUnReadMessages(currentPage, currentStatus);
+        }
+      });
+      paginationContainer.append(nextButton);
+    }
+    //  display "there is nothing to display "
+    function emptyMesage(currentStatus, countMsgStatus) {
+      const empty_table = document.createElement("tr");
+      const tableBody = $("#msg_table");
+      empty_table.innerHTML = "<td colspan=4'>There is nothing to display</td>";
+      switch (true) {
+        case countMsgStatus == "0":
+          tableBody.append(empty_table);
+          break;
+        case countMsgStatus == "0":
+          tableBody2.append(empty_table);
+        case countMsgStatus == "0":
+          tableBody3.append(empty_table);
+      }
+    }
+    // Fetch messages on page load
+    fetchAllMessages(currentPage, currentStatus);
+    fetchReadMessages(currentPage, currentStatus);
+    fetchNotReadMessages(currentPage, currentStatus);
+
+    //delete selected message      
+    $('#delete_selected')
+      .on('click', function(e) {
+        var selected_idArray = [];
+        $('.chk_box_msg_id:checked')
+          .each(function() {
+            selected_idArray.push($(this)
+              .val());
+            $.ajax({
+              url: 'api/v1/ApiDeleteMessage',
+              method: 'post',
+              headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]')
+                  .attr('content')
+              },
+              data: {
+                'message_id': selected_idArray
+              },
+              success: function(response) {
+                console.log('deleted message successfully!');
+                // Retrieve data after update 
+                //retrieving updated messages to read 
+                fetchNotReadMessages(currentPage, currentStatus);
+                fetchReadMessages(currentPage, currentStatus);
+              },
+              error: function(xhr, status, error) {
+                console.log('Error reading message:', error);
+              }
+            });
+          });
+      });
+
+
+    $('#read_all_delete')
+      .on('click', function(e) {
+        var readAllArray = [];
+        $('.chk_box_msg_id').each(function() {
+            readAllArray.push($(this).val());
+            $.ajax({
+              url: 'api/v1/ApiReadAllDelMessage',
+              method: 'post',
+              headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]')
+                  .attr('content')
+              },
+              success: function() {
+                // Retrieve data after update 
+                //retrieving updated messages to read 
+                fetchAllMessages(currentPage, currentStatus);
+                fetchReadMessages(currentPage, currentStatus);
+              },
+              error: function(xhr, status, error) {
+                console.log('Error reading message:', error);
+              }
+            });
+          });
+      });
+  });
+/*check all message*/
+function check_all_msg() {
+  var checkboxes = document.getElementsByClassName('chk_box_msg_id');
+  var th_checkbox = document.getElementsByClassName('chk_all_msg')[0];
+  for (var i = 0; i < checkboxes.length; i++) {
+    checkboxes[i].checked = th_checkbox.checked;
+  }
+}
+var th_checkbox = document.getElementsByClassName('chk_all_msg')[0];
+th_checkbox.addEventListener('click', check_all_msg);
+  
+</script>
+
+    
+@endsection
