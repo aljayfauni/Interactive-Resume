@@ -335,7 +335,7 @@ var loader = document.querySelector("#loader"),
 
                        
                     }
-                    if (i > 15280)) {
+                    if (i > 15280) {
                         $('.walk-right').css('background-image', '../images/almotor.png)');
                     }
                     if (i <= 15279){
