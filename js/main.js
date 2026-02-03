@@ -333,7 +333,7 @@ var loader = document.querySelector("#loader"),
                         $('.me').css('background-size','cover');
                         $('.walk-right').css('background-size','cover');
                         $('.right').css('width', '290px');
-                        $('.walk-right')[0].style.setProperty('width', '290px', 'important');
+                        $('.walk-right')[0].style.setProperty('width', '200px', 'important');
 
                        
                     }
