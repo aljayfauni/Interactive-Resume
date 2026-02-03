@@ -336,9 +336,7 @@ var loader = document.querySelector("#loader"),
                        
                     }
                    
-                    if (i < 15279){
-                     $('.walk-right').css('background-image', '../images/going_right.png)');
-                    }
+               
                     if(i < 11800){
                         $('.exp1').slideUp(600);
                         $('.exp2').slideUp(600);
