@@ -336,6 +336,7 @@ var loader = document.querySelector("#loader"),
                         $('.walk-right').css('background-size','cover');
                         $('.right').css('width', '320px');
                         $('.right').css('bottom', '80px'); 
+                        $('.right').css('background-position','center');
                         $('.right').css('background-size','cover');
                     
 
