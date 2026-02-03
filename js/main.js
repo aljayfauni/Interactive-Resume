@@ -42,6 +42,8 @@ var loader = document.querySelector("#loader"),
     positionEndGround2 = blue.clientWidth - $(window).width() / 2 - me.clientWidth / 4,
     negativepositionEndGround1 = -Math.abs(positionEndGround1),
     negativepositionEndGround2 = -Math.abs(positionEndGround2),
+
+    
    
     // --- start ---set position of elements and images
     $(start).css({bottom:370  }),
@@ -327,6 +329,7 @@ var loader = document.querySelector("#loader"),
                     }
                     if(i >= 15279){
                         $('.exp3').slideDown(600);
+                         $('.walk-right').css('background-image', 'url(../images/motor.png)');
                        
 
 
