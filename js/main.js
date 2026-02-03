@@ -329,7 +329,7 @@ var loader = document.querySelector("#loader"),
                     }
                     if(i >= 15279){
                         $('.exp3').slideDown(600);
-                        $('.walk-right').css('background-image', 'url("Interactive-Resume/images/almoto.png")');
+                        $('.walk-right').css('background-image', 'url("almoto.png")');
 
                        
                     }
