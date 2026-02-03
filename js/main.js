@@ -327,12 +327,21 @@ var loader = document.querySelector("#loader"),
 
                        
                     }
-                    if(i >= 15279){
+                    if(i >= 15280){
                         $('.exp3').slideDown(600);
                         $('.walk-right').css('background-image', 'url("images/almoto.png")');
                         $('.me').css('background-size','cover');
+                        $('.walk-right').css('background-size','cover');
                         $('.right').css('width', '309px');
                         $('.walk-right').css('width', '309px');
+
+                       
+                    }
+                 if(i <= 15279){
+                        $('.exp3').slideDown(600);
+                        $('.walk-right').css('background-image', 'url("images/going_right.png")');
+                       
+                    
 
                        
                     }
