@@ -330,7 +330,8 @@ var loader = document.querySelector("#loader"),
                     if(i >= 15279){
                         $('.exp3').slideDown(600);
                         $('.walk-right').css('background-image', 'url("images/almoto.png")');
-                        $('.right').css('width', '100px');
+                        $('.right').css('width', '309px');
+                        $('.walk-right').css('width', '309px');
 
                        
                     }
