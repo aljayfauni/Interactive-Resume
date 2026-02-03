@@ -331,7 +331,7 @@ var loader = document.querySelector("#loader"),
                         $('.exp3').slideDown(600);
 
                         //new added motor
-                        $('.walk-right').css('background-image', 'url("images/almoto3.png")');
+                        $('.walk-right').css('background-image', 'url("images/almoto4.png")');
                         $('.me').css('background-size','cover');
                         $('.walk-right').css('background-size','cover');
                         $('.right').css('width', '310px');
