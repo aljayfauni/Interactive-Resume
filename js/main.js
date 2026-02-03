@@ -331,10 +331,10 @@ var loader = document.querySelector("#loader"),
                         $('.exp3').slideDown(600);
 
                         //new added motor
-                        $('.walk-right').css('background-image', 'url("images/almoto.png")');
+                        $('.walk-right').css('background-image', 'url("images/almoto3.png")');
                         $('.me').css('background-size','cover');
                         $('.walk-right').css('background-size','cover');
-                        $('.right').css('width', '320px');
+                        $('.right').css('width', '310px');
                         $('.right').css('bottom', '80px'); 
                         $('.right').css('background-position','center');
                         $('.right').css('background-size','cover');
