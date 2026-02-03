@@ -333,20 +333,11 @@ var loader = document.querySelector("#loader"),
                         $('.me').css('background-size','cover');
                         $('.walk-right').css('background-size','cover');
                         $('.right').css('width', '290px');
-                        $('.walk-right')[0].style.setProperty('width', '200px', 'important');
-
-                       
-                    }
-                 if(i <= 15280){
-                        $('.exp3').slideDown(600);
-                        $('.walk-right').css('background-image', 'url("images/me.png")','important');
-                        $('.right').css('width', '100px');
-                        $('.walk-right').css('width', '100px');
-                       
                     
 
                        
                     }
+        
                    
                
                     if(i < 11800){
