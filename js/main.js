@@ -384,20 +384,20 @@ var loader = document.querySelector("#loader"),
                           
                           (jQuery)
                         : (function (e) {
-                              // e(function () {
-                              //     e(window).scroll(function () {
-                              //         me.classList.remove("walk-right"),
-                              //             me.classList.add("walk-left"),
-                              //             clearTimeout(e.data(this, "scrollCheck")),
-                              //             e.data(
-                              //                 this,
-                              //                 "scrollCheck",
-                              //                 setTimeout(function () {
-                              //                     me.classList.remove("walk-left"), me.classList.add("left");
-                              //                 }, 100)
-                              //             );
-                              //     });
-                              // });
+                              e(function () {
+                                  e(window).scroll(function () {
+                                      me.classList.remove("walk-right"),
+                                          me.classList.add("walk-left"),
+                                          clearTimeout(e.data(this, "scrollCheck")),
+                                          e.data(
+                                              this,
+                                              "scrollCheck",
+                                              setTimeout(function () {
+                                                  me.classList.remove("walk-left"), me.classList.add("left");
+                                              }, 100)
+                                          );
+                                  });
+                              });
                           })(jQuery),
                     (lastScrollTop = t <= 0 ? 0 : t);
             },
