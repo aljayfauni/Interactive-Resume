@@ -334,7 +334,8 @@ var loader = document.querySelector("#loader"),
                         $('.walk-right').css('background-image', 'url("images/almoto1.png")');
                         $('.me').css('background-size','cover');
                         $('.walk-right').css('background-size','cover');
-                        $('.right').css('width', '310px');
+                        $('.right').css('width', '320px');
+                        $('.right').css('bottom', '80px'); 
                         $('.right').css('background-size','cover');
                     
 
