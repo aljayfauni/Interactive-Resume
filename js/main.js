@@ -329,8 +329,8 @@ var loader = document.querySelector("#loader"),
                     }
                     if(i >= 15280){
                         $('.exp3').slideDown(600);
-                        $('.walk-right').css('background-image', 'url("images/almoto.png")');
-                        $('.me').css('background-size','cover');
+                        $('.walk-right').css('background-image', 'url("images/almoto1.png")');
+                        $('.right').css('background-size','cover');
                         $('.walk-right').css('background-size','cover');
                         $('.right').css('width', '290px');
                         $('.walk-right')[0].style.setProperty('width', '200px', 'important');
