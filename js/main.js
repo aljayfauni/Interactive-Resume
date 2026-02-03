@@ -329,7 +329,7 @@ var loader = document.querySelector("#loader"),
                     }
                     if(i >= 15279){
                         $('.exp3').slideDown(600);
-                         $('.walk-right').css('background-image', 'url(../images/motor.png)');
+                         $('.walk-right').css('background-image', 'url(../images/almotor.png)');
                        
 
 
