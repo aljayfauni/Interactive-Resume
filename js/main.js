@@ -339,7 +339,7 @@ var loader = document.querySelector("#loader"),
                     }
                  if(i <= 15280){
                         $('.exp3').slideDown(600);
-                        $('.walk-right').css('background-image', 'url("images/me.png")');
+                        $('.walk-right').css('background-image', 'url("images/me.png")','important');
                         $('.right').css('width', '100px');
                         $('.walk-right').css('width', '100px');
                        
