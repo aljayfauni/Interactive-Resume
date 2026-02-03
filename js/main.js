@@ -329,11 +329,14 @@ var loader = document.querySelector("#loader"),
                     }
                     if(i >= 15279){
                         $('.exp3').slideDown(600);
-                         $('.walk-right').css('background-image', 'url(../images/almotor.png)');
+                        
                        
 
 
                        
+                    }
+                    if (!(i < 15280)) {
+                        $('.walk-right').css('background-image', 'url(../images/almotor.png)');
                     }
                     if(i < 11800){
                         $('.exp1').slideUp(600);
